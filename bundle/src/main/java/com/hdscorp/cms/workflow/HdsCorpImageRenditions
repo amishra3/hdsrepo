@@ -58,10 +58,10 @@ import com.hdscorp.cms.config.HdsCorpGlobalConfiguration;
 @Component
 @Service
 @Properties({
-		@Property(name = Constants.SERVICE_DESCRIPTION, value = "PaneraImageRenditions"),
+		@Property(name = Constants.SERVICE_DESCRIPTION, value = "HdsCorpImageRenditions"),
 		@Property(name = Constants.SERVICE_VENDOR, value = "Adobe"),
 		@Property(name = "process.label", value = "Panera Image Renditions") })
-public class PaneraImageRenditions extends AbstractAssetWorkflowProcess
+public class HdsCorpImageRenditions extends AbstractAssetWorkflowProcess
 		implements WorkflowProcess {
 
 	/**
@@ -72,7 +72,7 @@ public class PaneraImageRenditions extends AbstractAssetWorkflowProcess
 	private static final String ARGUMENT_SEPARATOR = ",";
 
 	private static final Logger log = LoggerFactory
-			.getLogger(PaneraImageRenditions.class);
+			.getLogger(HdsCorpImageRenditions.class);
 
 	/**
 	 * <p>
@@ -371,12 +371,12 @@ public class PaneraImageRenditions extends AbstractAssetWorkflowProcess
 	 */
 	private String[] buildArguments(final MetaDataMap metaData) {
 		final String processArgs = (String) metaData.get(
-				PaneraImageRenditions.Arguments.PROCESS_ARGS.name(), String.class);
+				HdsCorpImageRenditions.Arguments.PROCESS_ARGS.name(), String.class);
 		if (StringUtils.isNotBlank(processArgs)) {
 			return processArgs.split(ARGUMENT_SEPARATOR);
 		}
 
-		final String[] configs = (String[]) metaData.get(PaneraImageRenditions.Arguments.CONFIGS.name(),
+		final String[] configs = (String[]) metaData.get(HdsCorpImageRenditions.Arguments.CONFIGS.name(),
 				String[].class);
 		if (configs != null) {
 			return configs;

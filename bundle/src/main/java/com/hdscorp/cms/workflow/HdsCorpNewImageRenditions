@@ -68,10 +68,10 @@ import com.day.image.Layer;
 @Component
 @Service
 @Properties({
-		@Property(name = Constants.SERVICE_DESCRIPTION, value = "PaneraNewImageRenditions"),
+		@Property(name = Constants.SERVICE_DESCRIPTION, value = "HdsCorpNewImageRenditions"),
 		@Property(name = Constants.SERVICE_VENDOR, value = "Adobe"),
 		@Property(name = "process.label", value = "Panera New Image Renditions") })
-public class PaneraNewImageRenditions extends AbstractAssetWorkflowProcess
+public class HdsCorpNewImageRenditions extends AbstractAssetWorkflowProcess
 		implements WorkflowProcess {
 
 	/**
@@ -82,7 +82,7 @@ public class PaneraNewImageRenditions extends AbstractAssetWorkflowProcess
 	private static final String ARGUMENT_SEPARATOR = ",";
 
 	private static final Logger log = LoggerFactory
-			.getLogger(PaneraNewImageRenditions.class);
+			.getLogger(HdsCorpNewImageRenditions.class);
 
 	/**
 	 * <p>
