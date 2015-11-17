@@ -29,7 +29,7 @@ import com.day.image.Layer;
  * 
  * This Class will be Used to Rename image names for desktop and ipad.
  * 
- * @author ksuren
+ * @author abhinav
  * 
  */
 public class WebEnabledImageCreator {

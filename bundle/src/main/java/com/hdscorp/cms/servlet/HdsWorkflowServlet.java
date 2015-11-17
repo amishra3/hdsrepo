@@ -24,10 +24,9 @@ import com.day.cq.workflow.WorkflowService;
 import com.day.cq.workflow.WorkflowSession;
 import com.day.cq.workflow.exec.WorkflowData;
 import com.day.cq.workflow.model.WorkflowModel;
-import com.panera.pb.cms.workflow.PaneraImageRenditions;
 
 /**
- * @author ksuren
+ * @author abhinav
  *         <p>
  *         Responsible for getting items list based on tag.
  *         </p>
@@ -62,12 +61,12 @@ public class HdsWorkflowServlet extends SlingAllMethodsServlet {
      * throws IOException.
      */
 
-    public static final String WORKFLOW_ID = "/etc/workflow/models/panerabread/panera-image-renditions/jcr:content/model";
+    public static final String WORKFLOW_ID = "/etc/workflow/models/hdscorp/hdscorp-image-renditions/jcr:content/model";
 
     public static final String PAYLOAD_PATH = "";
 
     private static final Logger log = LoggerFactory
-            .getLogger(PaneraImageRenditions.class);
+            .getLogger(HdsWorkflowServlet.class);
 
     @Reference
     private SlingRepository repository;

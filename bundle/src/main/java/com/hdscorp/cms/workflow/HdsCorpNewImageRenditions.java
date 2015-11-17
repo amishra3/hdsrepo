@@ -1,15 +1,11 @@
 package com.hdscorp.cms.workflow;
 
-import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +15,6 @@ import javax.jcr.Item;
 import javax.jcr.Node;
 import javax.jcr.Session;
 
-import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.felix.scr.annotations.Component;
@@ -61,7 +56,7 @@ import com.day.image.Layer;
  *             - exception in workflow lifecycle
  **/
 /**
- * @author ksuren
+ * @author abhinav
  * 
  */
 
@@ -452,14 +447,14 @@ public class HdsCorpNewImageRenditions extends AbstractAssetWorkflowProcess
 	 */
 	private String[] buildArguments(final MetaDataMap metaData) {
 		final String processArgs = (String) metaData.get(
-				PaneraImageRenditions.Arguments.PROCESS_ARGS.name(),
+				HdsCorpImageRenditions.Arguments.PROCESS_ARGS.name(),
 				String.class);
 		if (StringUtils.isNotBlank(processArgs)) {
 			return processArgs.split(ARGUMENT_SEPARATOR);
 		}
 
 		final String[] configs = (String[]) metaData.get(
-				PaneraImageRenditions.Arguments.CONFIGS.name(), String[].class);
+				HdsCorpImageRenditions.Arguments.CONFIGS.name(), String[].class);
 		if (configs != null) {
 			return configs;
 		}
