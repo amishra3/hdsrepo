@@ -211,9 +211,9 @@
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>com.hdscorp.hdscorp-project</Bundle-SymbolicName>
-
+						<Export-Package>com.hdscorp.cms.*;version=${project.version}</Export-Package>
 						<Sling-Model-Packages>
-							slingmodels
+							com.hdscorp.cms.slingmodels
 						</Sling-Model-Packages>
 
 					</instructions>
