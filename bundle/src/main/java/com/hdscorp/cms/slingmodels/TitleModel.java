@@ -30,10 +30,6 @@ public class TitleModel {
     private String title;
     
     public String getTitle() {
-    	System.out.println( "===================================================");
-    	System.out.println( "===================================================");
-    	System.out.println( "===================================================");
-    	System.out.println( "===================================================");
         return title;
     }
 }
