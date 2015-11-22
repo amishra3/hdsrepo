@@ -26,7 +26,7 @@ import com.hdscorp.cms.constants.GlobalConstants;
 /**
  * Singleton
  * {@link CacheInvalidator} class used to invalidate cache 
- * @author skattu
+ * @author abhinav
  *
  */
 public final class CacheInvalidator {

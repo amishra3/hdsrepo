@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 /**
  * {@link HttpUtil} is a Util class which will handle the Http GET and POST Requests using {@link HttpURLConnection}
  * 
- * @author skattu
+ * @author abhinav
  * 
  */
 public class HttpUtil {

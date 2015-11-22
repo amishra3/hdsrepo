@@ -22,7 +22,7 @@ import com.day.cq.replication.Replicator;
 /**
  * Singleton
  * {@link ReplicatorProvider} Getting Replicator Service to activate/deactivate content paths 
- * @author skattu
+ * @author abhinav
  *
  */
 public class ReplicatorProvider {

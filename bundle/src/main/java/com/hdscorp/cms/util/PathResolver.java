@@ -27,7 +27,7 @@ import com.hdscorp.cms.constants.GlobalConstants;
 import com.hdscorp.cms.util.PageUtils;
 /**
  * {@link PathResolver} class used to resolve urls
- * @author skattu
+ * @author abhinav
  *
  */
 public final class PathResolver {

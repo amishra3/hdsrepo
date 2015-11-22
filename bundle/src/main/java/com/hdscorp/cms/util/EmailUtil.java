@@ -45,7 +45,7 @@ import com.hdscorp.cms.util.JcrUtilService;
 
 /**
  * {@link EmailUtil} Responsible to handle Sending Emails
- * @author skattu
+ * @author abhinav
  *
  */
 public final class EmailUtil {

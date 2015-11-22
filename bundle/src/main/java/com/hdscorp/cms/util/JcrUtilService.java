@@ -41,7 +41,7 @@ import com.day.cq.replication.Replicator;
         @Property(name = Constants.SERVICE_RANKING,intValue=100) })
 @Service(JcrUtilService.class)
 /**
- * @author skattu
+ * @author abhinav
  * @description This JcrUtilServicen class acts as OSGI Service which gives JCR resourceResolver and Session Objects
  * 			     to access and manipulate the content in the repository 
  */

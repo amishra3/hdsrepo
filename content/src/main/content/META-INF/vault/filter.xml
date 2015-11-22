@@ -3,7 +3,7 @@
     <filter root="/apps/hdscorp"/>
 
     <filter root="/apps/sling/servlet/errorhandler"/>
-
+	<filter root="/apps/foundation"/>
 
     <filter root="/etc/clientlibs/hdscorp"/>
 

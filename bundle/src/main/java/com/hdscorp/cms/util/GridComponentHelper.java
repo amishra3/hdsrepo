@@ -19,7 +19,7 @@ import com.hdscorp.cms.constants.GlobalConstants;
 import com.hdscorp.cms.dao.JCRDataAccessor;
 /**
  * {@link GridComponentHelper} class for Grid Component Update Funcationalty Utility
- * @author skattu
+ * @author abhinav
  *
  */
 public final class GridComponentHelper {

@@ -149,24 +149,7 @@ public class HdsCorpImageRenditions extends AbstractAssetWorkflowProcess
 					} // end if
 
 				}
-
-				else {
-					
-					if (payloadPath
-							.startsWith((String) HdsCorpGlobalConfiguration
-									.getPropertyValue(HdsCorpGlobalConfiguration.ARTICLE_DETAILS_IMAGES_DAM_PATH))
-							&& "articledetail".equals(originalSizes[0].toString())) {
-
-						long articlewidth = Long.parseLong(originalSizes[1].toString());
-						float factor  = (float) width / articlewidth;
-						long articleHeight = (long) (length/ factor);
-						rendition = articlewidth + ":" + articleHeight;
-						rendtionList.add(rendition);
-						renditionNames.put("cq5dam.web."+articlewidth+"."+articleHeight, originalSizes[0].toString());
-
-					} // end if
-				} // end if
-
+	
 			}
 			String[] rends = new String[rendtionList.size()];
 			rends = (String[]) rendtionList.toArray(rends);

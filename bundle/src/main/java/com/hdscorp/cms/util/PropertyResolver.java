@@ -37,7 +37,7 @@ import com.hdscorp.cms.constants.GlobalConstants;
 import com.hdscorp.cms.util.PathResolver;
 /**
  * {@link PropertyResolver} class used to resolve the JCR Properties
- * @author skattu
+ * @author abhinav
  *
  */
 public final class PropertyResolver {
