@@ -4,7 +4,7 @@
 
     <filter root="/apps/sling/servlet/errorhandler"/>
 	<filter root="/apps/foundation"/>
-
+	<filter root="/apps/hdscorp/install"/>
     <filter root="/etc/clientlibs/hdscorp"/>
 
 
