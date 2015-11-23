@@ -16,7 +16,7 @@
 <%@ page import="org.apache.sling.api.resource.ResourceResolver,
                     com.hdscorp.cms.slingmodels.TitleModel"%>
 
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/foundation/global.jsp"%>
 
 
 <sling:adaptTo adaptable="${resource}" adaptTo="com.hdscorp.cms.slingmodels.TitleModel" var="myModel" /> 

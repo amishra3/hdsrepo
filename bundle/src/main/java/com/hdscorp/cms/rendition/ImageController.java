@@ -25,7 +25,7 @@ public class ImageController {
 	public static final String TABLET_RENDITION = ".retina";
 	public static final String MOBILE_LANDSCAPE = "landscape";
 	public static final String MOBILE_PORTRAIT = "portrait";
-	public static final String LAZY_IMAGE_SRC = "/etc/designs/panerabread/clientLibs/css/images/blank-placard-placeholder.gif";
+	public static final String LAZY_IMAGE_SRC = "/etc/designs/hdscorp/clientLibs/css/images/blank-placard-placeholder.gif";
 
 	private static final Logger LOG = LoggerFactory.getLogger(ImageController.class);
 

@@ -1,15 +1,3 @@
-/*
-\ * ReplicatorProvider.java
- * 
- * Created on 02/06/2013 *
- * Copyright 2013, PANERA;  All Rights Reserved. *
- * This software is the confidential and proprietary information of
- * PANERA, ("Confidential Information"). You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into
- * with PANERA.
- * 
- */
 package com.hdscorp.cms.util;
 
 import org.apache.commons.lang.StringUtils;

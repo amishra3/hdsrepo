@@ -32,7 +32,7 @@ import com.hdscorp.cms.util.JcrUtilService;
 import com.hdscorp.cms.util.PathResolver;
 import com.hdscorp.cms.util.ReplicatorProvider;
 
-@Component(immediate = true, label = "HDS Corp Replication EventHandler Listener", description = "Panera Replication EventHandler Listener", metatype = true, policy =ConfigurationPolicy.REQUIRE)
+@Component(immediate = true, label = "HDS Corp Replication EventHandler Listener", description = "HDS Corp Replication EventHandler Listener", metatype = true, policy =ConfigurationPolicy.REQUIRE)
 @Service
 @Properties({
 		@Property(name = Constants.SERVICE_DESCRIPTION, value = "HDS Corp Replication EventHandler Listener"),
@@ -60,11 +60,11 @@ public class ReplicationEventHandlerListener implements EventHandler {
 						
 						// Custom Location information 
 						if(pagePath.contains(GlobalConstants.CUSTOM_LOCATIONS_PATH)){
-							CacheInvalidator.invalidateCache(GlobalConstants.LOCATION_SERVLET_PATH, false);
+							CacheInvalidator.invalidateCache("/location", false);
 						}
-						if (pagePath.startsWith("/content/panerabread/en_us/structureddata/recipes/")) {
+						if (pagePath.startsWith("/content/hdscorp/en_us/structureddata/recipes/")) {
 							resourceResolver = JcrUtilService.getResourceResolver();
-							String RECIPE_ROOT_PATH = "/content/panerabread/en_us/recipes/";
+							String RECIPE_ROOT_PATH = "/content/hdscorp/en_us/recipes/";
 							Resource resource = resourceResolver.getResource(pagePath);
 							if(null!=resource){
 								Page page = resource.adaptTo(Page.class);
@@ -77,9 +77,9 @@ public class ReplicationEventHandlerListener implements EventHandler {
 								// Invalidate Cache for Recipe Landing Pages
 								invalidateLandingPages(GlobalConstants.RECIPES);
 							}
-						}else if(pagePath.contains("/content/panerabread/en_us/structureddata/articles/")) {
+						}else if(pagePath.contains("/content/hdscorp/en_us/structureddata/articles/")) {
 							resourceResolver = JcrUtilService.getResourceResolver();
-							final String ARTICLE_ROOT_PATH = "/content/panerabread/en_us/articles/";
+							final String ARTICLE_ROOT_PATH = "/content/hdscorp/en_us/articles/";
 							final Resource resource = resourceResolver.getResource(pagePath);
 							if(null!=resource){
 								final Page page = resource.adaptTo(Page.class);
@@ -95,7 +95,7 @@ public class ReplicationEventHandlerListener implements EventHandler {
 						}
 						
 						if (StringUtils.isNotEmpty(pagePath)) {
-							if(pagePath.startsWith("/etc/segmentation/panerabread/")){
+							if(pagePath.startsWith("/etc/segmentation/hdscorp/")){
 								CacheInvalidator.invalidateCache("/etc/segmentation.segment.js", false);
 							}
 							final String shortUrl = PathResolver.getShortURLPath(pagePath);
@@ -112,9 +112,9 @@ public class ReplicationEventHandlerListener implements EventHandler {
 						
 
 					}else if(replicationAction.getType() == ReplicationActionType.DEACTIVATE){
-						if(pagePath.contains("/content/panerabread/en_us/structureddata/recipes/")) {
+						if(pagePath.contains("/content/hdscorp/en_us/structureddata/recipes/")) {
 							resourceResolver = JcrUtilService.getResourceResolver();
-							String RECIPE_ROOT_PATH = "/content/panerabread/en_us/recipes/";
+							String RECIPE_ROOT_PATH = "/content/hdscorp/en_us/recipes/";
 							final Resource resource = resourceResolver.getResource(pagePath);
 							if(null!=resource){
 								final Page page = resource.adaptTo(Page.class);
@@ -125,9 +125,9 @@ public class ReplicationEventHandlerListener implements EventHandler {
 								// Invalidate Cache for Recipe Landing Pages
 								invalidateLandingPages(GlobalConstants.RECIPES);
 							}
-						}else if(pagePath.contains("/content/panerabread/en_us/structureddata/articles/")){
+						}else if(pagePath.contains("/content/hdscorp/en_us/structureddata/articles/")){
 							resourceResolver = JcrUtilService.getResourceResolver();
-							final String ARTICLE_ROOT_PATH = "/content/panerabread/en_us/articles/";
+							final String ARTICLE_ROOT_PATH = "/content/hdscorp/en_us/articles/";
 							final Resource resource = resourceResolver.getResource(pagePath);
 							if(null!=resource){
 								final Page page = resource.adaptTo(Page.class);

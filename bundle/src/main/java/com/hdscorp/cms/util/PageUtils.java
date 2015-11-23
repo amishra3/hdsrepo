@@ -581,7 +581,7 @@ public final class PageUtils {
                         "nt:unstructured", "nt:unstructured", session, false);
                 if (node != null) {
                     node.setProperty("sling:resourceType",
-                            "panerabread/components/content/" + nodeName);
+                            "hdscorp/components/content/" + nodeName);
 
                 }
                 session.save();

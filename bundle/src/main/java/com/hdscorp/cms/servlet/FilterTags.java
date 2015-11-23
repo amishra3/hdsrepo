@@ -82,7 +82,7 @@ public class FilterTags extends SlingAllMethodsServlet {
 			ResourceResolver resourceResolver = JcrUtilService
 					.getResourceResolver();
 			Resource pageResource = resourceResolver
-					.getResource("/content/panerabread/en_us/lookups/filtertags/jcr:content/overlay");
+					.getResource("/content/hdscorp/en_us/lookups/filtertags/jcr:content/overlay");
 			TagManager tagManager=resourceResolver.adaptTo(TagManager.class);
 			Node pageNode = pageResource.adaptTo(Node.class);
 

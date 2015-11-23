@@ -1,15 +1,3 @@
-/*
- * JcrUtilService.java
- * 
- * Created on 08/05/2013 *
- * Copyright 2013, PANERA;  All Rights Reserved. *
- * This software is the confidential and proprietary information of
- * PANERA, ("Confidential Information"). You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into
- * with PANERA.
- * 
- */
 package com.hdscorp.cms.util;
 
 import javax.jcr.RepositoryException;
@@ -37,7 +25,7 @@ import com.day.cq.replication.Replicator;
 @Component(immediate = true, label = "JCR Util Service", description = "JCR Util Service", metatype = true)
 @Properties({
         @Property(name = Constants.SERVICE_DESCRIPTION, value = "JCR Util Service"),
-        @Property(name = Constants.SERVICE_VENDOR, value = "Panera Bread"),
+        @Property(name = Constants.SERVICE_VENDOR, value = "HDS Corp"),
         @Property(name = Constants.SERVICE_RANKING,intValue=100) })
 @Service(JcrUtilService.class)
 /**

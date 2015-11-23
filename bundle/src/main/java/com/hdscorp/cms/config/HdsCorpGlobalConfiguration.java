@@ -71,14 +71,13 @@ public class HdsCorpGlobalConfiguration {
 		LOG.info("HDS Corp Global Configuration : configuration updated");
 		try {
 			properties = context.getProperties();
-			// Invalidate Cache for Delivery Zone Information (MSA Codes)
 			if (CacheInvalidator.invalidateCache(
-					GlobalConstants.DELIVERY_ZONE_INFO_SERVLET, false)) {
+					"/Path to content which utiilizes this config", false)) {
 				LOG.info("Cache Invalidated successfully for page ::"
-						+ GlobalConstants.DELIVERY_ZONE_INFO_SERVLET);
+						+ "/Path to content which utiilizes this config");
 			} else {
 				LOG.info("Error while invalidating Cache for requested URL ::"
-						+ GlobalConstants.DELIVERY_ZONE_INFO_SERVLET);
+						+ "/Path to content which utiilizes this config");
 			}
 		} catch (Exception e) {
 			LOG.error("Error while Updating configuration properties...");
