@@ -4,13 +4,6 @@ public final class GlobalConstants {
 
 	public static final String APPLICATION_CONTENT_PATH = "/content/hdscorp/";
 	public static final String APPLICATION_DESIGN_ROOT_PATH = "/etc/designs/hdscorp/";
-	public static final String RECIPE_ROOT_PATH = "/content/hdscorp/<locale>/recipes/";
-	public static final String RECIPE_TEMPLATE_PATH = "/apps/hdscorp/templates/recipedetails";
-	public static final String ARTICLE_TEMPLATE_PATH = "/apps/hdscorp/templates/articledetails";
-	public static final String RECIPE_RESOURCE_TYPE_PATH = "hdscorp/components/page/recipedetails";
-	public static final String ARTICLE_RESOURCE_TYPE_PATH = "hdscorp/components/page/articledetails";
-	public static final String COMPANY = "company";
-	public static final String COMPANY_TEMPLATE_PATH = "/apps/hdscorp/templates/twocolumnpage";
 	public static final String PATH_SEPERATOR = "/";
 	public static final String EMPTY_STRING = "";
 	public static final String HTML_EXTENSION = ".html";
