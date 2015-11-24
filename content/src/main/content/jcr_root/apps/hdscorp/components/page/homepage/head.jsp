@@ -39,11 +39,11 @@
 <%@ page import="com.day.cq.commons.Doctype,org.apache.commons.lang3.StringEscapeUtils" %>
 <%
     String xs = Doctype.isXHTML(request) ? "/" : "";
-	//String favIcon = currentDesign.getPath() + "/clientLibs/images/icons/favicon.ico";
-    //if(resourceResolver.getResource(favIcon) == null){
-      //  favIcon = null;
-    //}
-    String favIcon = null ;
+/* 	String favIcon = currentDesign.getPath() + "/clientLibs/images/icons/favicon.ico";
+    if(resourceResolver.getResource(favIcon) == null){
+        favIcon = null;
+    } */
+    String favIcon = null;
 %>
 <head>
       <meta charset="utf-8"/>
@@ -52,13 +52,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
 
       <meta http-equiv="content-type" content="text/html; charset=UTF-8"<%=xs%>>
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta name="keywords" content="<%= StringEscapeUtils.escapeHtml4(WCMUtils.getKeywords(currentPage, false)) %>"<%=xs%>>
       <meta name="title" content="<%= StringEscapeUtils.escapeHtml4(properties.get("jcr:title", "")) %>"<%=xs%>>
       <meta name="description" content="<%= StringEscapeUtils.escapeHtml4(properties.get("jcr:description", "")) %>"<%=xs%>>
-	  <meta name="google" value="notranslate" />
-	<meta name="referrer" content="origin">
-	
+      <meta name="google" value="notranslate" />
+      <meta name="google-site-verification" content="mM9pVgBKsM4kSsQHUyFDI8LXCk_Le7_FZJRx5iqd-qk" />
+      <meta name="referrer" content="origin">
+
 	  <cq:include script="headlibs.jsp"/>
 	  <cq:include script="headeranalytics.jsp"/>
       <cq:include script="/libs/wcm/core/components/init/init.jsp"/>

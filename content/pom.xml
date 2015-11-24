@@ -84,7 +84,6 @@
                 <excludes>
                     <exclude>**/.vlt</exclude>
                     <exclude>**/.vltignore</exclude>
-                    <exclude>/apps/hdscorp/install</exclude>
                 </excludes>
             </resource>
         </resources>

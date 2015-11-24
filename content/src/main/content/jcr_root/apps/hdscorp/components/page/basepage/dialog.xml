@@ -31,9 +31,9 @@
                     jcr:primaryType="cq:Widget"
                     path="/libs/foundation/components/page/tab_livecopy.infinity.json"
                     xtype="cqinclude"/>
-                <panerabread
+                <hdscorp
                     jcr:primaryType="cq:Widget"
-                    path="/apps/panerabread/components/page/basepage/panerabread.infinity.json"
+                    path="/apps/hdscorp/components/page/basepage/hdscorp.infinity.json"
                     xtype="cqinclude"/>
             </items>
         </tabs>

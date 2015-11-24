@@ -78,5 +78,4 @@
 
 <cq:include script="head.jsp"/>
 <cq:include script="body.jsp"/>
-<span class="hide" aria-hidden="true" id="site-config" data-generic-service-error="<%=configProperties.get("serviceerrormsg",null)%>"</span>
 </html>
