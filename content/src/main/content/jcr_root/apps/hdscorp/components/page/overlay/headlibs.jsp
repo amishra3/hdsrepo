@@ -14,10 +14,10 @@
             requestScope['com.day.cq.wcm.api.WCMMode']=='DESIGN'}">
               <cq:includeClientLib categories ="hdscorp.widgets"/>
  </c:if>
-<cq:includeClientLib css="hdscorp.custom.clientlibs"/>
-<cq:includeClientLib js="hdscorp.custom.clientheadlibs"/>
-<cq:includeClientLib js="hdscorp.home.clientlibs"/>
 
-
-
+<c:if test="${wcmMode eq editMode or wcmMode eq designMode}">
+    <cq:includeClientLib css="hdscorp.custom.clientlibs"/>
+	<cq:includeClientLib js="hdscorp.custom.clientheadlibs"/>	
+	<cq:includeClientLib js="hdscorp.home.clientlibs"/>
+</c:if>
 
