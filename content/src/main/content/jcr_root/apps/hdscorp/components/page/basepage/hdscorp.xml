@@ -13,55 +13,5 @@
             fieldLabel="Enter page Subtext"
             name="./subtext"
             xtype="textfield"/>
-        <sitemap
-            jcr:primaryType="cq:Widget"
-            collapsed="{Boolean}true"
-            collapsible="{Boolean}true"
-            title="Sitemap Settings"
-            xtype="dialogfieldset">
-            <items jcr:primaryType="cq:WidgetCollection">
-                <changefreq
-                    jcr:primaryType="cq:Widget"
-                    fieldLabel="Change Frequency"
-                    name="./pagechangefreq"
-                    xtype="textfield"/>
-                <priority
-                    jcr:primaryType="cq:Widget"
-                    fieldDescription="A decimal fraction between 0 and 1, both inclusive"
-                    fieldLabel="Sitemap Priority"
-                    name="./pagepriority"
-                    xtype="textfield"/>
-                <displaydescendants
-                    jcr:primaryType="cq:Widget"
-                    defaultValue="yes"
-                    fieldLabel="Display Descendants"
-                    name="./displaydescendants"
-                    type="radio"
-                    xtype="selection">
-                    <options jcr:primaryType="cq:WidgetCollection">
-                        <no
-                            jcr:primaryType="nt:unstructured"
-                            text="No"
-                            value="no"/>
-                        <yes
-                            jcr:primaryType="nt:unstructured"
-                            text="Yes"
-                            value="yes"/>
-                    </options>
-                </displaydescendants>
-            </items>
-        </sitemap>
-        <hideinsearch
-            jcr:primaryType="cq:Widget"
-            fieldLabel="Hide Page In Search Results"
-            name="./hideinsearch"
-            type="checkbox"
-            xtype="selection"/>
-        <includetwitter
-            jcr:primaryType="cq:Widget"
-            fieldLabel="Include Twitter Config??"
-            name="./includeTwitter"
-            type="checkbox"
-            xtype="selection"/>
     </items>
 </jcr:root>
