@@ -10,9 +10,9 @@
 --%><%@ page session="false" %><%
 %><%@include file="/apps/foundation/global.jsp"%>
 
-<c:if test="${isEditMode}">
+<wcmmode:edit>
 	<cq:includeClientLib categories ="cq.widgets"/>
-</c:if>
+</wcmmode:edit>
 
 
 <cq:includeClientLib css="hdscorp.main"/>
