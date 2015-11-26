@@ -1,4 +1,4 @@
-<%@include file="/apps/responsive/business/global-business.jsp"%>
+<%@include file="/apps/foundation/global.jsp"%>
 
 <c:set var="id" value="${properties.id}"/>
 <c:choose>
@@ -9,6 +9,6 @@
         <cq:include path="wrapper-parsys" resourceType="foundation/components/parsys"/>
     </c:otherwise>
 </c:choose>
-<c:if test="${wcmMode == 'EDIT' || wcmMode == 'DESIGN'}">
+<wcmmode:edit>
     <cq:include path="end" resourceType="responsive/business/components/content/manual-id-wrapper/end" />
-</c:if>
+</wcmmode:edit>

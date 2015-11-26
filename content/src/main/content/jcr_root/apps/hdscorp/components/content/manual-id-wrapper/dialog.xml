@@ -8,7 +8,7 @@
         <items jcr:primaryType="cq:WidgetCollection">
             <id
                     jcr:primaryType="cq:Widget"
-                    path="/apps/responsive/business/components/content/manual-id-wrapper/manual_id.infinity.json"
+                    path="/apps/hdscorp/components/content/manual-id-wrapper/manual_id.infinity.json"
                     xtype="cqinclude"/>
         </items>
     </items>
