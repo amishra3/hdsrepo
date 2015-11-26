@@ -13,8 +13,7 @@
 
 
 --%>
-<%@ page import="org.apache.sling.api.resource.ResourceResolver,
-                    com.hdscorp.cms.slingmodels.TitleModel"%>
+<%@ page import="com.hdscorp.cms.slingmodels.TitleModel"%>
 
 <%@include file="/apps/foundation/global.jsp"%>
 
