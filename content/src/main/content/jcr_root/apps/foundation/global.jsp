@@ -53,7 +53,8 @@
         com.day.cq.wcm.api.designer.Design,
         com.day.cq.wcm.api.designer.Style,
         com.day.cq.wcm.api.components.ComponentContext,
-        com.day.cq.wcm.api.components.EditContext"
+        com.day.cq.wcm.api.components.EditContext,
+        com.day.cq.wcm.api.WCMMode"
 %><%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling" %><%
 %><%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %><%
 %><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%
@@ -62,6 +63,11 @@
 %><%@ taglib prefix="wcmmode" uri="http://www.adobe.com/consulting/acs-aem-commons/wcmmode" %><%
 %><cq:defineObjects /><%
 
-    // add more initialization code here
+	    // add more initialization code here
 
+        boolean isEdit = WCMMode.fromRequest(request) == WCMMode.EDIT;
+        boolean isDesign = WCMMode.fromRequest(request) == WCMMode.DESIGN;
 %>
+
+<c:set var="isEdit" value="<%= isEdit %>" />
+<c:set var="isDesign" value="<%= isDesign %>" />

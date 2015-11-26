@@ -10,12 +10,11 @@
 --%><%@ page session="false" %><%
 %><%@include file="/apps/foundation/global.jsp"%>
 
-<c:if test="${ requestScope['com.day.cq.wcm.api.WCMMode']=='EDIT' ||  requestScope['com.day.cq.wcm.api.WCMMode']=='DESIGN'}">
+<c:if test="${isEditMode}">
 	<cq:includeClientLib categories ="cq.widgets"/>
 </c:if>
 
 
-<!--
+
 <cq:includeClientLib css="hdscorp.main"/>
 <cq:includeClientLib categories="hdscorp.dependencies"/>
--->
