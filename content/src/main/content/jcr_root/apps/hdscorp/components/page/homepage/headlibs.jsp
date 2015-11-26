@@ -14,8 +14,3 @@
 	<cq:includeClientLib categories ="cq.widgets"/>
 </c:if>
 
-
-<!--
-<cq:includeClientLib css="hdscorp.main"/>
-<cq:includeClientLib categories="hdscorp.dependencies"/>
--->

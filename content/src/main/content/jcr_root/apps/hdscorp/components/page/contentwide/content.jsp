@@ -10,7 +10,7 @@
 
 	<div id="skrollr-body">
 
-        <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext" />
+        <!-- <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext" /> -->
 
 
         <cq:include path="par" resourceType="foundation/components/parsys" />
