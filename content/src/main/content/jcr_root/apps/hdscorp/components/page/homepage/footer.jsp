@@ -10,4 +10,6 @@
     
 </footer>
 
-<cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/> 
+<cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
+
+<cq:includeClientLib js="hdscorp.main"/> 

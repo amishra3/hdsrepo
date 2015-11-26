@@ -1,6 +1,9 @@
 <%@include file="/apps/foundation/global.jsp"%>
 <%@page import="com.hdscorp.cms.config.HdsCorpGlobalConfiguration"%>
 
+
+<%/* Add a Property to the template, to drive the inclusion of GA script%>
+
 <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push([ '_setAccount', 'google-account-here' ]);
@@ -20,5 +23,8 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+
+<%*/%>
 
 

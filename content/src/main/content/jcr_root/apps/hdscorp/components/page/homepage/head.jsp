@@ -57,7 +57,7 @@
       <meta name="title" content="<%= StringEscapeUtils.escapeHtml4(properties.get("jcr:title", "")) %>"<%=xs%>>
       <meta name="description" content="<%= StringEscapeUtils.escapeHtml4(properties.get("jcr:description", "")) %>"<%=xs%>>
       <meta name="google" value="notranslate" />
-      <meta name="google-site-verification" content="mM9pVgBKsM4kSsQHUyFDI8LXCk_Le7_FZJRx5iqd-qk" />
+      <meta name="google-site-verification" content="" />
       <meta name="referrer" content="origin">
 
 	  <cq:include script="headlibs.jsp"/>
