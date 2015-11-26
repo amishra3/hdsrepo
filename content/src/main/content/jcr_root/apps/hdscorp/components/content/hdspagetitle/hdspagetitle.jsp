@@ -21,8 +21,4 @@
 
 <sling:adaptTo adaptable="${resource}" adaptTo="com.hdscorp.cms.slingmodels.TitleModel" var="myModel" /> 
 												
-<h3>${myModel.title}</h3>
-
-<wcmmode:edit>
-This is page title component.
-</wcmmode:edit>
+<cq:text property="jcr:title" value="${myModel.title}" tagName="${myModel.type}" tagClass="${myModel.underLineClass}"/>
