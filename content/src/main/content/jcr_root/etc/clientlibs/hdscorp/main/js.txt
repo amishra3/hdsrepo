@@ -1,1 +1,4 @@
 #base=js
+vendor.js
+plugins.js
+main.js
