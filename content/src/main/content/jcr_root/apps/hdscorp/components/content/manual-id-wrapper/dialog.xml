@@ -7,9 +7,9 @@
         xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <id
-                    jcr:primaryType="cq:Widget"
-                    path="/apps/hdscorp/components/content/manual-id-wrapper/manual_id.infinity.json"
-                    xtype="cqinclude"/>
+                jcr:primaryType="cq:Widget"
+                path="/apps/hdscorp/components/content/manual-id-wrapper/manual_id.infinity.json"
+                xtype="cqinclude"/>
         </items>
     </items>
 </jcr:root>

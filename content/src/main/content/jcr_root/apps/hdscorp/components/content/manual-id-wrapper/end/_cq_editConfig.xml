@@ -3,5 +3,4 @@
     cq:actions="[text:Manual ID Wrapper End]"
     cq:dialogMode="floating"
     cq:layout="editbar"
-    jcr:primaryType="cq:EditConfig">
-</jcr:root>
+    jcr:primaryType="cq:EditConfig"/>
