@@ -41,7 +41,8 @@
 
   ==============================================================================
 
---%><%@page session="false" import="javax.jcr.*,
+--%><%@page import="com.day.cq.commons.inherit.HierarchyNodeInheritanceValueMap"%>
+<%@page session="false" import="javax.jcr.*,
         org.apache.sling.api.resource.Resource,
         org.apache.sling.api.resource.ValueMap,
         com.day.cq.commons.inherit.InheritanceValueMap,
@@ -63,11 +64,5 @@
 %><%@ taglib prefix="wcmmode" uri="http://www.adobe.com/consulting/acs-aem-commons/wcmmode" %><%
 %><cq:defineObjects /><%
 
-	    // add more initialization code here
-
-        boolean isEdit = WCMMode.fromRequest(request) == WCMMode.EDIT;
-        boolean isDesign = WCMMode.fromRequest(request) == WCMMode.DESIGN;
+//add more initialization code here
 %>
-
-<c:set var="isEdit" value="<%= isEdit %>" />
-<c:set var="isDesign" value="<%= isDesign %>" />

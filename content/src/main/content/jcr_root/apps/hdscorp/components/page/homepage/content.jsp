@@ -1,50 +1,13 @@
 <%@include file="/apps/foundation/global.jsp"%>
 
-    <script src="https://use.typekit.net/pmh2hld.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script src="https://use.typekit.net/pmh2hld.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<cq:include path="${currentDesign.path}/jcr:content/globalheader" resourceType="hdscorp/components/content/globalheader"/>
 
 <div class="one-column">
 	<!-- Header Starts Heere -->
-	<div class="header">
-		<div
-			class="header-container content-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<span class="hitachi-logo hidden-xs hidden-sm"></span> <span
-				class="hitachi-logo-mobile hidden-md hidden-lg"></span>
-			<div class="navigation hidden-xs hidden-sm">
-				<ul>
-					<li><a href="#"><span class="icon nav-globe"></span>
-							Global</a></li>
-					<li><a href="#"><span class="icon nav-community"></span>
-							Community</a></li>
-					<li class="search"><input type="text"
-						placeholder="Search HDS.com"><span class="icon nav-search"></span>
-					</li>
-				</ul>
-			</div>
-			<div class="navigation-mobile hidden-md hidden-lg">
-				<div class="search-mobile">
-					<span class="sprite icon-search-mobile"></span>
-				</div>
-				<select>
-					<option>USA</option>
-				</select>
-			</div>
-		</div>
-		<div class="sub-navigation-container">
-			<div class="sub-navigation">
-				<h5 class="col-md-3">Hitachi Data Systems</h5>
-				<ul class="col-xs-12 col-sm-12">
-					<li class="col-xs-4 col-sm-4 active"><a href="#">Products
-							&amp; Solutions</a></li>
-					<li class="col-xs-4 col-sm-4"><a href="#">Support</a></li>
-					<li class="col-xs-4 col-sm-4"><a href="#">Insights</a></li>
-					<li class="col-xs-4 col-sm-4"><a href="#">Partners</a></li>
-					<li class="col-xs-4 col-sm-4"><a href="#">About Us</a></li>
-					<li class="col-xs-4 col-sm-4"><a href="#">Contact Us</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+
 
 	<!-- Header Ends Heere -->
 	
