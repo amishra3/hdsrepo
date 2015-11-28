@@ -3,11 +3,12 @@
 <script src="https://use.typekit.net/pmh2hld.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-<cq:include path="${currentDesign.path}/jcr:content/globalheader" resourceType="hdscorp/components/content/globalheader"/>
+
 
 <div class="one-column">
 	<!-- Header Starts Heere -->
 
+	<cq:include path="${currentDesign.path}/jcr:content/globalheader" resourceType="hdscorp/components/content/globalheader"/>
 
 	<!-- Header Ends Heere -->
 	

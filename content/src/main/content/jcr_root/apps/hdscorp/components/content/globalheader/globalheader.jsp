@@ -15,10 +15,8 @@
 
 <%@include file="/apps/foundation/global.jsp"%>
 
-<c:set var="childPages"
-	value="<%=PageUtils.getChildPages(properties.get("rootPath", ""),resourceResolver)%>" />
-<c:set var="childs"
-	value="<%=PageUtils.getChildPages(properties.get("rootPath", ""),resourceResolver)%>" />
+<c:set var="childPages" value="<%=PageUtils.getChildPages(properties.get("rootPath", ""),resourceResolver)%>" />
+<c:set var="childs" value="<%=PageUtils.getChildPages(properties.get("rootPath", ""),resourceResolver)%>" />
 <%
 JCRDataAccessor dataAccessor = new JCRDataAccessor(pageContext);
 String seacrhpageUrl=properties.get("searchpathurl",String.class);
@@ -26,7 +24,6 @@ if(seacrhpageUrl!=null){
    String shortseacrhUrl=PathResolver.getShortURLPath(seacrhpageUrl);
    pageContext.setAttribute("shortseacrhUrl", shortseacrhUrl);
 }
-
 
 %>
 
