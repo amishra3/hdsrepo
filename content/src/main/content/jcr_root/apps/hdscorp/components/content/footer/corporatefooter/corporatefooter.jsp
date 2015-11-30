@@ -34,7 +34,7 @@
                                <c:set var="linkUrl" value="${linkUrl}"/>
    						</c:otherwise>
 					</c:choose>
-               		<a href="${linkUrl}">${link.urlLabel}</a> |
+               		<a href="${linkUrl}">${link.urlLabel}</a> <c:if test="${!loop.last}">|</c:if>
 				</c:forEach>
 			</p>					
 	</c:when>
