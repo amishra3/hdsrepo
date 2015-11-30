@@ -49,22 +49,22 @@
                         id="twitterpath"
                         name="./twitterpath"
                         xtype="textfield"/>
-                    <Instagram
+                    <Googleplus
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Instagram Path"
-                        name="./instagram"
+                        fieldLabel="Google Plus Path"
+                        name="./googleplus"
                         type="checkbox"
                         xtype="selection">
                         <listeners
                             jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;instagrampath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;instagrampath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Instagram>
-                    <InstagramPath
+                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;googlepluspath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
+                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;googlepluspath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
+                    </Googleplus>
+                    <GoogleplusPath
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Instagram  Path"
-                        id="instagrampath"
-                        name="./instagrampath"
+                        fieldLabel="Google Plus Path"
+                        id="googlepluspath"
+                        name="./googlepluspath"
                         xtype="textfield"/>
                     <Pinterest
                         jcr:primaryType="cq:Widget"
