@@ -4,16 +4,6 @@
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 
-
-<div class="one-column">
-	<!-- Header Starts Heere -->
-
-	<cq:include path="${currentDesign.path}/jcr:content/globalheader" resourceType="hdscorp/components/content/globalheader"/>
-
-	<!-- Header Ends Heere -->
-	
-	<div style="clear: both;"></div>
-	
 	
 	<!-- Hero Area Starts Here -->
 	
@@ -215,137 +205,16 @@
 		
 		<!-- FOOTER STARTS Here-->
 			
-    	<div class="footer">	
-    		<div class="footer-gray col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    			<div class="footer-container content-container col-md-12">
-    				<div class="nav-list-container">
-    					<ul class="nav-list col-sm-6 col-md-3">
-    						<li>
-    							<a href="#">Quick Links</a>
-    						</li>
-    						<li>
-    							<a href="#">HDS Community</a>
-    						</li>
-    						<li>
-    							<a href="#">Partner Login</a>
-    						</li>
-    						<li>
-    							<a href="#">Find A Partner</a>
-    						</li>
-    						<li>
-    							<a href="#">Hitachi, Ltd.</a>
-    						</li>
-    						<li>
-    							<a href="#">Legal</a>
-    						</li>
-    						<li>
-    							<a href="#">Site Map</a>
-    						</li>
-    					</ul>
-    					<ul class="nav-list col-sm-6 col-md-3">
-    						<li>
-    							<a href="#">Products &amp; Solutions</a>
-    						</li>
-    						<li>
-    							<a href="#">Cloud</a>
-    						</li>
-    						<li>
-    							<a href="#">Content Management</a>
-    						</li>
-    						<li>
-    							<a href="#">Converged Infrastructure</a>
-    						</li>
-    						<li>
-    							<a href="#">Data Analytics</a>
-    						</li>
-    						<li>
-    							<a href="#">Storage</a>
-    						</li>
-    						<li>
-    							<a href="#">See All</a>
-    						</li>
-    					</ul>
-    					<ul class="nav-list col-sm-6 col-md-3">
-    						<li>
-    							<a href="#">Company</a>
-    						</li>
-    						<li>
-    							<a href="#">About Us</a>
-    						</li>
-    						<li>
-    							<a href="#">Careers</a>
-    						</li>
-    						<li>
-    							<a href="#">Executive Team</a>
-    						</li>
-    						<li>
-    							<a href="#">Social Innovation</a>
-    						</li>
-    					</ul>
-    					<ul class="nav-list col-sm-6 col-md-3">
-    						<li>
-    							<a href="#">Contact HDS</a>
-    						</li>
-    						<li>
-    							<a href="#">Sales</a>
-    						</li>
-    						<li>
-    							<a href="#">Support Center</a>
-    						</li>
-    						<li>
-    							<a href="#">Media Relations</a>
-    						</li>
-    						<li>
-    							<a href="#">Worldwide Offices</a>
-    						</li>
-    					</ul>
-    				</div>
-    	
-    				<div class="social">
-    					<a href="#"><span class="sprite icon-facebook-white"></span></a>
-    					<a href="#"><span class="sprite icon-twitter-white"></span></a>
-    					<a href="#"><span class="sprite icon-gplus-white"></span></a>
-    					<a href="#"><span class="sprite icon-youtube-white"></span></a>
-    					<a href="#"><span class="sprite icon-two-white"></span></a>
-    					<a href="#"><span class="sprite icon-group-white"></span></a>
-    				</div>
-    				<a href="#" class="footer-logo"><span class="sprite hitachi-footer-logo"></span></a>
-    			</div>
-    		</div>
-    		<div class="footer-white col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    			<div class="footer-container content-container col-md-12">
-    				<p class="links">
-    					<a href="#">Terms of Use</a> | <a href="#">Legal</a> | <a href="#">Sitemap</a>
-    				</p>
-    				<p class="copyright">
-    					&copy; Hitachi Data Systems Corporation 2015. All Rights Reserved.
-    				</p>
-    			</div>
-    		</div>
-    	</div>
     <!-- FOOTER ENDS Here-->	
 	
 	
 		<!-- Secondary Hero Area #4 ENDS Here-->	
 	
-	<div id="skrollr-body">
 
 		<c:if test="${pageProperties.personalizationEnabled}">
 
-			<cq:include path="clientcontext"
-				resourceType="cq/personalization/components/clientcontext" />
+			<cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext" />
 
 		</c:if>
 
 		<cq:include path="par" resourceType="foundation/components/parsys" />
-
-
-
-
-
-
-	</div>
-
-</div>
-
-

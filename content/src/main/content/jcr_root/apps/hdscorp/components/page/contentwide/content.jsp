@@ -2,19 +2,23 @@
 
 
 
-<div class="one-column">
-	<!-- Header Starts Heere -->
 
-	<cq:include path="${currentDesign.path}/jcr:content/globalheader" resourceType="hdscorp/components/content/globalheader"/>
+<!-- Header Starts Here -->
 
-	<!-- Header Ends Heere -->
+<!-- Header Ends Here -->
 
-        <c:if test="${pageProperties.personalizationEnabled}">
+<div style="clear: both;"></div>
 
-            <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext" />            
+<div class="contentarea">
 
-        </c:if>
+	<c:if test="${pageProperties.personalizationEnabled}">
+	
+		<cq:include path="clientcontext"
+			resourceType="cq/personalization/components/clientcontext" />
+	
+	</c:if>
+	
 
-        <cq:include path="par" resourceType="foundation/components/parsys" />
+	<cq:include path="par" resourceType="foundation/components/parsys" />
 
 </div>

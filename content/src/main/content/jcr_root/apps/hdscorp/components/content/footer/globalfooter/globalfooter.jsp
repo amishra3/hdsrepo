@@ -1,8 +1,7 @@
 <%--
-
   globalfooter component.
-
 --%>
+
 <%@page session="false"%>
 <%@page import="com.hdscorp.cms.util.PathResolver"%>
 <%@page import="com.hdscorp.cms.util.PageUtils"%>
@@ -18,33 +17,27 @@
 <c:choose>
 	<c:when test="${not empty footerCategory}">
 
-		<h4>${footerCategory}</h4>
-		<ul>
-			<c:forEach var="navlinks" items="${footerNavLinks}">
-				<c:set var="navUrl" value="${navlinks.linkUrl}" />
-				<c:set var="gatitle" value="${fn:replace(navlinks.linkName,' ','')}" />
-				<c:set var="singleQuote" value="'" />
-				<c:set var="gatitle" value="${fn:replace(gatitle,singleQuote,'')}" />
-				<c:choose>
+		<li>
+			<a href="#">${footerCategory}</a>
+		</li>
+		<c:forEach var="navlinks" items="${footerNavLinks}">
+			<c:set var="navUrl" value="${navlinks.linkUrl}" />
+			<c:set var="singleQuote" value="'" />
+			<c:choose>
 
-					<c:when test="${fn:startsWith(navUrl,'/content')}">
+				<c:when test="${fn:startsWith(navUrl,'/content')}">
 
-						<li><a class="gatrack"
-							data-ga-track="Engagement||Navigation||FooterNav:CustomerService:${gatitle}"
-							href="<%=PathResolver.getShortURLPath(pageContext.getAttribute("navUrl").toString())%>"
-							title="${navlinks.linkName}">${navlinks.linkName}</a></li>
+					<li><a	href="<%=PathResolver.getShortURLPath(pageContext.getAttribute("navUrl").toString())%>"
+						title="${navlinks.linkName}">${navlinks.linkName}</a></li>
 
-					</c:when>
-					<c:otherwise>
-						<li><a class="gatrack"
-							data-ga-track="Engagement||Navigation||FooterNav:CustomerService:${gatitle}"
-							href="${navUrl}" title="${navlinks.linkName}">${navlinks.linkName}</a>
-						</li>
-					</c:otherwise>
+				</c:when>
+				<c:otherwise>
+					<li><a href="${navUrl}" title="${navlinks.linkName}">${navlinks.linkName}</a>
+					</li>
+				</c:otherwise>
 
-				</c:choose>
-			</c:forEach>
-		</ul>
+			</c:choose>
+		</c:forEach>
 
 	</c:when>
 	<c:otherwise>

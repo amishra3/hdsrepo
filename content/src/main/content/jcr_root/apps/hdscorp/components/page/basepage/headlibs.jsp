@@ -12,6 +12,7 @@
 
 <wcmmode:edit>
 	<cq:includeClientLib categories ="cq.widgets"/>
+	<cq:includeClientLib categories ="hdscorp.widgets"/>
 </wcmmode:edit>
 
 

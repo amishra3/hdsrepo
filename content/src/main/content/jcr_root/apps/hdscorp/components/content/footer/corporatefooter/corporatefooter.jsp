@@ -18,35 +18,33 @@
 <c:set var="footersubtext" value="<%=properties.get("footersubtext")%>" />
 <c:set var="copyrighttext" value="<%=properties.get("copyrighttext")%>" />
 
-<div class="legal group">
 
-		<c:choose>
-			<c:when test="${not empty footerLinks}">
-				<c:set var="corporateFooterLinks"
-					value="<%=PageUtils.convertMultiWidgetToList(properties,
-							"urlLabel-pageUrl")%>" />
-                <span class="copyright">${copyrighttext}${footersubtext}</span>
-				<c:forEach var="link" items="${corporateFooterLinks}"
-					varStatus="loop">
-		  <c:set var="linkUrl" value="${link.pageUrl}" />
-              <c:choose>
-    <c:when test="${fn:startsWith(linkUrl,'/content/')}">
-                                <c:set var="linkUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("linkUrl").toString())%>"/>
-                </c:when>
-                <c:otherwise>
-                                <c:set var="linkUrl" value="${linkUrl}"/>
-    </c:otherwise>
-</c:choose>
-                <a href="${linkUrl}">${link.urlLabel}</a>
-
-	</c:forEach>
+<c:choose>
+	<c:when test="${not empty footerLinks}">
+		<c:set var="corporateFooterLinks" value="<%=PageUtils.convertMultiWidgetToList(properties,"urlLabel-pageUrl")%>" />
+			<p class="links">
+				<c:forEach var="link" items="${corporateFooterLinks}" varStatus="loop">
+					<c:set var="linkUrl" value="${link.pageUrl}" />
+					
+					<c:choose>
+   						<c:when test="${fn:startsWith(linkUrl,'/content/')}">
+                               <c:set var="linkUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("linkUrl").toString())%>"/>
+               			</c:when>
+               			<c:otherwise>
+                               <c:set var="linkUrl" value="${linkUrl}"/>
+   						</c:otherwise>
+					</c:choose>
+               		<a href="${linkUrl}">${link.urlLabel}</a> |
+				</c:forEach>
+			</p>					
 	</c:when>
 	<c:otherwise>
-        <c:if test="${requestScope['com.day.cq.wcm.api.WCMMode']=='EDIT' || 
-        requestScope['com.day.cq.wcm.api.WCMMode']=='DESIGN'}">
-		<a>Please provide global footer links</a>
-        </c:if>
+		<wcmmode:edit>
+				<a>Please provide global footer links</a>
+		</wcmmode:edit>
 	</c:otherwise>
-	</c:choose>
+</c:choose>
 
-</div>
+<p class="copyright">
+	${copyrighttext}
+</p>
