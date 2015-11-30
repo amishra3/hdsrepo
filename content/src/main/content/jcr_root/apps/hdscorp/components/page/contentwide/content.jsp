@@ -2,13 +2,12 @@
 
 
 
-<div id="content-outer-wrapper">
+<div class="one-column">
+	<!-- Header Starts Heere -->
 
-<nav class="homepage-nav hide">
+	<cq:include path="${currentDesign.path}/jcr:content/globalheader" resourceType="hdscorp/components/content/globalheader"/>
 
-</nav>
-
-	<div id="skrollr-body">
+	<!-- Header Ends Heere -->
 
         <c:if test="${pageProperties.personalizationEnabled}">
 
@@ -18,6 +17,4 @@
 
         <cq:include path="par" resourceType="foundation/components/parsys" />
 
-	</div>
-
-  </div>
+</div>

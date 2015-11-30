@@ -51,6 +51,17 @@ if(seacrhpageUrl!=null){
     </c:choose>
 </c:if>
 
+<c:set var="hdscommunitylinktarget" value="_self"/>
+<c:if test="${properties.hdscommunitylinktype eq 'true'}">
+	<c:set var="hdscommunitylinktarget" value="_blank"/>
+</c:if>
+
+<c:set var="hdsgloballinktarget" value="_self"/>
+<c:if test="${properties.hdsgloballinktype eq 'true'}">
+	<c:set var="hdsgloballinktarget" value="_blank"/>
+</c:if>
+
+
 
 <!-- HEADER STARTS -->
 
@@ -61,10 +72,10 @@ if(seacrhpageUrl!=null){
 				class="hitachi-logo-mobile hidden-md hidden-lg"></span>
 			<div class="navigation hidden-xs hidden-sm">
 				<ul>
-					<li><a href="#"><span class="icon nav-globe"></span>
-							Global</a></li>
-					<li><a href="#"><span class="icon nav-community"></span>
-							Community</a></li>
+					<li><a href="${hdsgloballink}" x-cq-linkchecker="skip" target="${hdsgloballinktarget}"><span class="icon nav-globe"></span>
+							${properties.hdsglobaltext}</a></li>
+					<li><a href="${hdsCommunityLink}" x-cq-linkchecker="skip" target="${hdscommunitylinktarget}"><span class="icon nav-community"></span>
+							${properties.hdscommunitytext}</a></li>
 					<li class="search"><input type="text"
 						placeholder="Search HDS.com"><span class="icon nav-search"></span>
 					</li>
@@ -90,10 +101,10 @@ if(seacrhpageUrl!=null){
 		                    <c:set var="subtext" value="${pageprops.subtext}" />
 		                    <c:choose>
 		   			 			<c:when test="${not empty childPage.navigationTitle}">
-		         		 			<li class="col-xs-4 col-sm-4 "><a href="#">${childPage.navigationTitle}</a></li>
+		         		 			<li class="col-xs-4 col-sm-4 "><a href="${childPage.path}.html">${childPage.navigationTitle}</a></li>
 		             			</c:when> 
 					     	  	<c:otherwise>
-									<li class="col-xs-4 col-sm-4 "><a href="#">${childPage.title}</a></li>
+									<li class="col-xs-4 col-sm-4 "><a href="${childPage.path}.html">${childPage.title}</a></li>
 				         		</c:otherwise>  
 	   			 			</c:choose> 	                    
 						</c:if>
