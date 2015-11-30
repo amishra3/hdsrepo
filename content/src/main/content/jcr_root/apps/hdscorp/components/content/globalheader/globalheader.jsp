@@ -77,7 +77,7 @@ if(seacrhpageUrl!=null){
 					<li><a href="${hdsCommunityLink}" x-cq-linkchecker="skip" target="${hdscommunitylinktarget}"><span class="icon nav-community"></span>
 							${properties.hdscommunitytext}</a></li>
 					<li class="search"><input type="text"
-						placeholder="Search HDS.com"><span class="icon nav-search"></span>
+						placeholder="${properties.searchboxtext}"><span class="icon nav-search"></span>
 					</li>
 				</ul>
 			</div>
@@ -92,7 +92,7 @@ if(seacrhpageUrl!=null){
 		</div>
 		<div class="sub-navigation-container">
 			<div class="sub-navigation">
-				<h5 class="col-md-3">Hitachi Data Systems</h5>
+				<h5 class="col-md-3">${properties.topnanhdstext}</h5>
 				<ul class="col-xs-12 col-sm-12">
 					<c:forEach var="childPage" items="${childPages}" varStatus="count">
 						<c:if test="${childPage.hideInNav != true}">

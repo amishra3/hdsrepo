@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
     title="Configure Global Header Dialog"
     xtype="dialog">
@@ -20,10 +20,16 @@
                         fieldLabel="Logo URL"
                         name="./imageurl"
                         xtype="pathfield"/>
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;if(this.getValue()==&quot;true&quot;){&#xa;CQ.Ext.getCmp('refreshtime').show();&#xa;}&#xa;else{&#xa;CQ.Ext.getCmp('refreshtime').hide();}&#xa;}"
-                            selectionchanged="function(){&#xa;if(this.getValue()==&quot;true&quot;){&#xa;CQ.Ext.getCmp('refreshtime').show();&#xa;}&#xa;else{&#xa;CQ.Ext.getCmp('refreshtime').hide();}&#xa;}"/>
+                    <topnanhdstext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="HDS Top Nav Display Text"
+                        name="./topnanhdstext"
+                        value="HDS GLobal"
+                        xtype="textfield"/>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){&#xa;if(this.getValue()==&quot;true&quot;){&#xa;CQ.Ext.getCmp('refreshtime').show();&#xa;}&#xa;else{&#xa;CQ.Ext.getCmp('refreshtime').hide();}&#xa;}"
+                        selectionchanged="function(){&#xa;if(this.getValue()==&quot;true&quot;){&#xa;CQ.Ext.getCmp('refreshtime').show();&#xa;}&#xa;else{&#xa;CQ.Ext.getCmp('refreshtime').hide();}&#xa;}"/>
                     <hdsglobalitems
                         jcr:primaryType="cq:Widget"
                         collapsed="{Boolean}false"
@@ -49,7 +55,6 @@
                                 name="./hdsgloballinktype"
                                 type="checkbox"
                                 xtype="selection"/>
-                           
                         </items>
                     </hdsglobalitems>
                     <hdscommunitylinkitems
@@ -79,7 +84,6 @@
                                 xtype="selection"/>
                         </items>
                     </hdscommunitylinkitems>
-                    
                 </items>
             </tab1>
             <tab2
