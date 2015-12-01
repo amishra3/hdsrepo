@@ -40,10 +40,10 @@
 <%
     String xs = Doctype.isXHTML(request) ? "/" : "";
 	//String favIcon = currentDesign.getPath() + "/clientLibs/images/icons/favicon.ico";
-    //if(resourceResolver.getResource(favIcon) == null){
-      //  favIcon = null;
-    //}
-    String favIcon = null ;
+	String favIcon = "/etc/clientlibs/hdscorp/main/images/favicon.ico";
+	if(resourceResolver.getResource(favIcon) == null){
+	    favIcon = null;
+	} 
 %>
 <head>
       <meta charset="utf-8"/>

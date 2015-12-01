@@ -38,11 +38,6 @@
                             fieldLabel="Enter Copyright  text"
                             name="./copyrighttext"
                             xtype="textfield"/>
-                        <footersubtext
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Enter Footer sub  text"
-                            name="./footersubtext"
-                            xtype="textfield"/>
                     </footnote>
                 </items>
             </tab1>

@@ -64,7 +64,7 @@
     				<a href="#" class="learn-more btn-square -red">Learn More</a>
     			</div>
     			<div class="cloud-image col-md-5">
-    				<img src="images/cloud-storage.jpg">
+    				<img src="/content/dam/hdscorp/en_us/homepage/banners/cloud-storage.jpg">
     			</div>
     		</div>
     	</div>

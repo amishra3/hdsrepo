@@ -1,13 +1,9 @@
-
 <%--
-  <corporatefooter.jsp>
-
   ==============================================================================
 
   corporatefooter component - This component displays the footer components.
 
   ==============================================================================
-
 --%>
 
 <%@include file="/apps/foundation/global.jsp"%>
@@ -15,9 +11,7 @@
 <%@page import="com.hdscorp.cms.util.PageUtils"%>
 
 <c:set var="footerLinks" value="<%=properties.get("footer")%>" />
-<c:set var="footersubtext" value="<%=properties.get("footersubtext")%>" />
 <c:set var="copyrighttext" value="<%=properties.get("copyrighttext")%>" />
-
 
 <c:choose>
 	<c:when test="${not empty footerLinks}">
