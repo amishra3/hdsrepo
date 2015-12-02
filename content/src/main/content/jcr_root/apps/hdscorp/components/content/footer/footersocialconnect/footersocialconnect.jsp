@@ -12,7 +12,6 @@
 </c:if>
 <ul class="social-icons">
 	<c:if test="${properties.facebook}">
-		<li class="facebook"><a href="${properties.facebookpath}" target="_blank" title="Facebook"></a></li>
 		<a href="${properties.facebookpath}"><span class="sprite icon-facebook-white"></span></a>
 	</c:if>
 	<c:if test="${properties.twitter}">
