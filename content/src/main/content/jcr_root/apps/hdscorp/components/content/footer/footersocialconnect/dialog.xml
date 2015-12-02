@@ -10,11 +10,6 @@
                 jcr:primaryType="cq:Panel"
                 title="Footer Social Connect">
                 <items jcr:primaryType="cq:WidgetCollection">
-                    <header
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Header"
-                        name="./header"
-                        xtype="textfield"/>
                     <Facebook
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Facebook"
@@ -66,23 +61,6 @@
                         id="googlepluspath"
                         name="./googlepluspath"
                         xtype="textfield"/>
-                    <Pinterest
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Pinterest"
-                        name="./pinterest"
-                        type="checkbox"
-                        xtype="selection">
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;pinterestpath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;pinterestpath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Pinterest>
-                    <PinterestPath
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Pinterest Path"
-                        id="pinterestpath"
-                        name="./pinterestpath"
-                        xtype="textfield"/>
                     <Youtube
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Youtube"
@@ -99,23 +77,6 @@
                         fieldLabel="Youtube Path"
                         id="youtubepath"
                         name="./youtubepath"
-                        xtype="textfield"/>
-                    <Foursquare
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Foursquare"
-                        name="./foursquare"
-                        type="checkbox"
-                        xtype="selection">
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;foursquarepath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;foursquarepath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Foursquare>
-                    <FoursquarePath
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Foursquare Path"
-                        id="foursquarepath"
-                        name="./foursquarepath"
                         xtype="textfield"/>
                 </items>
             </tab1>

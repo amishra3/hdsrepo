@@ -13,22 +13,21 @@
 <ul class="social-icons">
 	<c:if test="${properties.facebook}">
 		<li class="facebook"><a href="${properties.facebookpath}" target="_blank" title="Facebook"></a></li>
+		<a href="${properties.facebookpath}"><span class="sprite icon-facebook-white"></span></a>
 	</c:if>
 	<c:if test="${properties.twitter}">
-		<li class="twitter"><a href="${properties.twitterpath}" target="_blank" title="Twitter"></a></li>
+		<a href="${properties.twitterpath}"><span class="sprite icon-twitter-white"></span></a>		
 	</c:if>
-	<c:if test="${properties.instagram}">
-		<li class="instagram"><a href="${properties.instagrampath}" target="_blank" title="Instagram"></a></li>
-	</c:if>
-	<c:if test="${properties.pinterest}">
-		<li class="pinterest"><a href="${properties.pinterestpath}" target="_blank" title="Pinterest"></a></li>
+	<c:if test="${properties.googleplus}">
+		<a href="${properties.googlepluspath}"><span class="sprite icon-gplus-white"></span></a>
 	</c:if>
 	<c:if test="${properties.youtube}">
-		<li class="youtube"><a href="${properties.youtubepath}" target="_blank" title="YouTube"></a></li>
-	</c:if>
-	<c:if test="${properties.foursquare}">
-		<li class="foursquare"><a href="${properties.foursquarepath}" target="_blank"
-			title="Foursquare"></a></li>
+		<a href="${properties.youtubepath}"><span class="sprite icon-youtube-white"></span></a>
 	</c:if>
 </ul>
 
+
+<!-- 
+	<a href="#"><span class="sprite icon-two-white"></span></a>
+	<a href="#"><span class="sprite icon-group-white"></span></a>
+ -->

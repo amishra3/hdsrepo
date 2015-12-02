@@ -42,12 +42,13 @@
     					<cq:include path="${currentDesign.path}/jcr:content/globalfooter/footersocialconnect" 
     						resourceType="hdscorp/components/content/footer/footersocialconnect" />
     				
+    				<!-- 
     					<a href="#"><span class="sprite icon-facebook-white"></span></a>
     					<a href="#"><span class="sprite icon-twitter-white"></span></a>
     					<a href="#"><span class="sprite icon-gplus-white"></span></a>
     					<a href="#"><span class="sprite icon-youtube-white"></span></a>
     					<a href="#"><span class="sprite icon-two-white"></span></a>
-    					<a href="#"><span class="sprite icon-group-white"></span></a>
+    					<a href="#"><span class="sprite icon-group-white"></span></a>-->
     				</div>
     				<a href="#" class="footer-logo"><span class="sprite hitachi-footer-logo"></span></a>
     			</div>
