@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    buttons="\[CQ.Dialog.OK,&#xa;{text: &quot;Cancel&quot;,&#xa;handler: function(){&#xa;var contentsnippet = CQ.Ext.getCmp('contentsnippet');&#xa;contentsnippet.hide();&#xa;location.reload(true)&#xa;}&#xa;}&#xa;]&#xa;"
+    closable="false"
+    height="620"
+    id="contentsnippet"
+    title="Banner Generator"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        height="500"
+        manageTabs="function(tab,noSwitch){&#xa;var tabs=['props','homepageherobanner','homepagesecindarybanner'];&#xa;var index=tabs.indexOf(tab);&#xa;if(index==-1){&#xa;this.hideTabStripItem(8);return;}&#xa;for(var i=1;i&lt;=tabs.length;i++){&#xa;if(index==i){&#xa;this.unhideTabStripItem(i);}&#xa;else{this.hideTabStripItem(i);}&#xa;}&#xa;this.doLayout();if(noSwitch)this.activate(0);}"
+        title="Banner Component"
+        width="1000"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Widget"
+                title="Banner Details"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bannertype
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue=""
+                        fieldLabel="Type/Size of Banner"
+                        id="bannerType"
+                        name="./bannertype"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <homepageherobanner
+                                jcr:primaryType="nt:unstructured"
+                                text="Homepage Hero Banner"
+                                value="homepageherobanner"/>
+                            <homepagesecindarybanner
+                                jcr:primaryType="nt:unstructured"
+                                text="Homepage Secondary Banner"
+                                value="homepagesecindarybanner"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(box){&#xa;box.findParentByType('tabpanel').manageTabs(this.getValue(),true);&#xa;}"
+                            selectionchanged="function(box){&#xa;box.findParentByType('tabpanel').manageTabs(this.getValue(),true);&#xa;}"/>
+                    </bannertype>
+                </items>
+            </general>
+            <homepageherobanner
+                jcr:primaryType="cq:Widget"
+                title="Homepage Hero Banner"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <herotitlecontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Title Content"
+                        height="125"
+                        name="./herotitlecontent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </herotitlecontent>
+                    <herosubtitlecontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Sub Title Content"
+                        height="125"
+                        name="./herosubtitlecontent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </herosubtitlecontent>
+                    <multilinks
+                        jcr:primaryType="cq:Widget"
+                        customMultiFieldName="./multilinks"
+                        fieldLabel="Tabs"
+                        name="./multilinks"
+                        xtype="custommultifield">
+                        <fieldConfig jcr:primaryType="cq:WidgetCollection">
+                            <tabTitle
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title"
+                                name="./tabTitle"
+                                xtype="textfield"/>
+                            <tabOverlayPath
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Overlay Path"
+                                name="./tabOverlayPath"
+                                xtype="pathfield"/>
+                            <tabIconPath
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Icon Path"
+                                name="./tabIconPath"
+                                xtype="pathfield"/>
+                        </fieldConfig>
+                    </multilinks>
+                    <imagePath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        allowUpload="false"
+                        cropParameter="./imagePath/imageCrop2"
+                        ddGroups="[media]"
+                        fieldLabel="Banner Image"
+                        fileNameParameter="./imagePath/fileName2"
+                        fileReferenceParameter="./heroimagePath"
+                        height="{Long}200"
+                        name="./heroimage"
+                        rotateParameter="./imagePath/imageRotate2"
+                        sizeLimit="100"
+                        title="Image"
+                        width="{Long}200"
+                        xtype="html5smartimage"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(1&#xa;&#xa;); }"/>
+            </homepageherobanner>
+            <homepagesecindarybanner
+                jcr:primaryType="cq:Widget"
+                title="Homepage Secondary Hero Banner"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <secondaryherotitlecontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Title Content"
+                        name="./secondaryherotitlecontent"
+                        xtype="textfield"/>
+                    <secondaryherosubtitlecontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Sub Title Content"
+                        name="./secondaryherosubtitlecontent"
+                        xtype="textfield"/>
+                    <secondaryherocontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Content"
+                        height="125"
+                        name="./secondaryherocontent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </secondaryherocontent>
+                    <secondaryheroimage
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        allowUpload="false"
+                        cropParameter="./secondaryimagePath/imageCrop2"
+                        ddGroups="[media]"
+                        fieldLabel="Seondary Hero Banner Image"
+                        fileNameParameter="./secondimage/fileName"
+                        fileReferenceParameter="./secondimage/fileReference"
+                        height="{Long}200"
+                        name="./secondaryheroimage"
+                        rotateParameter="./secondimage/imageRotate"
+                        sizeLimit="100"
+                        title="Secondary Banner Image"
+                        width="{Long}200"
+                        xtype="html5smartimage"/>
+                    <secondaryimagealttext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Alt Text"
+                        name="./secondaryimagealttext"
+                        xtype="textfield"/>
+                    <secondarybuttonurl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Button Target URL"
+                        name="./secondarybuttonurl"
+                        xtype="pathfield"/>
+                    <secondarybuttonlabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Button Label"
+                        name="./secondarybuttonlabel"
+                        xtype="textfield"/>
+                    <secondaryurltargettype
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in New Window ?"
+                        name="./secondaryurltargettype"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(2&#xa;&#xa;); }"/>
+            </homepagesecindarybanner>
+        </items>
+    </items>
+    <listeners jcr:primaryType="nt:unstructured"/>
+</jcr:root>
