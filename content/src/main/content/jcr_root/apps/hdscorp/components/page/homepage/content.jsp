@@ -6,38 +6,8 @@
 
 	
 	<!-- Hero Area Starts Here -->
-	
-    	<div class="hero general col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    		<div class="hero-container general">
-    			<h2 class="headline hidden-xs"><strong>HITACHI DATA SYSTEMS</strong> Every<br>after forth above is first<br>likeness third beginning him.</h2>
-    			<h2 class="headline hidden-sm hidden-md hidden-lg">BE MORE <strong>SUCCESSFUL</strong> IN BUSINESS AND SOCIETY</h2>
-    			<h4 class="sub-headline hidden-xs">See what <strong>HITACHI DATA SYSTEMS</strong> is doing for the following industries.</h4>
-    			<h4 class="sub-headline hidden-sm hidden-md hidden-lg">Solve your business challenges with<br> <strong>HITACHI DATA SYSTEMS</strong>.<br> How can we help you?</h4>
-    	
-    			<ul class="general-list col-sm-10 col-md-9 col-lg-8 clearfix">
-    				<li class="col-sm-6">
-    					<a href="#" class="general-healthcare"><span class="sprite icon-suitcase-red"></span> Healthcare</a>
-    				</li>
-    				<li class="col-sm-6">
-    					<a href="#"><span class="sprite icon-building-red"></span> Public Sector</a>
-    				</li>
-    				<li class="col-sm-6">
-    					<a href="#"><span class="sprite icon-phone-red"></span> Telecommunications</a>
-    				</li>
-    				<li class="col-sm-6">
-    					<a href="#"><span class="sprite icon-globe-red"></span> Information Technology</a>
-    				</li>
-    			</ul>
-    	
-    			<div class="view-all">
-    				<a href="#">View All Industries &nbsp;<span class="sprite icon-caret-white"></span></a>
-    			</div>
-    	
-    			<div class="scroll-down">
-    				<a href="#"><span class="sprite icon-arrow-down"></span></a>
-    			</div>
-    		</div>
-    	</div>	
+
+	<cq:include path="herobannerpar" resourceType="hdscorp/components/content/banners/homeherobanner" />
 	
 	<!-- Hero Area Ends Here -->
 	

@@ -14,7 +14,7 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <name
                         jcr:primaryType="cq:Widget"
-                        fieldDescription="Name wraps the injected component with a div containing the given name &lt;br/>&#xa;Full guidelines of the component are available &lt;a href=&quot;http://mystropedia.corp.mystrotv.com/display/WEBCMS/Injection+Container&quot; target=&quot;_blank&quot;>here&lt;/a>"
+                        fieldDescription="Name wraps the injected component with a div containing the given name &lt;br/>"
                         fieldLabel="Name:"
                         name="./name"
                         xtype="textfield"/>
