@@ -30,60 +30,36 @@
                         jcr:primaryType="nt:unstructured"
                         loadcontent="function(){&#xa;if(this.getValue()==&quot;true&quot;){&#xa;CQ.Ext.getCmp('refreshtime').show();&#xa;}&#xa;else{&#xa;CQ.Ext.getCmp('refreshtime').hide();}&#xa;}"
                         selectionchanged="function(){&#xa;if(this.getValue()==&quot;true&quot;){&#xa;CQ.Ext.getCmp('refreshtime').show();&#xa;}&#xa;else{&#xa;CQ.Ext.getCmp('refreshtime').hide();}&#xa;}"/>
-                    <hdsglobalitems
+                    <externalmultilinks
                         jcr:primaryType="cq:Widget"
-                        collapsed="{Boolean}false"
-                        collapsible="{Boolean}true"
-                        title="HDS GLobal Link  Details"
-                        xtype="dialogfieldset">
-                        <items jcr:primaryType="cq:WidgetCollection">
-                            <orderbuttontext
+                        customMultiFieldName="./externalmultilinks"
+                        fieldLabel="Tabs"
+                        name="./externalmultilinks"
+                        xtype="custommultifield">
+                        <fieldConfig jcr:primaryType="cq:WidgetCollection">
+                            <linkTitle
                                 jcr:primaryType="cq:Widget"
-                                fieldLabel="HDS Global Display Text"
-                                name="./hdsglobaltext"
-                                value="HDS GLobal"
+                                fieldLabel="Link Display Text"
+                                name="./linkTitle"
                                 xtype="textfield"/>
-                            <hdsglobalPath
+                            <linktargeturl
                                 jcr:primaryType="cq:Widget"
-                                allowBlank="{Boolean}false"
-                                fieldLabel="HDS GLobal Link"
-                                name="./hdsglobalPath"
+                                fieldLabel="Target URL"
+                                name="./linktargeturl"
                                 xtype="pathfield"/>
-                            <orderlinktype
+                            <linkIconPath
                                 jcr:primaryType="cq:Widget"
-                                fieldLabel="Open in new window?"
-                                name="./hdsgloballinktype"
+                                fieldLabel="Link Icon Path"
+                                name="./linkIconPath"
+                                xtype="pathfield"/>
+                            <linkurltargettype
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Open in New Window ?"
+                                name="./linkurltargettype"
                                 type="checkbox"
                                 xtype="selection"/>
-                        </items>
-                    </hdsglobalitems>
-                    <hdscommunitylinkitems
-                        jcr:primaryType="cq:Widget"
-                        collapsed="{Boolean}false"
-                        collapsible="{Boolean}true"
-                        title="HDS Community Link Details"
-                        xtype="dialogfieldset">
-                        <items jcr:primaryType="cq:WidgetCollection">
-                            <cateringbuttontext
-                                jcr:primaryType="cq:Widget"
-                                defaultValue="HDS Community"
-                                fieldLabel="HDS Community Text"
-                                name="./hdscommunitytext"
-                                xtype="textfield"/>
-                            <hdsCommunityPath
-                                jcr:primaryType="cq:Widget"
-                                allowBlank="{Boolean}false"
-                                fieldLabel="HDS Community Link"
-                                name="./hdsCommunityPath"
-                                xtype="pathfield"/>
-                            <hdscommunitylinktype
-                                jcr:primaryType="cq:Widget"
-                                fieldLabel="Open in new window?"
-                                name="./hdscommunitylinktype"
-                                type="checkbox"
-                                xtype="selection"/>
-                        </items>
-                    </hdscommunitylinkitems>
+                        </fieldConfig>
+                    </externalmultilinks>
                 </items>
             </tab1>
             <tab2

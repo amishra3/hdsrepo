@@ -1,4 +1,4 @@
-<%--
+	<%--
   globalheader component.
 --%>
 
@@ -27,40 +27,7 @@ if(seacrhpageUrl!=null){
 
 %>
 
-<c:set var="hdsgloballink" value="${properties.hdsglobalPath}"/>
-<c:set var="hdsCommunityLink" value="${properties.hdsCommunityPath}" />
-<c:if test="${not empty hdsgloballink}">
-    <c:choose>
-    <c:when test="${fn:startsWith(hdsgloballink, '/content')}">
-		<c:set var="hdsgloballink" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("hdsgloballink").toString())%>" />
-    </c:when>
-    <c:otherwise>
-        <c:set var="hdsgloballink" value="${hdsgloballink}"/>
-    </c:otherwise>
-    </c:choose>
-</c:if>
-
-<c:if test="${not empty hdsCommunityLink}">
-     <c:choose>
-     <c:when test="${fn:startsWith(hdsCommunityLink, '/content')}">
-		<c:set var="hdsCommunityLink" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("hdsCommunityLink").toString())%>" />
-    </c:when>
-    <c:otherwise>
-        <c:set var="hdsCommunityLink" value="${hdsCommunityLink}"/>
-    </c:otherwise>
-    </c:choose>
-</c:if>
-
-<c:set var="hdscommunitylinktarget" value="_self"/>
-<c:if test="${properties.hdscommunitylinktype eq 'true'}">
-	<c:set var="hdscommunitylinktarget" value="_blank"/>
-</c:if>
-
-<c:set var="hdsgloballinktarget" value="_self"/>
-<c:if test="${properties.hdsgloballinktype eq 'true'}">
-	<c:set var="hdsgloballinktarget" value="_blank"/>
-</c:if>
-
+<c:set var="externalLinksList" value="<%=PageUtils.convertMultiWidgetToList(properties,"linkTitle-linktargeturl-linkIconPath-linkurltargettype")%>" />
 
 
 <!-- HEADER STARTS -->
@@ -71,11 +38,21 @@ if(seacrhpageUrl!=null){
 			<span class="hitachi-logo hidden-xs hidden-sm"></span> <span
 				class="hitachi-logo-mobile hidden-md hidden-lg"></span>
 			<div class="navigation hidden-xs hidden-sm">
-				<ul>
-					<li><a href="${hdsgloballink}" x-cq-linkchecker="skip" target="${hdsgloballinktarget}"><span class="icon nav-globe"></span>
-							${properties.hdsglobaltext}</a></li>
-					<li><a href="${hdsCommunityLink}" x-cq-linkchecker="skip" target="${hdscommunitylinktarget}"><span class="icon nav-community"></span>
-							${properties.hdscommunitytext}</a></li>
+				<ul>		
+					<c:forEach var="externalLink" items="${externalLinksList}">
+						<c:set var="linkTitle" value="${externalLink.linkTitle}" />
+						<c:set var="linktargeturl" value="${externalLink.linktargeturl}" />
+						<c:set var="linkIconPath" value="${externalLink.linkIconPath}" />
+						<c:set var="linkurltargettype" value="${externalLink.linkurltargettype}" />
+						<li>
+							<a href="${linktargeturl}" x-cq-linkchecker="skip" target="${linkurltargettype?'_blank':'_self'}">
+								<span class="icon nav-globe" style="background-image: url(${linkIconPath});background-position: 0 0;"></span>
+								${linkTitle}
+							</a>
+						</li>
+						
+					</c:forEach>
+				
 					<li class="search"><input type="text"
 						placeholder="${properties.searchboxtext}"><span class="icon nav-search"></span>
 					</li>
