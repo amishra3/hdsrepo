@@ -76,6 +76,16 @@
                         title="Image"
                         width="{Long}200"
                         xtype="html5smartimage"/>
+                    <viewalllinktext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="View All Link Text"
+                        name="./viewalllinktext"
+                        xtype="textfield"/>
+                    <viewalllinkurl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="View All Link Target URL"
+                        name="./viewalllinkurl"
+                        xtype="pathfield"/>
                 </items>
             </tab1>
         </items>

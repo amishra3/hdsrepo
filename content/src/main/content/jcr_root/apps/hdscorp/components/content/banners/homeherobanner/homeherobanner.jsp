@@ -9,6 +9,12 @@
 <%@page import="com.hdscorp.cms.util.PathResolver"%>
 <%@page import="com.hdscorp.cms.util.PageUtils"%>
 
+<c:set var="viewlinkUrl" value="${properties.viewalllinkurl}" />
+
+<c:if test="${fn:startsWith(viewlinkUrl,'/content/')}">
+	<c:set var="viewlinkUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("viewlinkUrl").toString())%>" />
+</c:if>
+
 
 <c:choose>
 	<c:when test="${not empty properties.herotitlecontent}">
@@ -40,7 +46,7 @@
     			</ul>
     	
     			<div class="view-all">
-    				<a href="#">View All Industries &nbsp;<span class="sprite icon-caret-white"></span></a>
+    				<a href="${viewlinkUrl}">${properties.viewalllinktext}<span class="sprite icon-caret-white"></span></a>
     			</div>
     	
     			<div class="scroll-down">
