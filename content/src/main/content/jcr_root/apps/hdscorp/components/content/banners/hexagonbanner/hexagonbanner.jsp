@@ -37,7 +37,7 @@
 						<c:set var="placardIconPath" value="${placardList.placardIconPath}" />
 						<c:set var="placardcontent" value="${placardList.placardcontent}" />
 	    				<li class="hexagon-good hexagon270">
-	    					<span class="sprite icon-light"></span>
+	    					<span class="sprite icon-light" style="background-image: url('${placardIconPath}');"></span>
 	    					<h4>${placardTitle}</h4>
 	    					${placardcontent}
 	    				</li>
