@@ -60,22 +60,22 @@
                                 xtype="pathfield"/>
                         </fieldConfig>
                     </multilinks>
-					<imagePath
-                    jcr:primaryType="cq:Widget"
-                    allowBlank="{Boolean}false"
-                    allowUpload="false"
-                    cropParameter="./imagePath/imageCrop2"
-                    ddGroups="[media]"
-                    fieldLabel="Banner Image"
-                    fileNameParameter="./imagePath/fileName2"
-                    fileReferenceParameter="./jcr:imagePath"
-                    height="{Long}200"
-                    name="./heroimage"
-                    rotateParameter="./imagePath/imageRotate2"
-                    sizeLimit="100"
-                    title="Image"
-                    width="{Long}200"
-                    xtype="html5smartimage"/>
+                    <imagePath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        allowUpload="false"
+                        cropParameter="./imagePath/imageCrop2"
+                        ddGroups="[media]"
+                        fieldLabel="Banner Image"
+                        fileNameParameter="./imagePath/fileName2"
+                        fileReferenceParameter="./heroimagePath"
+                        height="{Long}200"
+                        name="./heroimage"
+                        rotateParameter="./imagePath/imageRotate2"
+                        sizeLimit="100"
+                        title="Image"
+                        width="{Long}200"
+                        xtype="html5smartimage"/>
                 </items>
             </tab1>
         </items>

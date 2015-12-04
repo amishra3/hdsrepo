@@ -11,7 +11,7 @@
     <items
         jcr:primaryType="nt:unstructured"
         height="500"
-        manageTabs="function(tab,noSwitch){&#xa;var tabs=['props','homepageherobanner','homepagesecindarybanner'];&#xa;var index=tabs.indexOf(tab);&#xa;if(index==-1){&#xa;this.hideTabStripItem(8);return;}&#xa;for(var i=1;i&lt;=tabs.length;i++){&#xa;if(index==i){&#xa;this.unhideTabStripItem(i);}&#xa;else{this.hideTabStripItem(i);}&#xa;}&#xa;this.doLayout();if(noSwitch)this.activate(0);}"
+        manageTabs="function(tab,noSwitch){&#xa;var tabs=['props','homepageherobanner','homepagesecindarybanner','hexagonbanner'];&#xa;var index=tabs.indexOf(tab);&#xa;if(index==-1){&#xa;this.hideTabStripItem(8);return;}&#xa;for(var i=1;i&lt;=tabs.length;i++){&#xa;if(index==i){&#xa;this.unhideTabStripItem(i);}&#xa;else{this.hideTabStripItem(i);}&#xa;}&#xa;this.doLayout();if(noSwitch)this.activate(0);}"
         title="Banner Component"
         width="1000"
         xtype="tabpanel">
@@ -23,7 +23,7 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <bannertype
                         jcr:primaryType="cq:Widget"
-                        allowBlank="false"
+                        allowBlank="true"
                         defaultValue=""
                         fieldLabel="Type/Size of Banner"
                         id="bannerType"
@@ -39,6 +39,10 @@
                                 jcr:primaryType="nt:unstructured"
                                 text="Homepage Secondary Banner"
                                 value="homepagesecindarybanner"/>
+                            <hexagonbanner
+                                jcr:primaryType="nt:unstructured"
+                                text="Homepage Secondary Hexagon Banner"
+                                value="hexagonbanner"/>
                         </options>
                         <listeners
                             jcr:primaryType="nt:unstructured"
@@ -102,7 +106,7 @@
                     </multilinks>
                     <imagePath
                         jcr:primaryType="cq:Widget"
-                        allowBlank="{Boolean}false"
+                        allowBlank="{Boolean}true"
                         allowUpload="false"
                         cropParameter="./imagePath/imageCrop2"
                         ddGroups="[media]"
@@ -150,13 +154,13 @@
                     </secondaryherocontent>
                     <secondaryheroimage
                         jcr:primaryType="cq:Widget"
-                        allowBlank="{Boolean}false"
+                        allowBlank="{Boolean}true"
                         allowUpload="false"
                         cropParameter="./secondaryimagePath/imageCrop2"
                         ddGroups="[media]"
                         fieldLabel="Seondary Hero Banner Image"
                         fileNameParameter="./secondimage/fileName"
-                        fileReferenceParameter="./secondimage/fileReference"
+                        fileReferenceParameter="./secondaryheroimage"
                         height="{Long}200"
                         name="./secondaryheroimage"
                         rotateParameter="./secondimage/imageRotate"
@@ -185,11 +189,99 @@
                         name="./secondaryurltargettype"
                         type="checkbox"
                         xtype="selection"/>
+                    <secondarycontentalign
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Align Content on Right and Image on Left ?"
+                        name="./secondarycontentalign"
+                        type="checkbox"
+                        xtype="selection"/>
                 </items>
                 <listeners
                     jcr:primaryType="nt:unstructured"
                     render="function() { this.findParentByType('tabpanel').hideTabStripItem(2&#xa;&#xa;); }"/>
             </homepagesecindarybanner>
+            <hexagonbanner
+                jcr:primaryType="cq:Widget"
+                title="Homepage Hexagon Hero Banner"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <hextitlecontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Title Content"
+                        name="./hextitlecontent"
+                        xtype="textfield"/>
+                    <hexsubtitlecontent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hero Sub Title Content"
+                        name="./hexsubtitlecontent"
+                        xtype="textfield"/>
+                    <heximagePath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        allowUpload="false"
+                        cropParameter="./heximagePath/imageCrop2"
+                        ddGroups="[media]"
+                        fieldLabel="Banner Image"
+                        fileNameParameter="./heximagePath/fileName2"
+                        fileReferenceParameter="./heximagePath"
+                        height="{Long}200"
+                        name="./heximagePath"
+                        rotateParameter="./heximagePathimagePath/imageRotate2"
+                        sizeLimit="100"
+                        title="Image"
+                        width="{Long}200"
+                        xtype="html5smartimage"/>
+                    <multilinks
+                        jcr:primaryType="cq:Widget"
+                        customMultiFieldName="./hexmultilinks"
+                        fieldLabel="Tabs"
+                        name="./hexmultilinks"
+                        xtype="custommultifield">
+                        <fieldConfig jcr:primaryType="cq:WidgetCollection">
+                            <placardTitle
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placard Title"
+                                name="./placardTitle"
+                                xtype="textfield"/>
+                            <placardcontent
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placard Content"
+                                name="./placardcontent"
+                                xtype="richtext"/>
+                            <placardIconPath
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placard Icon Path"
+                                name="./placardIconPath"
+                                xtype="pathfield"/>
+                        </fieldConfig>
+                    </multilinks>
+                    <hexbuttonlabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Button Label"
+                        name="./hexbuttonlabel"
+                        xtype="textfield"/>
+                    <hexbuttonurl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Button Target URL"
+                        name="./hexbuttonurl"
+                        xtype="pathfield"/>
+                    <hexurltargettype
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in New Window ?"
+                        name="./hexurltargettype"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <hexshowadditionsymbol
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Addition Icons ?"
+                        name="./hexshowadditionsymbol"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(3&#xa;&#xa;); }"/>
+            </hexagonbanner>
         </items>
     </items>
     <listeners jcr:primaryType="nt:unstructured"/>
