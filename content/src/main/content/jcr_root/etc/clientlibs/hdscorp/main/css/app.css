@@ -5,3 +5,7 @@
 .floatright {
 	float: right;
 }
+
+.editbarstyle {
+	overflow: auto;
+}
