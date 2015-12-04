@@ -2,31 +2,21 @@
   footersocialconnect component.
   This component is used to display social connect icons in the global footer
 --%>
-<%
-
-%><%@include file="/apps/foundation/global.jsp"%>
+<%@include file="/apps/foundation/global.jsp"%>
 <%@page session="false"%>
+<%@page import="com.hdscorp.cms.util.PageUtils"%>
 
-<c:if test="${not empty properties.header}">
-	<h4>${properties.header}</h4>
-</c:if>
+
+
+<c:set var="socialmultilinks" value="<%=PageUtils.convertMultiWidgetToList(properties,"linktargeturl-linkIconPath")%>" />
+
+ 
 <ul class="social-icons">
-	<c:if test="${properties.facebook}">
-		<a href="${properties.facebookpath}"><span class="sprite icon-facebook-white"></span></a>
-	</c:if>
-	<c:if test="${properties.twitter}">
-		<a href="${properties.twitterpath}"><span class="sprite icon-twitter-white"></span></a>		
-	</c:if>
-	<c:if test="${properties.googleplus}">
-		<a href="${properties.googlepluspath}"><span class="sprite icon-gplus-white"></span></a>
-	</c:if>
-	<c:if test="${properties.youtube}">
-		<a href="${properties.youtubepath}"><span class="sprite icon-youtube-white"></span></a>
-	</c:if>
+					<c:forEach var="externalLink" items="${socialmultilinks}">
+						<c:set var="linktargeturl" value="${externalLink.linktargeturl}" />
+						<c:set var="linkIconPath" value="${externalLink.linkIconPath}" />
+						<a href="${linkIconPath}" target="_blank">
+							<span class="sprite icon-facebook-white" style="background-image: url(${linkIconPath});background-position: 0 0;"/>
+						</a>
+					</c:forEach>
 </ul>
-
-
-<!-- 
-	<a href="#"><span class="sprite icon-two-white"></span></a>
-	<a href="#"><span class="sprite icon-group-white"></span></a>
- -->

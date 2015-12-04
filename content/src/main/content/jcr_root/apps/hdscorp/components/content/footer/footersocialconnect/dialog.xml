@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Dialog"
     xtype="dialog">
     <items
@@ -10,74 +10,25 @@
                 jcr:primaryType="cq:Panel"
                 title="Footer Social Connect">
                 <items jcr:primaryType="cq:WidgetCollection">
-                    <Facebook
+                    <socialmultilinks
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Facebook"
-                        name="./facebook"
-                        type="checkbox"
-                        xtype="selection">
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;facebookpath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;facebookpath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Facebook>
-                    <FacebookPath
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Facebook Path"
-                        id="facebookpath"
-                        name="./facebookpath"
-                        xtype="textfield"/>
-                    <Twitter
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Twitter"
-                        name="./twitter"
-                        type="checkbox"
-                        xtype="selection">
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;twitterpath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;twitterpath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Twitter>
-                    <TwitterPath
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Twitter Path"
-                        id="twitterpath"
-                        name="./twitterpath"
-                        xtype="textfield"/>
-                    <Googleplus
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Google Plus Path"
-                        name="./googleplus"
-                        type="checkbox"
-                        xtype="selection">
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;googlepluspath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;googlepluspath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Googleplus>
-                    <GoogleplusPath
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Google Plus Path"
-                        id="googlepluspath"
-                        name="./googlepluspath"
-                        xtype="textfield"/>
-                    <Youtube
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Youtube"
-                        name="./youtube"
-                        type="checkbox"
-                        xtype="selection">
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;youtubepath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"
-                            selectionchanged="function(){&#xa;var url = this.findParentByType('tabpanel').findById(&quot;youtubepath&quot;);&#xa;if(this.getValue()==&quot;true&quot;){&#xa;url.show();&#xa;}&#xa;else{&#xa;url.hide();&#xa;}&#xa;}"/>
-                    </Youtube>
-                    <YoutubePath
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Youtube Path"
-                        id="youtubepath"
-                        name="./youtubepath"
-                        xtype="textfield"/>
+                        customMultiFieldName="./socialmultilinks"
+                        fieldLabel="Social Links"
+                        name="./socialmultilinks"
+                        xtype="custommultifield">
+                        <fieldConfig jcr:primaryType="cq:WidgetCollection">
+                            <linktargeturl
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Target URL"
+                                name="./linktargeturl"
+                                xtype="pathfield"/>
+                            <linkIconPath
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Link Icon Path"
+                                name="./linkIconPath"
+                                xtype="pathfield"/>
+                        </fieldConfig>
+                    </socialmultilinks>
                 </items>
             </tab1>
         </items>
