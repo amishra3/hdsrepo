@@ -22,7 +22,7 @@
 
 		<c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath")%>" />
 
-    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-image: url('${properties.heximagePath}')">
     		<div class="calculating-success-container content-container">
     			<h1>${properties.hextitlecontent}</h1>
     			<h4>${properties.hexsubtitlecontent}</h4>

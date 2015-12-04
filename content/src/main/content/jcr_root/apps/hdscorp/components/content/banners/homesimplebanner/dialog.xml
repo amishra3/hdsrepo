@@ -12,33 +12,33 @@
                 jcr:primaryType="cq:Panel"
                 title="Tab 1">
                 <items jcr:primaryType="cq:WidgetCollection">
-                    <hextitlecontent
+                    <simplebannertitle
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Hero Title Content"
-                        name="./hextitlecontent"
+                        name="./simplebannertitle"
                         xtype="textfield"/>
-                    <hexsubtitlecontent
+                    <simplebannersubtitle
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Hero Sub Title Content"
-                        name="./hexsubtitlecontent"
+                        name="./simplebannersubtitle"
                         xtype="textfield"/>
-                    <hexcontent
+                    <simplebannercontent
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Hero Content"
-                        name="./hexcontent"
+                        fieldLabel="Banner Content"
+                        name="./simplebannercontent"
                         xtype="richtext"/>
-                    <heximagePath
+                    <simplebannermagePath
                         jcr:primaryType="cq:Widget"
                         allowBlank="{Boolean}false"
                         allowUpload="false"
-                        cropParameter="./heximagePath/imageCrop2"
+                        cropParameter="./simplebannermagePath/imageCrop2"
                         ddGroups="[media]"
                         fieldLabel="Banner Image"
-                        fileNameParameter="./heximagePath/fileName2"
+                        fileNameParameter="./simplebannermagePath/fileName2"
                         fileReferenceParameter="./heximagePath"
                         height="{Long}200"
-                        name="./heximagePath"
-                        rotateParameter="./heximagePathimagePath/imageRotate2"
+                        name="./simplebannermagePath"
+                        rotateParameter="./simplebannermagePath/imageRotate2"
                         sizeLimit="100"
                         title="Image"
                         width="{Long}200"
@@ -67,26 +67,20 @@
                                 xtype="pathfield"/>
                         </fieldConfig>
                     </multilinks>
-                    <hexbuttonlabel
+                    <simpllebannerbuttonlabel
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Button Label"
-                        name="./hexbuttonlabel"
+                        name="./simpllebannerbuttonlabel"
                         xtype="textfield"/>
-                    <hexbuttonurl
+                    <simplebannerbuttonurl
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Button Target URL"
-                        name="./hexbuttonurl"
+                        name="./simplebannerbuttonurl"
                         xtype="pathfield"/>
-                    <hexurltargettype
+                    <simplebannerurltargettype
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Open in New Window ?"
-                        name="./hexurltargettype"
-                        type="checkbox"
-                        xtype="selection"/>
-                    <hexshowadditionsymbol
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Show Addition Icons ?"
-                        name="./hexshowadditionsymbol"
+                        name="./simplebannerurltargettype"
                         type="checkbox"
                         xtype="selection"/>
                 </items>
