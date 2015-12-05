@@ -22,6 +22,9 @@
 	
 	
     	<div class="footer">
+
+			<cq:include path="${currentDesign.path}/jcr:content/globalfooter/contactuspromobanner" 
+				resourceType="hdscorp/components/content/banners/contactuspromobanner" />
     	
        		
     		<div class="footer-gray col-xs-12 col-sm-12 col-md-12 col-lg-12">

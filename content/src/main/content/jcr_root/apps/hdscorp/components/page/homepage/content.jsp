@@ -3,61 +3,37 @@
 <script src="https://use.typekit.net/pmh2hld.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-<c:set var="editbarstyle" value="" />
-<wcmmode:edit>
-	<c:set var="editbarstyle" value="style='overflow:auto;'" />
-</wcmmode:edit>
+	<c:set var="editbarstyle" value="" />
+	<wcmmode:edit>
+		<c:set var="editbarstyle" value="style='overflow:auto;'" />
+	</wcmmode:edit>
 	
-<div ${editbarstyle}>
-	<cq:include path="herobannerpar" resourceType="hdscorp/components/content/banners/homeherobanner" />
+	<div ${editbarstyle}>
+		<cq:include path="herobannerpar" resourceType="hdscorp/components/content/banners/homeherobanner" />
+		
+	</div>
 	
-</div>
-
-<div ${editbarstyle}>	
-	<cq:include path="secondarybannerpar" resourceType="hdscorp/components/content/banners/homepagesecondarybanner" />
+	<div ${editbarstyle}>	
+		<cq:include path="secondarybannerpar" resourceType="hdscorp/components/content/banners/homepagesecondarybanner" />
+		
+	</div>
 	
-</div>
-
-<div ${editbarstyle}>
-	<cq:include path="hexsecondarybannerpar" resourceType="hdscorp/components/content/banners/hexagonbanner" />
+	<div ${editbarstyle}>
+		<cq:include path="hexsecondarybannerpar" resourceType="hdscorp/components/content/banners/hexagonbanner" />
+		
+	</div>
 	
-</div>
-
-<div ${editbarstyle}>
-	<cq:include path="simplebannerpar" resourceType="hdscorp/components/content/banners/homesimplebanner" />
-</div>
+	<div ${editbarstyle}>
+		<cq:include path="simplebannerpar" resourceType="hdscorp/components/content/banners/homesimplebanner" />
+	</div>
 	
 	<!-- CONTACT US PROMO STARTS Here-->
 		
-    	<div class="footer">
-    		<div class="footer-blue col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    			<div class="footer-container content-container col-md-12">
-    				<p class="talk">
-    					TO TALK TO A REPRESENTATIVE, CALL <strong>1.888.234.5601</strong>
-    				</p>
-    				<div class="buttons">
-    					<a href="#" class="information btn-square -white hidden-sm hidden-md hidden-lg">Get Information</a>
-    					<a href="#" class="reseller">Find a Reseller<span class="sprite icon-caret-white hidden-xs"></span></a>
-    					<a href="#" class="information btn-square -white hidden-xs">Get Information</a>
-    				</div>
-    			</div>
-    		</div>
-		</div>    	
 		
-		<!-- CONTACT US PROMO ENDS Here-->
+	<!-- CONTACT US PROMO ENDS Here-->
 		
-		<!-- FOOTER STARTS Here-->
-			
-    <!-- FOOTER ENDS Here-->	
+	<c:if test="${pageProperties.personalizationEnabled}">
+		<cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext" />
+	</c:if>
 	
-	
-		<!-- Secondary Hero Area #4 ENDS Here-->	
-	
-
-		<c:if test="${pageProperties.personalizationEnabled}">
-
-			<cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext" />
-
-		</c:if>
-
-		<cq:include path="par" resourceType="foundation/components/parsys" />
+	<cq:include path="par" resourceType="foundation/components/parsys" />
