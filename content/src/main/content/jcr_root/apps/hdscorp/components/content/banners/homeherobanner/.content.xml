@@ -3,4 +3,4 @@
     jcr:description="HDS Corp Homepage Hero Banner"
     jcr:primaryType="cq:Component"
     jcr:title="HDS Corp Homepage Hero Banner"
-    componentGroup="HDS Corp Components"/>
+    componentGroup="HDS Corp Banner Components"/>

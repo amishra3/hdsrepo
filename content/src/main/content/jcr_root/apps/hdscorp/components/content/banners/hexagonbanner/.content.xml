@@ -2,5 +2,5 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:description="HDS Corp Homepage Hero Banner"
     jcr:primaryType="cq:Component"
-    jcr:title="HDS Corp Homepage Hero Banner"
-    componentGroup="HDS Corp Components"/>
+    jcr:title="HDS Corp Homepage Hexagon Hero Banner"
+    componentGroup="HDS Corp Banner Components"/>

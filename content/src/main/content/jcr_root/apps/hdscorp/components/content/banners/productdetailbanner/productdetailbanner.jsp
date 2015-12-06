@@ -17,7 +17,6 @@
 </c:if>
 
 
-
 <c:choose>
 	<c:when test="${not empty properties.simplebannertitle}">
 
