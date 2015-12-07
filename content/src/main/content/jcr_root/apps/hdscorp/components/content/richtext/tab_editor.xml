@@ -5,7 +5,7 @@
     <items jcr:primaryType="cq:WidgetCollection">
         <editor
             jcr:primaryType="cq:Widget"
-            externalStyleSheets="[/etc/designs/residential/clientlibs/css/normalize-style.css]"
+            externalStyleSheets="[/etc/clientlibs/hdscorp/main/css/app.css]"
             hideLabel="{Boolean}true"
             name="./text"
             xtype="richtext">
@@ -54,7 +54,30 @@
                     features="*"/>
                 <paraformat
                     jcr:primaryType="nt:unstructured"
-                    features="*"/>
+                    features="*">
+                    <formats jcr:primaryType="cq:WidgetCollection">
+                        <P
+                            jcr:primaryType="nt:unstructured"
+                            description="Paragraph"
+                            tag="p"/>
+                        <H1
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 1 (H1)"
+                            tag="h1"/>
+                        <H2
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 2 (H2)"
+                            tag="h2"/>
+                        <H3
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 3 (H3)"
+                            tag="h3"/>
+                        <Strong
+                            jcr:primaryType="nt:unstructured"
+                            description="Strong"
+                            tag="strong"/>
+                    </formats>
+                </paraformat>
                 <spellcheck
                     jcr:primaryType="nt:unstructured"
                     features="*"/>
@@ -67,6 +90,20 @@
                 <tooltips
                     jcr:primaryType="nt:unstructured"
                     features="*"/>
+                <styles
+                    jcr:primaryType="nt:unstructured"
+                    features="*">
+                    <styles jcr:primaryType="cq:WidgetCollection">
+                        <floatleft
+                            jcr:primaryType="nt:unstructured"
+                            cssName="floatleft"
+                            text="floatleft"/>
+                        <floatright
+                            jcr:primaryType="nt:unstructured"
+                            cssName="floatright"
+                            text="floatright"/>
+                    </styles>
+                </styles>
             </rtePlugins>
             <htmlRules jcr:primaryType="nt:unstructured">
                 <links

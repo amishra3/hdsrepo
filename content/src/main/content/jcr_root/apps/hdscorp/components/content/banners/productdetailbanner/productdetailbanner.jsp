@@ -25,12 +25,12 @@
 		<div class="millennials col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-image:url('${properties.simplebannermagePath}');">
 			<div class="millennials-container content-container col-md-12">
 				<div class="millennials-content">
-					<h1>
+					<h1 class="textleftalign">
 						${properties.simplebannertitle}
 					</h1>
-					<h4>${properties.simplebannersubtitle}</h4>
+					<h4 class="textleftalign">${properties.simplebannersubtitle}</h4>
 						${properties.simplebannercontent}
-						<a href="${linkUrl}" class="learn btn-square -white" target="${properties.simplebannerurltargettype?'_blank':'_self'}">
+						<a href="${linkUrl}" class="learn btn-square -white floatleft" target="${properties.simplebannerurltargettype?'_blank':'_self'}">
 							${properties.simpllebannerbuttonlabel}
 						</a>
 					<div class="return hidden-sm hidden-md hidden-lg">

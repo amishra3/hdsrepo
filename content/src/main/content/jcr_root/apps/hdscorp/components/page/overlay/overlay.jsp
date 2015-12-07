@@ -1,10 +1,7 @@
-<%@page session="false"
-            contentType="text/html; charset=utf-8"
-            import="com.day.cq.commons.Doctype,
-                    org.apache.sling.api.resource.ValueMap" %>
+<%@page session="false" contentType="text/html; charset=utf-8"%>
 <%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %>
 
-<cq:defineObjects/>
+<%@include file="/apps/foundation/global.jsp"%>
 
 <c:set var="pageTemplate" value="<%=currentPage.getProperties().get("cq:template")%>" />
 <c:set var="pagePath" value="<%=currentPage.getProperties().get("cq:template")%>" />
