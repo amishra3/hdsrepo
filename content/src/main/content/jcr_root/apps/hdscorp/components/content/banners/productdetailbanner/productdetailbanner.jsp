@@ -29,7 +29,9 @@
 						${properties.simplebannertitle}
 					</h1>
 					<h4 class="textleftalign">${properties.simplebannersubtitle}</h4>
-						${properties.simplebannercontent}
+						
+						<cq:text property="simplebannercontent" placeholder="click here to set text" />
+						
 						<a href="${linkUrl}" class="learn btn-square -white floatleft" target="${properties.simplebannerurltargettype?'_blank':'_self'}">
 							${properties.simpllebannerbuttonlabel}
 						</a>

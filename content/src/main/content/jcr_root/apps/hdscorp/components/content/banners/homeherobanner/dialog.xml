@@ -18,11 +18,10 @@
                         height="125"
                         name="./herotitlecontent"
                         xtype="richtext">
-                        <rtePlugins jcr:primaryType="nt:unstructured">
-                            <misctools
-                                jcr:primaryType="nt:unstructured"
-                                features="*"/>
-                        </rtePlugins>
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/hdscorp/components/content/richtext/tab_editor/items/editor/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
                     </herotitlecontent>
                     <herosubtitlecontent
                         jcr:primaryType="cq:Widget"
@@ -30,11 +29,10 @@
                         height="125"
                         name="./herosubtitlecontent"
                         xtype="richtext">
-                        <rtePlugins jcr:primaryType="nt:unstructured">
-                            <misctools
-                                jcr:primaryType="nt:unstructured"
-                                features="*"/>
-                        </rtePlugins>
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/hdscorp/components/content/richtext/tab_editor/items/editor/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
                     </herosubtitlecontent>
                     <multilinks
                         jcr:primaryType="cq:Widget"
