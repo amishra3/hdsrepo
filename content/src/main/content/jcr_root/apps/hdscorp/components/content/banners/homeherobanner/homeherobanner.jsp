@@ -21,8 +21,8 @@
 
 		<c:set var="tabList" value="<%=PageUtils.convertMultiWidgetToList(properties,"tabTitle-tabOverlayPath-tabIconPath")%>" />
 
-		<div class="hero general col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-image: url(${properties.heroimagePath});">
-    		<div class="hero-container general">
+		<div class="hero-homepage general" style="background-image: url(${properties.heroimagePath});">
+    		<div class="hero-homepage-container general">
     			
     			<h2 class="headline hidden-xs">${properties.herotitlecontent}</h2>
     			<!-- <h2 class="headline hidden-sm hidden-md hidden-lg">${properties.herotitlecontent}</h2> -->

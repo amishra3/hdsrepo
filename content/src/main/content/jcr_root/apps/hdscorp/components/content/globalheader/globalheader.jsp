@@ -17,13 +17,21 @@
 
 <c:set var="childPages" value="<%=PageUtils.getChildPages(properties.get("rootPath", ""),resourceResolver)%>" />
 <c:set var="childs" value="<%=PageUtils.getChildPages(properties.get("rootPath", ""),resourceResolver)%>" />
+
+<c:set var="logoTargetURL" value="${properties.	imageurl}" />
+<c:if test="${fn:startsWith(logoTargetURL,'/content/')}">
+	<c:set var="logoTargetURL" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("logoTargetURL").toString())%>" />
+</c:if>
+
+
+
 <%
-JCRDataAccessor dataAccessor = new JCRDataAccessor(pageContext);
-String seacrhpageUrl=properties.get("searchpathurl",String.class);
-if(seacrhpageUrl!=null){
-   String shortseacrhUrl=PathResolver.getShortURLPath(seacrhpageUrl);
-   pageContext.setAttribute("shortseacrhUrl", shortseacrhUrl);
-}
+	JCRDataAccessor dataAccessor = new JCRDataAccessor(pageContext);
+	String seacrhpageUrl=properties.get("searchpathurl",String.class);
+	if(seacrhpageUrl!=null){
+	   String shortseacrhUrl=PathResolver.getShortURLPath(seacrhpageUrl);
+	   pageContext.setAttribute("shortseacrhUrl", shortseacrhUrl);
+	}
 
 %>
 
@@ -34,9 +42,10 @@ if(seacrhpageUrl!=null){
 
 	<div class="header">
 		<div
-			class="header-container content-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<span class="hitachi-logo hidden-xs hidden-sm"></span> <span
-				class="hitachi-logo-mobile hidden-md hidden-lg"></span>
+			class="header-container content-container">
+    		<a href=""${logoTargetURL}""><span class="hitachi-logo hidden-xs hidden-sm"></span></a>
+    		<a href=""${logoTargetURL}""><span class="hitachi-logo-mobile hidden-md hidden-lg"></span></a>				
+				
 			<div class="navigation hidden-xs hidden-sm">
 				<ul>		
 					<c:forEach var="externalLink" items="${externalLinksList}">
@@ -62,14 +71,15 @@ if(seacrhpageUrl!=null){
 				<div class="search-mobile">
 					<span class="sprite icon-search-mobile"></span>
 				</div>
-				<select>
-					<option>USA</option>
-				</select>
 			</div>
 		</div>
 		<div class="sub-navigation-container">
 			<div class="sub-navigation">
-				<h5 class="col-md-3">${properties.topnanhdstext}</h5>
+				<h5 class="col-md-3">
+					<a href="${logoTargetURL}">
+						<span class="sprite hitachi-sublogo-mobile hidden-sm hidden-md hidden-lg">Hitachi Data Systems</span><span class="sprite hitachi-sublogo hidden-xs">Hitachi Data Systems</span>
+					</a>
+				</h5>
 				<ul class="col-xs-12 col-sm-12">
 					<c:forEach var="childPage" items="${childPages}" varStatus="count">
 						<c:if test="${childPage.hideInNav != true}">
