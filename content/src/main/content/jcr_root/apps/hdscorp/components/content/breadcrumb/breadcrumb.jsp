@@ -10,7 +10,9 @@
 
 <c:if test="${empty pageProperties.hidebreadcrumb}">
 	<%
-		int currentPageDepth = currentPage.getDepth() - 1;
+		//Current Node should not be included in the breadcrumb
+		int currentPageDepth = currentPage.getDepth()-1;
+	
 		StringBuffer breadcrumbContent = new StringBuffer("");
 		String rootLabel = (String) properties.get("rootLabel",
 				String.class);
@@ -20,7 +22,7 @@
 			rootTargetUrl = PathResolver.getShortURLPath(rootTargetUrl);
 		}
 		breadcrumbContent.append("<a href='" + rootTargetUrl + "'>"
-				+ rootLabel + "</a> >");
+				+ rootLabel + "</a>");
 	
 		Page parentPageHandle = null;
 		String parentTitle = "";
@@ -28,10 +30,9 @@
 		for (int i = 3; i < currentPageDepth; i++) {
 			parentPageHandle = currentPage.getAbsoluteParent(i);
 			if (parentPageHandle != null) {
-				parentPath = PathResolver.getShortURLPath(parentPageHandle
-						.getPath());
-				breadcrumbContent.append("<a href='" + parentPath + "'>"
-						+ parentPageHandle.getTitle() + "</a> >");
+				breadcrumbContent.append(" > ");
+				parentPath = PathResolver.getShortURLPath(parentPageHandle.getPath());
+				breadcrumbContent.append("<a href='" + parentPath + "'>"+ parentPageHandle.getTitle() + "</a>");
 			}
 		}
 	%>
