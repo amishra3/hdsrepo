@@ -18,16 +18,15 @@
 
 <c:choose>
 	<c:when test="${not empty properties.herotitlecontent}">
-
+		<c:set var="tabOverlayPath" value="" />
 		<c:set var="tabList" value="<%=PageUtils.convertMultiWidgetToList(properties,"tabTitle-tabOverlayPath-tabIconPath")%>" />
-
+	
 		<div class="hero-homepage general" style="background-image: url(${properties.heroimagePath});">
     		<div class="hero-homepage-container general">
-    			
     			<h2 class="headline hidden-xs">${properties.herotitlecontent}</h2>
-    			<!-- <h2 class="headline hidden-sm hidden-md hidden-lg">${properties.herotitlecontent}</h2> -->
+    			<h2 class="headline hidden-sm hidden-md hidden-lg">${properties.herotitlecontent}</h2>
     			<h4 class="sub-headline hidden-xs">${properties.herosubtitlecontent}</h4>
-    			<!-- <h4 class="sub-headline hidden-sm hidden-md hidden-lg">${properties.herosubtitlecontent}</h4> -->
+    			<h4 class="sub-headline hidden-sm hidden-md hidden-lg">${properties.herosubtitlecontent}</h4>
     	
     			<ul class="general-list col-sm-10 col-md-9 col-lg-8 clearfix">
     				<c:forEach var="tabList" items="${tabList}">
@@ -38,23 +37,22 @@
     						<a href="#" data-href="${tabOverlayPath}.overlay.html" class="general-healthcare">
     							<span class="sprite icon-suitcase-red" style="background-image: url(${tabIconPath});background-position: 0 0"></span> ${tabTitle}
     						</a>
-    						<sling:include path="${tabOverlayPath}.overlay.html" />	
     					</li>
-    					
-    					
     				</c:forEach>
     			</ul>
     	
     			<div class="view-all">
-    				<a href="${viewlinkUrl}">${properties.viewalllinktext}<span class="sprite icon-caret-white"></span></a>
+    				<a href="${viewlinkUrl}">${properties.viewalllinktext}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
     			</div>
     	
     			<div class="scroll-down">
-    				<a href="#"><span class="sprite icon-arrow-down"></span></a>
     			</div>
     		</div>
     	</div>	
-</c:when>
+    	
+    	<!-- <sling:include path="${tabOverlayPath}.html" /> -->
+    	
+	</c:when>
 	<c:otherwise>
 		<wcmmode:edit>
 			<p>

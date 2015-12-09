@@ -20,5 +20,17 @@
             name="./personalizationEnabled"
             type="checkbox"
             xtype="selection"/>
+        <hidebreadcrumb
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Hide Breadcrumb ?"
+            name="./hidebreadcrumb"
+            type="checkbox"
+            xtype="selection"/>
+        <hidereturntotop
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Hide Return to Top Functionality For The Page ?"
+            name="./hidereturntotop"
+            type="checkbox"
+            xtype="selection"/>
     </items>
 </jcr:root>

@@ -22,7 +22,7 @@
 			<h1>${properties.secondaryherotitlecontent}</h1>
 			<h4>${properties.secondaryherosubtitlecontent}</h4>
 				${properties.secondaryherocontent}
-			<a href="${linkUrl}" class="learn-more btn-square -red" target="${properties.secondaryurltargettype?'_blank':'_self'}">
+			<a href="${linkUrl}" class="btn-square-red learn-more" target="${properties.secondaryurltargettype?'_blank':'_self'}">
 				${properties.secondarybuttonlabel}
 			</a>
 		</div>
