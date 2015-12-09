@@ -56,7 +56,9 @@
     			
     			</div>
     		</div>
-    	</div>	
+    	</div>
+
+		<cq:include path="${currentDesign.path}/jcr:content/globalfooter/returntotop" resourceType="hdscorp/components/content/footer/returntotop" />
 
 	</c:otherwise>
 </c:choose>
