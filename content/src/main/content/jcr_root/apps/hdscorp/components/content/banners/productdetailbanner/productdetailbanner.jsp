@@ -26,12 +26,12 @@
 <c:choose>
 	<c:when test="${not empty properties.simplebannertitle}">
 		<div class="hero-product-solutions overview clearfix" style="background-image:url('${properties.simplebannermagePath}');">
-			<div class="hero-product-solutions-container">
+			<div class="hero-product-solutions-container ${properties.simplebannercontentalign?'floatright':''}">
 				<h2 class="headline">${properties.simplebannertitle}</h2>
 				<h3>${properties.simplebannersubtitle}</h3>
 				<h4 class="sub-headline"><cq:text property="simplebannercontent" placeholder="click here to set text" /></h4>
 		
-				<c:if test="${not empty properties.simpllebannerlinklabel}">
+				<c:if test="${not empty properties.simpllebannerbuttonlabel}">
 					<div class="btn-square-white request">
 						<a href="${buttonUrl}" target="${properties.simplebannerurltargettype?'_blank':'_self'}">
 							${properties.simpllebannerbuttonlabel}
