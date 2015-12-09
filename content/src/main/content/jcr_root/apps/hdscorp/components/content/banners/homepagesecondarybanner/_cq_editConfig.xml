@@ -3,6 +3,7 @@
     cq:actions="[text:Homepage Secondary Hero Banner Component,edit,delete]"
     cq:dialogMode="floating"
     cq:layout="editbar"
+    cq:disableTargeting="{Boolean}true"
     jcr:primaryType="cq:EditConfig">
     <cq:listeners
         jcr:primaryType="cq:EditListenersConfig"

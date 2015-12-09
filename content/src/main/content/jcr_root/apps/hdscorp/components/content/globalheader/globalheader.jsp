@@ -73,6 +73,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="sub-navigation-container">
 			<div class="sub-navigation">
 				<h5 class="col-md-3">
@@ -99,6 +100,9 @@
 				</ul>
 			</div>
 		</div>
+		
+		<cq:include path="${currentDesign.path}/jcr:content/breadcrumbpar" resourceType="hdscorp/components/content/breadcrumb" />
+		
 	</div>
 	
 <!-- HEADER ENDS HERE -->

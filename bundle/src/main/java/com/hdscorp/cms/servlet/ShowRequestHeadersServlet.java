@@ -19,7 +19,7 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 @Properties({
 		@Property(name = "service.description", value = { "Request Servlet" }),
 		@Property(name = "service.vendor", value = { "HDS Corp" }),
-		@Property(name = "sling.servlet.paths", value = { "/hdscorp/servlets/showrequestheaders" }),
+		@Property(name = "sling.servlet.paths", value = { "/servicehdscorp/servlets/showrequestheaders" }),
 		@Property(name = "sling.servlet.methods", value = { "GET" }) })
 public class ShowRequestHeadersServlet extends SlingAllMethodsServlet {
 	private static final long serialVersionUID = -2128122335811219481L;

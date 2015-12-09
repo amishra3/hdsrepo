@@ -32,6 +32,7 @@ import org.slf4j.LoggerFactory;
 
 import com.day.cq.tagging.TagManager;
 import com.day.cq.tagging.Tag;
+import com.day.cq.wcm.foundation.Search;
 
 
 import com.hdscorp.cms.util.JcrUtilService;
@@ -47,7 +48,7 @@ import com.hdscorp.cms.util.JcrUtilService;
 @Properties({
 		@Property(name = "service.description", value = "Filters Tags "),
 		@Property(name = "service.vendor", value = "HDS Corp"),
-		@Property(name = "sling.servlet.paths", value = "/hdscorp/tags/recipes"),
+		@Property(name = "sling.servlet.paths", value = "/servicehdscorp/tags/recipes"),
 		@Property(name = "sling.servlet.methods", value = "GET") })
 public class FilterTags extends SlingAllMethodsServlet {
 
@@ -75,7 +76,6 @@ public class FilterTags extends SlingAllMethodsServlet {
 
 	
 		JSONObject filterjson = new JSONObject();
-
 		
 		try {
 

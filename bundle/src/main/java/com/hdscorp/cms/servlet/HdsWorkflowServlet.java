@@ -37,7 +37,7 @@ import com.day.cq.workflow.model.WorkflowModel;
 @Properties({
         @Property(name = "service.description", value = "HDS Corp Workflow Servlet"),
         @Property(name = "service.vendor", value = "HDS Corp"),
-        @Property(name = "sling.servlet.paths", value = "/hdscorp/images/renditions"),
+        @Property(name = "sling.servlet.paths", value = "/servicehdscorp/images/renditions"),
         @Property(name = "sling.servlet.methods", value = "GET")})
 public class HdsWorkflowServlet extends SlingAllMethodsServlet {
 

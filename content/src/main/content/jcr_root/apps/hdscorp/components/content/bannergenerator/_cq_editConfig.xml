@@ -3,6 +3,7 @@
     cq:actions="[text:Banner Generator Component,edit,delete,insert,copymove]"
     cq:dialogMode="floating"
     cq:layout="editbar"
+    cq:disableTargeting="{Boolean}true"
     jcr:primaryType="cq:EditConfig">
     <cq:listeners
         jcr:primaryType="cq:EditListenersConfig"
