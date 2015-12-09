@@ -10,7 +10,13 @@
 <%@page import="com.hdscorp.cms.util.PageUtils"%>
 
 
-<c:set var="linkUrl" value="${properties.simplebannerbuttonurl}" />
+<c:set var="buttonUrl" value="${properties.simplebannerbuttonurl}" />
+
+<c:if test="${fn:startsWith(buttonUrl,'/content/')}">
+	<c:set var="buttonUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("buttonUrl").toString())%>" />
+</c:if>
+
+<c:set var="linkUrl" value="${properties.simplebannerlinkurl}" />
 
 <c:if test="${fn:startsWith(linkUrl,'/content/')}">
 	<c:set var="linkUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("linkUrl").toString())%>" />
@@ -19,30 +25,26 @@
 
 <c:choose>
 	<c:when test="${not empty properties.simplebannertitle}">
-
-		<c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath")%>" />
-
-		<div class="millennials col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-image:url('${properties.simplebannermagePath}');">
-			<div class="millennials-container content-container col-md-12">
-				<div class="millennials-content">
-					<h1 class="textleftalign">
-						${properties.simplebannertitle}
-					</h1>
-					<h4 class="textleftalign">${properties.simplebannersubtitle}</h4>
-						
-						<cq:text property="simplebannercontent" placeholder="click here to set text" />
-						
-						<a href="${linkUrl}" class="learn btn-square -white floatleft" target="${properties.simplebannerurltargettype?'_blank':'_self'}">
+		<div class="hero-product-solutions overview clearfix" style="background-image:url('${properties.simplebannermagePath}');">
+			<div class="hero-product-solutions-container">
+				<h2 class="headline">${properties.simplebannertitle}</h2>
+				<h3>${properties.simplebannersubtitle}</h3>
+				<h4 class="sub-headline"><cq:text property="simplebannercontent" placeholder="click here to set text" /></h4>
+		
+				<c:if test="${not empty properties.simpllebannerlinklabel}">
+					<div class="btn-square-white request">
+						<a href="${buttonUrl}" target="${properties.simplebannerurltargettype?'_blank':'_self'}">
 							${properties.simpllebannerbuttonlabel}
 						</a>
-					<div class="return hidden-sm hidden-md hidden-lg">
-						<a href="#"><span class="sprite icon-arrow-up"></span><br>Return To Top</a>
 					</div>
-				</div>
+				</c:if>
+				<c:if test="${not empty properties.simpllebannerlinklabel}">
+					<div class="buy-through">
+						<a href="${linkUrl}" target="${properties.simplebannerlinkurltargettype?'_blank':'_self'}">${properties.simpllebannerlinklabel} <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+				</c:if>
 			</div>
 		</div>
-
-
 	</c:when>
 	<c:otherwise>
 		<wcmmode:edit>
