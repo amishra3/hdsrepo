@@ -142,13 +142,13 @@
 			<dependency>
 				<groupId>com.adobe.acs</groupId>
 				<artifactId>acs-aem-commons-bundle</artifactId>
-				<version>2.1.2</version>
+				<version>2.0.0</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>com.adobe.acs</groupId>
 				<artifactId>acs-aem-commons-content</artifactId>
-				<version>2.1.2</version>
+				<version>2.0.0</version>
 				<scope>provided</scope>
 				<type>content-package</type>
 			</dependency>
@@ -329,7 +329,32 @@
 					<artifactId>jslint-maven-plugin</artifactId>
 					<version>1.0.1</version>
 				</plugin>
+               <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+				<executions>
+				<execution>
+				<goals>
+				<goal>package</goal>
+				</goals>
+                <configuration>
+                    <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
+					<embeddedTarget>/apps/hdscorp/install</embeddedTarget>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.hdscorp</groupId>
+                            <artifactId>hdscorp-bundle</artifactId>
+                           <filter>true</filter>
+                        </embedded>
+                    </embeddeds>
+             
 
+                    <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
+                </configuration>
+				</execution>
+				</executions>
+            </plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
