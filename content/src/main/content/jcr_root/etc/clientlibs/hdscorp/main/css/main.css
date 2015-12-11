@@ -7794,7 +7794,7 @@ button.cta-scroll-top span {
 
 button.cta-scroll-top .icon-arrow-scroll-top {
   background-image: url(../images/sprite.png);
-  background-position: -110px -189px;
+  background-position: -354px -158px;
   width: 26px;
   height: 14px;
   margin-left: auto;
@@ -7867,14 +7867,14 @@ button.cta-scroll-top .text-return {
 
 .icon-close-hero {
   background-image: url(../images/sprite.png);
-  background-position: -27px -215px;
+  background-position: 0px -215px;
   width: 32px;
   height: 32px;
 }
 
 .icon-connect {
   background-image: url(../images/sprite.png);
-  background-position: -234px -20px;
+  background-position: -292px -20px;
   width: 56px;
   height: 65px;
 }
@@ -7888,6 +7888,13 @@ button.cta-scroll-top .text-return {
 
 .icon-advance {
   background-image: url(../images/sprite.png);
+  background-position: -234px -20px;
+  width: 58px;
+  height: 66px;
+}
+
+.icon-advance-lt {
+  background-image: url(../images/sprite.png);
   background-position: -176px -20px;
   width: 58px;
   height: 66px;
@@ -7895,35 +7902,35 @@ button.cta-scroll-top .text-return {
 
 .icon-connect-small {
   background-image: url(../images/sprite.png);
-  background-position: -91px -158px;
+  background-position: -60px -215px;
   width: 27px;
   height: 31px;
 }
 
 .icon-transform-small {
   background-image: url(../images/sprite.png);
-  background-position: 0px -215px;
+  background-position: -348px -20px;
   width: 27px;
   height: 42px;
 }
 
 .icon-advance-small {
   background-image: url(../images/sprite.png);
-  background-position: -59px -215px;
+  background-position: -32px -215px;
   width: 28px;
   height: 32px;
 }
 
 .icon-caret-red {
   background-image: url(../images/sprite.png);
-  background-position: -377px -20px;
+  background-position: -375px -20px;
   width: 9px;
   height: 14px;
 }
 
 .icon-caret-white {
   background-image: url(../images/sprite.png);
-  background-position: -364px -86px;
+  background-position: -375px -34px;
   width: 9px;
   height: 14px;
 }
@@ -7937,42 +7944,42 @@ button.cta-scroll-top .text-return {
 
 .icon-suitcase-red {
   background-image: url(../images/sprite.png);
-  background-position: -334px -103px;
+  background-position: -147px -158px;
   width: 27px;
   height: 24px;
 }
 
 .icon-phone-red {
   background-image: url(../images/sprite.png);
-  background-position: -133px -117px;
+  background-position: -114px -215px;
   width: 27px;
   height: 27px;
 }
 
 .icon-building-red {
   background-image: url(../images/sprite.png);
-  background-position: -172px -158px;
+  background-position: -168px -215px;
   width: 27px;
   height: 27px;
 }
 
 .icon-globe-red {
   background-image: url(../images/sprite.png);
-  background-position: -199px -158px;
+  background-position: -195px -215px;
   width: 27px;
   height: 27px;
 }
 
 .icon-arrow-up {
   background-image: url(../images/sprite.png);
-  background-position: -290px -70px;
+  background-position: -308px -131px;
   width: 29px;
   height: 13px;
 }
 
 .icon-arrow-down {
   background-image: url(../images/sprite.png);
-  background-position: -290px -45px;
+  background-position: -91px -158px;
   width: 56px;
   height: 25px;
 }
@@ -8007,49 +8014,49 @@ button.cta-scroll-top .text-return {
 
 .icon-facebook-white {
   background-image: url(../images/sprite.png);
-  background-position: -226px -158px;
+  background-position: -174px -158px;
   width: 24px;
   height: 23px;
 }
 
 .icon-twitter-white {
   background-image: url(../images/sprite.png);
-  background-position: -298px -158px;
+  background-position: -246px -158px;
   width: 23px;
   height: 23px;
 }
 
 .icon-linkedin-white {
   background-image: url(../images/sprite.png);
-  background-position: -67px -189px;
+  background-position: -97px -189px;
   width: 23px;
   height: 24px;
 }
 
 .icon-gplus-white {
   background-image: url(../images/sprite.png);
-  background-position: -250px -158px;
+  background-position: -198px -158px;
   width: 24px;
   height: 23px;
 }
 
 .icon-youtube-white {
   background-image: url(../images/sprite.png);
-  background-position: -274px -158px;
+  background-position: -222px -158px;
   width: 24px;
   height: 23px;
 }
 
 .icon-two-white {
   background-image: url(../images/sprite.png);
-  background-position: -44px -189px;
+  background-position: -74px -189px;
   width: 23px;
   height: 24px;
 }
 
 .icon-group-white {
   background-image: url(../images/sprite.png);
-  background-position: -361px -103px;
+  background-position: -360px -103px;
   width: 23px;
   height: 24px;
 }
@@ -8084,14 +8091,14 @@ button.cta-scroll-top .text-return {
 
 .icon-minus {
   background-image: url(../images/sprite.png);
-  background-position: -346px -45px;
+  background-position: -348px -62px;
   width: 38px;
   height: 19px;
 }
 
 .icon-search-mobile {
   background-image: url(../images/sprite.png);
-  background-position: -367px -158px;
+  background-position: -335px -158px;
   width: 19px;
   height: 20px;
 }
@@ -8105,37 +8112,44 @@ button.cta-scroll-top .text-return {
 
 .icon-content-type {
   background-image: url(../images/sprite.png);
-  background-position: -273px -103px;
+  background-position: -133px -117px;
   width: 31px;
   height: 27px;
 }
 
 .icon-white-paper {
   background-image: url(../images/sprite.png);
-  background-position: -118px -158px;
+  background-position: -87px -215px;
   width: 27px;
   height: 30px;
 }
 
 .icon-video-play {
   background-image: url(../images/sprite.png);
-  background-position: -145px -158px;
+  background-position: -141px -215px;
   width: 27px;
   height: 27px;
 }
 
 .icon-accordion-closed {
   background-image: url(../images/sprite.png);
-  background-position: -90px -189px;
+  background-position: -315px -158px;
   width: 20px;
   height: 20px;
 }
 
 .icon-accordion-opened {
   background-image: url(../images/sprite.png);
-  background-position: -346px -64px;
+  background-position: -348px -81px;
   width: 20px;
   height: 3px;
+}
+
+.icon-quote {
+  background-image: url(../images/sprite.png);
+  background-position: -364px -86px;
+  width: 22px;
+  height: 17px;
 }
 
 .hexagon {
@@ -8258,7 +8272,7 @@ button.cta-scroll-top .text-return {
 
 .header .header-container .hitachi-logo-mobile {
   background-image: url(../images/sprite.png);
-  background-position: -290px -20px;
+  background-position: -273px -103px;
   width: 87px;
   height: 25px;
 }
@@ -8274,7 +8288,7 @@ button.cta-scroll-top .text-return {
   top: 5px;
   margin-right: 5px;
   background-image: url(../images/sprite.png);
-  background-position: -321px -158px;
+  background-position: -269px -158px;
   width: 23px;
   height: 21px;
 }
@@ -8283,14 +8297,14 @@ button.cta-scroll-top .text-return {
   top: 5px;
   margin-right: 5px;
   background-image: url(../images/sprite.png);
-  background-position: -344px -158px;
+  background-position: -292px -158px;
   width: 23px;
   height: 21px;
 }
 
 .header .header-container .navigation .nav-search {
   background-image: url(../images/sprite.png);
-  background-position: -304px -103px;
+  background-position: -44px -189px;
   width: 30px;
   height: 26px;
 }
@@ -8390,7 +8404,7 @@ button.cta-scroll-top .text-return {
 
 .header .sub-navigation-container .sub-navigation > h5 {
   float: left;
-  margin-top: 15px;
+  margin-top: 18px;
   color: #ffffff;
   font-family: 'museo-sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -9137,19 +9151,19 @@ button.cta-scroll-top .text-return {
   }
   .hero-homepage.healthcare .hero-homepage-container .healthcare-list .hexagon > .icon-connect {
     background-image: url(../images/sprite.png);
-    background-position: -91px -158px;
+    background-position: -60px -215px;
     width: 27px;
     height: 31px;
   }
   .hero-homepage.healthcare .hero-homepage-container .healthcare-list .hexagon > .icon-transform {
     background-image: url(../images/sprite.png);
-    background-position: 0px -215px;
+    background-position: -348px -20px;
     width: 27px;
     height: 42px;
   }
   .hero-homepage.healthcare .hero-homepage-container .healthcare-list .hexagon > .icon-advance {
     background-image: url(../images/sprite.png);
-    background-position: -59px -215px;
+    background-position: -32px -215px;
     width: 28px;
     height: 32px;
   }
@@ -10080,7 +10094,7 @@ button.cta-scroll-top .text-return {
   max-width: 1280px;
 }
 
-#overview ul.stickyNav {
+ul.stickyNav {
   display: table;
   border-spacing: 15px 0;
   border-collapse: separate;
@@ -10089,7 +10103,7 @@ button.cta-scroll-top .text-return {
   margin: 0 0 0 auto;
 }
 
-#overview ul.stickyNav li {
+ul.stickyNav li {
   display: table-cell;
   text-align: center;
   width: 194px;
@@ -10101,7 +10115,7 @@ button.cta-scroll-top .text-return {
   background-color: #eee;
 }
 
-#overview ul.stickyNav li a {
+ul.stickyNav li a {
   display: inline-block;
   height: 100%;
   padding: 15px 21.5px;
@@ -10113,20 +10127,20 @@ button.cta-scroll-top .text-return {
   display: block;
 }
 
-#overview ul.stickyNav li a:hover, #overview ul.stickyNav li a:active, #overview ul.stickyNav li a:focus {
+ul.stickyNav li a:hover, ul.stickyNav li a:active, ul.stickyNav li a:focus {
   text-decoration: none;
   outline: none;
 }
 
-#overview ul.stickyNav li:first-child a {
+ul.stickyNav li:first-child a {
   margin-left: 0;
 }
 
-#overview ul.stickyNav li.active {
+ul.stickyNav li.active {
   background-color: #fff;
 }
 
-#overview ul.stickyNav li.active:after {
+ul.stickyNav li.active:after {
   content: '';
   width: 0;
   height: 0;
@@ -10138,17 +10152,26 @@ button.cta-scroll-top .text-return {
   left: calc(50% - 12px);
 }
 
-#overview ul.stickyNav li.active a {
+ul.stickyNav li.active a {
   color: #ce0000;
 }
 
-#overview ul.stickyNav li:hover {
+ul.stickyNav li:hover {
   background-color: #fff;
 }
 
-#overview .icon-light,
-#overview .icon-gear,
-#overview .icon-advance {
+.business-specific .icon-light,
+.business-specific .icon-gear,
+.business-specific .icon-advance,
+.business-specific .icon-advance-lt,
+.specific-quote .icon-light,
+.specific-quote .icon-gear,
+.specific-quote .icon-advance,
+.specific-quote .icon-advance-lt,
+.specific-tech .icon-light,
+.specific-tech .icon-gear,
+.specific-tech .icon-advance,
+.specific-tech .icon-advance-lt {
   position: absolute;
   top: -30px;
   left: 0;
@@ -10156,7 +10179,9 @@ button.cta-scroll-top .text-return {
   margin: 0 auto;
 }
 
-#overview .calculating-list {
+.business-specific .calculating-list,
+.specific-quote .calculating-list,
+.specific-tech .calculating-list {
   display: inline-block;
   width: 100%;
   margin: 35px 0 0;
@@ -10165,49 +10190,68 @@ button.cta-scroll-top .text-return {
   height: auto;
 }
 
-#overview .calculating-list > li {
+.business-specific .calculating-list > li,
+.specific-quote .calculating-list > li,
+.specific-tech .calculating-list > li {
   display: inline-block;
   position: relative;
   margin: 0 5px;
-  padding-top: 50px;
+  padding: 50px 10px 0 10px;
   overflow: visible;
   height: auto;
 }
 
-#overview .calculating-list > li h4 {
+.business-specific .calculating-list > li h4,
+.specific-quote .calculating-list > li h4,
+.specific-tech .calculating-list > li h4 {
   color: #000000;
   font-family: 'museo-sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-align: center;
+  text-transform: none;
   padding: 0 5px;
   font-size: 1.3125em;
-  line-height: 1;
+  line-height: 1.3em;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+  margin-top: 0;
 }
 
-#overview .calculating-list > li p {
+.business-specific .calculating-list > li p,
+.specific-quote .calculating-list > li p,
+.specific-tech .calculating-list > li p {
   margin: 0 10px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.875em;
-  line-height: 1;
-  line-height: 130%;
+  line-height: 1.5em;
   text-align: center;
   color: #414141;
 }
 
-#overview .calculating-list > li .icon-plus,
-#overview .calculating-list > li .icon-minus {
+.business-specific .calculating-list > li .icon-plus,
+.business-specific .calculating-list > li .icon-minus,
+.specific-quote .calculating-list > li .icon-plus,
+.specific-quote .calculating-list > li .icon-minus,
+.specific-tech .calculating-list > li .icon-plus,
+.specific-tech .calculating-list > li .icon-minus {
   position: relative;
 }
 
-#overview .calculating-list > li .icon-plus {
+.business-specific .calculating-list > li .icon-plus,
+.specific-quote .calculating-list > li .icon-plus,
+.specific-tech .calculating-list > li .icon-plus {
   top: 10px;
 }
 
-#overview .calculating-list > li .icon-minus {
+.business-specific .calculating-list > li .icon-minus,
+.specific-quote .calculating-list > li .icon-minus,
+.specific-tech .calculating-list > li .icon-minus {
   top: -5px;
 }
 
-#overview .hexContain {
+.business-specific .hexContain,
+.specific-quote .hexContain,
+.specific-tech .hexContain {
   min-height: 420px;
 }
 
@@ -10250,10 +10294,10 @@ button.cta-scroll-top .text-return {
 }
 
 @media only screen and (max-width: 992px) {
-  #overview ul.stickyNav li {
+  ul.stickyNav li {
     margin: 0 0 0 15px;
   }
-  #overview ul.stickyNav li:first-child {
+  ul.stickyNav li:first-child {
     margin-left: 0;
   }
 }
@@ -10311,6 +10355,154 @@ button.cta-scroll-top .text-return {
   }
 }
 
+.specific-quote {
+  padding: 40px 10px 45px 10px;
+  color: #ffffff;
+  background: url("../images/hero-specific-quote.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.specific-quote p {
+  position: relative;
+  display: block;
+  width: 63%;
+  margin: 25px auto;
+  font-family: 'Myriad Pro', arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.specific-quote p .icon-quote.open-quote {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.specific-quote p .icon-quote.close-quote {
+  position: relative;
+  top: -5px;
+  margin-left: 10px;
+}
+
+.specific-quote cite {
+  display: block;
+  text-align: right;
+  margin-right: 10%;
+  font-size: 0.875em;
+  line-height: 1;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .specific-quote {
+    padding: 22px 15px 35px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .specific-quote .content-container [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .specific-quote q {
+    width: auto;
+  }
+  .specific-benefit .content-container h2 {
+    font-size: 1.875rem;
+    margin: 0 0 30px;
+  }
+  .specific-benefit .content-container h4 {
+    font-size: 1.125rem;
+  }
+  .specific-benefit .content-container .hexContain {
+    text-align: center;
+  }
+  .specific-benefit .content-container .hexContain .hexagon {
+    width: 280px;
+  }
+  .specific-benefit .content-container .hexContain .hexagon:before {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+  }
+  .specific-benefit .content-container .hexContain .hexagon:after {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+  }
+}
+
+.specific-tech {
+  padding: 40px 10px 45px 10px;
+  color: #ffffff;
+  background: url("../images/hero-specific-tech.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.specific-tech h2 {
+  margin: 80px 0 20px;
+  font-family: 'museo-sans', Helvetica, Arial, sans-serif;
+  font-size: 3.75em;
+  line-height: 1;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.specific-tech h4 {
+  margin-bottom: 20px;
+  font-family: 'museo-slab', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.specific-tech ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.specific-tech ul li {
+  font-family: arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 1;
+  margin: 15px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .specific-tech {
+    padding: 22px 15px 35px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .specific-tech .content-container [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .specific-tech .content-container h2 {
+    font-size: 1.875rem;
+    margin: 0 0 30px;
+  }
+  .specific-tech .content-container h4 {
+    font-size: 1.125rem;
+  }
+  .specific-tech .content-container .hexContain {
+    text-align: center;
+  }
+  .specific-tech .content-container .hexContain .hexagon {
+    width: 280px;
+  }
+  .specific-tech .content-container .hexContain .hexagon:before {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+  }
+  .specific-tech .content-container .hexContain .hexagon:after {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+  }
+}
+
 .mes-section {
   background-color: #ce0000;
   background: url("../images/prod-sol-bg-mes.png") no-repeat 50% 50%;
@@ -10330,6 +10522,7 @@ button.cta-scroll-top .text-return {
 .mes-section .mes-container header {
   font-family: 'museo-slab', Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   padding-bottom: 40px;
@@ -10372,6 +10565,7 @@ button.cta-scroll-top .text-return {
   outline: 0;
   text-decoration: none;
   color: #ce0000;
+  font-weight: 800;
 }
 
 .mes-section .mes-container .product-box .product-link a:hover {
@@ -10596,6 +10790,7 @@ button.cta-scroll-top .text-return {
   outline: 0;
   text-decoration: none;
   color: #ce0000;
+  font-weight: 800;
 }
 
 .cs-section .cs-container .cs-highlight-box .cs-highlight-box-read a:hover {
@@ -10737,6 +10932,7 @@ button.cta-scroll-top .text-return {
   outline: 0;
   text-decoration: none;
   color: #ce0000;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
@@ -10897,6 +11093,7 @@ button.cta-scroll-top .text-return {
     outline: 0;
     text-decoration: none;
     color: #ce0000;
+    font-weight: 800;
   }
   .resources-section .resources-all-mobile .resources-all-mobile-read a:hover {
     color: #ac1f25;

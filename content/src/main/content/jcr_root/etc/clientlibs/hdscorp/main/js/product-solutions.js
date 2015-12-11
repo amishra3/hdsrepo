@@ -72,28 +72,64 @@
 		element: document.getElementById('overview'),
 		handler: function(direction) {
 			setActiveLi.call(this);
-		}
+		},
+		offset: 1
+	});
+
+	var waypointb = new Waypoint({
+		element: document.getElementById('overview'),
+		handler: function(direction) {
+			setActiveLi.call(this);
+		},
+		offset: -1
 	});
 
 	var waypoint2 = new Waypoint({
 		element: document.getElementById('features-benefits'),
 		handler: function(direction) {
 			setActiveLi.call(this);
-		}
+		},
+		offset: 1
+	});
+
+	var waypoint2b = new Waypoint({
+		element: document.getElementById('features-benefits'),
+		handler: function(direction) {
+			setActiveLi.call(this);
+		},
+		offset: -1
 	});
 
 	var waypoint3 = new Waypoint({
 		element: document.getElementById('resources'),
 		handler: function(direction) {
 			setActiveLi.call(this);
-		}
+		},
+		offset: 1
+	});
+
+	var waypoint3b = new Waypoint({
+		element: document.getElementById('resources'),
+		handler: function(direction) {
+			setActiveLi.call(this);
+		},
+		offset: -1
 	});
 
 	var waypoint4 = new Waypoint({
 		element: document.getElementById('tech-specifications'),
 		handler: function(direction) {
 			setActiveLi.call(this);
-		}
+		},
+		offset: 1
+	});
+
+	var waypoint4b = new Waypoint({
+		element: document.getElementById('tech-specifications'),
+		handler: function(direction) {
+			setActiveLi.call(this);
+		},
+		offset: -1
 	});
 
 	var allMenus = $('.accordion-menu-container');
@@ -127,9 +163,10 @@
 	$('.stickyNav a').on('click', function(e){
 		e.preventDefault();
 
-		var el = $(this).attr('href').substring(1);
+		var el = $(this).attr('href').substring(1),
+			stickyNavHeight = $('.navContain .stickyNav').outerHeight();
 
-		$(window).scrollTo(document.getElementById(el), 1000);
+		$(window).scrollTo(document.getElementById(el), 1000 );
 	});
 
 })(jQuery);
