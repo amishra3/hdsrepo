@@ -17,7 +17,6 @@
 		});
 
 		$('.btn-play-video').click(function() {
-			console.log('play');
 			$heroProducts.siblings('.video').show();
 			$heroProducts.siblings('.overview, .server-rack').hide();
 		});

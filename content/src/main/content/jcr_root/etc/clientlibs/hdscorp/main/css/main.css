@@ -7749,13 +7749,13 @@ The `sprites` mixin generates identical output to the CSS template
 
 button.cta-scroll-top {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 10px;
+  right: 10px;
   outline: 0;
   border: 0;
   display: none;
-  padding: 0 6px;
-  margin: 6px 8px;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   text-transform: uppercase;
@@ -7767,21 +7767,21 @@ button.cta-scroll-top {
   cursor: pointer;
   letter-spacing: .15em;
   z-index: 1031;
-  min-height: 56px;
-  min-width: 56px;
-  width: 87px;
-  height: 87px;
+  width: 77px;
+  height: 77px;
   vertical-align: middle;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 50%;
   transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition-property: background-color, box-shadow, transform;
-  background-color: #838383;
+  background-color: #8f8f8f;
+  background-color: rgba(131, 131, 131, 0.9);
   color: #ffffff;
 }
 
 button.cta-scroll-top:hover {
-  background-color: #666;
+  background-color: #757575;
+  background-color: rgba(102, 102, 102, 0.9);
 }
 
 button.cta-scroll-top.active {
@@ -7794,9 +7794,9 @@ button.cta-scroll-top span {
 
 button.cta-scroll-top .icon-arrow-scroll-top {
   background-image: url(../images/sprite.png);
-  background-position: -334px -103px;
-  width: 37px;
-  height: 19px;
+  background-position: -110px -189px;
+  width: 26px;
+  height: 14px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7844,9 +7844,16 @@ button.cta-scroll-top .text-return {
 }
 
 @media only screen and (max-width: 768px) {
-  button.cta-scroll-top,
-  button.cta-scroll-top.active {
-    display: none;
+  button.cta-scroll-top {
+    position: absolute;
+    display: inline-block;
+    font-size: .5rem;
+    line-height: .7rem;
+    width: 68px;
+    height: 68px;
+  }
+  button.cta-scroll-top .text-return {
+    margin-top: 5px;
   }
   .btn-transparent-square {
     max-width: 300px;
@@ -7930,7 +7937,7 @@ button.cta-scroll-top .text-return {
 
 .icon-suitcase-red {
   background-image: url(../images/sprite.png);
-  background-position: -226px -158px;
+  background-position: -334px -103px;
   width: 27px;
   height: 24px;
 }
@@ -8000,49 +8007,49 @@ button.cta-scroll-top .text-return {
 
 .icon-facebook-white {
   background-image: url(../images/sprite.png);
-  background-position: -324px -158px;
+  background-position: -226px -158px;
   width: 24px;
   height: 23px;
 }
 
 .icon-twitter-white {
   background-image: url(../images/sprite.png);
-  background-position: -348px -158px;
+  background-position: -298px -158px;
   width: 23px;
   height: 23px;
 }
 
 .icon-linkedin-white {
   background-image: url(../images/sprite.png);
-  background-position: -44px -189px;
+  background-position: -67px -189px;
   width: 23px;
   height: 24px;
 }
 
 .icon-gplus-white {
   background-image: url(../images/sprite.png);
-  background-position: -300px -158px;
+  background-position: -250px -158px;
   width: 24px;
   height: 23px;
 }
 
 .icon-youtube-white {
   background-image: url(../images/sprite.png);
-  background-position: -276px -158px;
+  background-position: -274px -158px;
   width: 24px;
   height: 23px;
 }
 
 .icon-two-white {
   background-image: url(../images/sprite.png);
-  background-position: -253px -158px;
+  background-position: -44px -189px;
   width: 23px;
   height: 24px;
 }
 
 .icon-group-white {
   background-image: url(../images/sprite.png);
-  background-position: -67px -189px;
+  background-position: -361px -103px;
   width: 23px;
   height: 24px;
 }
@@ -8084,7 +8091,7 @@ button.cta-scroll-top .text-return {
 
 .icon-search-mobile {
   background-image: url(../images/sprite.png);
-  background-position: -156px -189px;
+  background-position: -367px -158px;
   width: 19px;
   height: 20px;
 }
@@ -8119,7 +8126,7 @@ button.cta-scroll-top .text-return {
 
 .icon-accordion-closed {
   background-image: url(../images/sprite.png);
-  background-position: -136px -189px;
+  background-position: -90px -189px;
   width: 20px;
   height: 20px;
 }
@@ -8267,7 +8274,7 @@ button.cta-scroll-top .text-return {
   top: 5px;
   margin-right: 5px;
   background-image: url(../images/sprite.png);
-  background-position: -113px -189px;
+  background-position: -321px -158px;
   width: 23px;
   height: 21px;
 }
@@ -8276,7 +8283,7 @@ button.cta-scroll-top .text-return {
   top: 5px;
   margin-right: 5px;
   background-image: url(../images/sprite.png);
-  background-position: -90px -189px;
+  background-position: -344px -158px;
   width: 23px;
   height: 21px;
 }
@@ -8344,7 +8351,7 @@ button.cta-scroll-top .text-return {
 
 .header .header-container .navigation > ul > li.search .nav-search {
   position: absolute;
-  right: 11px;
+  right: 13px;
 }
 
 .header .header-container .navigation-mobile {
@@ -8774,6 +8781,9 @@ button.cta-scroll-top .text-return {
   }
   .footer .footer-gray .footer-container .social > a {
     margin-left: 10px;
+  }
+  .footer .footer-blue {
+    position: relative;
   }
   .footer .footer-blue .buttons .reseller,
   .footer .footer-blue .buttons .information {
@@ -9388,6 +9398,7 @@ button.cta-scroll-top .text-return {
   .hero-product-solutions {
     min-height: 0;
     padding-top: 130px;
+    padding-bottom: 80px;
     background-position: top right;
   }
   .hero-product-solutions .hero-product-solutions-container {
@@ -9426,6 +9437,7 @@ button.cta-scroll-top .text-return {
 @media only screen and (max-width: 768px) {
   .hero-product-solutions {
     padding-top: 170px;
+    padding-bottom: 0;
   }
   .hero-product-solutions .hero-product-solutions-container .headline {
     margin-bottom: 10px;
@@ -10045,21 +10057,93 @@ button.cta-scroll-top .text-return {
 }
 
 .navContain {
-  margin-top: -45px;
   position: absolute;
-  right: -25px;
-  text-align: right;
+  bottom: 0;
+  right: 0;
   z-index: 999;
 }
 
 .sticky {
   position: fixed;
-  top: 45px;
+  height: 0;
+  top: 0;
   left: 0px;
   z-index: 999;
-  width: 100%;
+}
+
+.sticky .stickNav-background {
   background: rgba(0, 0, 0, 0.5);
-  height: 45px;
+}
+
+.sticky .stickNav-container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+#overview ul.stickyNav {
+  display: table;
+  border-spacing: 15px 0;
+  border-collapse: separate;
+  z-index: 1001;
+  max-width: 1280px;
+  margin: 0 0 0 auto;
+}
+
+#overview ul.stickyNav li {
+  display: table-cell;
+  text-align: center;
+  width: 194px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: middle;
+  background-color: #eee;
+}
+
+#overview ul.stickyNav li a {
+  display: inline-block;
+  height: 100%;
+  padding: 15px 21.5px;
+  font-family: 'museo-sans', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+}
+
+#overview ul.stickyNav li a:hover, #overview ul.stickyNav li a:active, #overview ul.stickyNav li a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+#overview ul.stickyNav li:first-child a {
+  margin-left: 0;
+}
+
+#overview ul.stickyNav li.active {
+  background-color: #fff;
+}
+
+#overview ul.stickyNav li.active:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 12px);
+}
+
+#overview ul.stickyNav li.active a {
+  color: #ce0000;
+}
+
+#overview ul.stickyNav li:hover {
+  background-color: #fff;
 }
 
 #overview .icon-light,
@@ -10127,63 +10211,6 @@ button.cta-scroll-top .text-return {
   min-height: 420px;
 }
 
-#overview ul.stickyNav {
-  height: 45px;
-  z-index: 1001;
-  max-width: 1280px;
-  text-align: right;
-  margin: 0 auto;
-}
-
-#overview ul.stickyNav li {
-  height: 45px;
-  text-align: center;
-  width: 194px;
-  padding: 5px 20px;
-  margin-right: 15px;
-  line-height: 3;
-  background-color: #eee;
-  position: relative;
-}
-
-#overview ul.stickyNav li a {
-  font-family: 'museo-sans', Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
-  display: block;
-}
-
-#overview ul.stickyNav li a:hover, #overview ul.stickyNav li a:active, #overview ul.stickyNav li a:focus {
-  text-decoration: none;
-  outline: none;
-}
-
-#overview ul.stickyNav li.active {
-  background-color: #fff;
-}
-
-#overview ul.stickyNav li.active:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 11px solid transparent;
-  border-right: 11px solid transparent;
-  border-top: 10px solid #fff;
-  position: absolute;
-  bottom: -10px;
-  left: calc(50% - 12px);
-}
-
-#overview ul.stickyNav li.active a {
-  color: #ce0000;
-}
-
-#overview ul.stickyNav li:hover {
-  background-color: #fff;
-}
-
 .animateAnchor {
   position: relative;
   margin: 15px auto;
@@ -10220,6 +10247,15 @@ button.cta-scroll-top .text-return {
 .animateAnchor:hover > .animateIcon {
   color: #ac1f25;
   left: 6px;
+}
+
+@media only screen and (max-width: 992px) {
+  #overview ul.stickyNav li {
+    margin: 0 0 0 15px;
+  }
+  #overview ul.stickyNav li:first-child {
+    margin-left: 0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -10445,6 +10481,29 @@ button.cta-scroll-top .text-return {
   transform: translateY(-50%);
 }
 
+.spec-section .spec-container .tbd-dl a {
+  background-color: transparent;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  margin: 0 auto;
+  display: block;
+  max-width: 375px;
+  text-align: center;
+}
+
+.spec-section .spec-container .tbd-dl a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.spec-section .spec-container .tbd-dl a:hover a {
+  color: #000000;
+}
+
+.spec-section .spec-container .tbd-dl a:focus, .spec-section .spec-container .tbd-dl a:hover {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 768px) {
   .spec-section .spec-container {
     padding-top: 22px;
@@ -10562,17 +10621,39 @@ button.cta-scroll-top .text-return {
 }
 
 .cs-section .cs-container .cs-selections .cs-selection-box:hover .glyphicon.glyphicon-chevron-right {
-  left: 8px;
+  right: -8px;
 }
 
 .cs-section .cs-container .cs-selections .cs-selection-box .glyphicon.glyphicon-chevron-right {
   position: relative;
-  left: 0;
+  right: 0;
   transition: all 0.5s ease-out;
 }
 
 .cs-section .cs-container .cs-all {
   margin: 42px 0;
+}
+
+.cs-section .cs-container .cs-all .cs-all-box a {
+  background-color: transparent;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  margin: 0 auto;
+  display: block;
+  max-width: 375px;
+}
+
+.cs-section .cs-container .cs-all .cs-all-box a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.cs-section .cs-container .cs-all .cs-all-box a:hover a {
+  color: #000000;
+}
+
+.cs-section .cs-container .cs-all .cs-all-box a:focus, .cs-section .cs-container .cs-all .cs-all-box a:hover {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -10707,13 +10788,13 @@ button.cta-scroll-top .text-return {
 
 .resources-section .resources-container .resources-all:hover .glyphicon.glyphicon-chevron-right,
 .resources-section .resources-container .resources-support:hover .glyphicon.glyphicon-chevron-right {
-  left: 8px;
+  right: -8px;
 }
 
 .resources-section .resources-container .resources-all .glyphicon.glyphicon-chevron-right,
 .resources-section .resources-container .resources-support .glyphicon.glyphicon-chevron-right {
   position: relative;
-  left: 0;
+  right: 0;
   transition: all 0.5s ease-out;
 }
 
@@ -10832,7 +10913,7 @@ button.cta-scroll-top .text-return {
   min-height: 875px;
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 110px;
+  padding-top: 70px;
   /*padding-bottom: 123px;*/
 }
 
@@ -10853,7 +10934,7 @@ button.cta-scroll-top .text-return {
   text-align: center;
   min-height: 382px;
   max-width: 1107px;
-  padding-top: 120px;
+  padding-top: 60px;
   margin: 0 auto 140px;
 }
 
@@ -10996,6 +11077,9 @@ button.cta-scroll-top .text-return {
     height: 3px;
     width: 100%;
     background-color: #c5c5c5;
+  }
+  .accordion-menu-container .accordion-menu {
+    display: block !important;
   }
   .accordion-content {
     max-height: 0px;

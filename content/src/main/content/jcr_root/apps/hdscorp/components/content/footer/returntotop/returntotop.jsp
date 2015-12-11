@@ -8,9 +8,33 @@
 					com.day.cq.wcm.api.components.Toolbar"%>
 
 
-<c:if test="${empty pageProperties.hidereturntotop}">
-		<button class="cta-scroll-top">
-			<div class="icon-arrow-scroll-top"></div>
-			<span class="text-return">${properties.returnTopLabel}</span>
-		</button>
-</c:if>
+<div class="accordion-menu-container">
+	<div class="accordion-menu hidden-sm hidden-md hidden-lg">
+		Overview <span class="icon-accordion-closed"></span> <span
+			class="icon-accordion-opened"></span>
+	</div>
+</div>
+
+
+<div class="accordion-menu-container">
+	<div class="accordion-menu hidden-sm hidden-md hidden-lg">
+		Advantages <span class="icon-accordion-closed"></span> <span
+			class="icon-accordion-opened"></span>
+	</div>
+</div>
+
+
+<div class="accordion-menu-container">
+	<div class="accordion-menu hidden-sm hidden-md hidden-lg">
+		Resources &amp; Support <span class="icon-accordion-closed"></span> <span
+			class="icon-accordion-opened"></span>
+	</div>
+</div>
+
+
+<div class="accordion-menu-container">
+	<div class="accordion-menu hidden-sm hidden-md hidden-lg">
+		Tech Specs <span class="icon-accordion-closed"></span> <span
+			class="icon-accordion-opened"></span>
+	</div>
+</div>
