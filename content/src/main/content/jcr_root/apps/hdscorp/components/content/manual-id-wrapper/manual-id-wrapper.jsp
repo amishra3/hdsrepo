@@ -10,5 +10,10 @@
     </c:otherwise>
 </c:choose>
 <wcmmode:edit>
+	<c:if test="${not empty id}">
+		<p>
+			<span class="cq-text-placeholder-ipe">Configure ${properties.id} content here.</span>
+		</p>
+	</c:if>
     <cq:include path="end" resourceType="/apps/hdscorp/components/content/manual-id-wrapper/end" />
 </wcmmode:edit>
