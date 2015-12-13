@@ -7,8 +7,8 @@
 	var $heroProducts = $('.hero-product-solutions');
 	if ($heroProducts.length) {
 		$('.close-hero').click(function() {
-			$heroProducts.siblings('.overview').show();
-			$heroProducts.siblings('.server-rack, .video').hide();
+			$heroProducts.siblings('.server-rack').show();
+			$heroProducts.siblings('.video').hide();
 		});
 
 		$('.request').click(function() {
