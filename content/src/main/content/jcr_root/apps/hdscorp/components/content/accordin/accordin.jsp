@@ -8,6 +8,13 @@
 
 <c:set var="tabinks" value="<%=PageUtils.convertMultiWidgetToList(properties,"tabName-tabAnchor-defaultActiveTab")%>" />
 
+<div class="accordion-menu-container">
+	<div class="accordion-menu hidden-sm hidden-md hidden-lg">
+		<span class="acc-label" id="stickyNav-0"></span> <span
+			class="icon-accordion-closed"></span> <span
+			class="icon-accordion-opened"></span>
+	</div>
+</div>
 
 <div class="hidden-xs content-container" style="position: relative;">
 	<div class="navContain">

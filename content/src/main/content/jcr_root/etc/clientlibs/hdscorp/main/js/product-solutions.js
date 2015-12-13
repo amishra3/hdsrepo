@@ -8,11 +8,6 @@
 	if ($heroProducts.length) {
 		$('.close-hero').click(function() {
 			$heroProducts.siblings('.server-rack').show();
-			$heroProducts.siblings('.video').hide();
-		});
-
-		$('.request').click(function() {
-			$heroProducts.siblings('.server-rack').show();
 			$heroProducts.siblings('.overview, .video').hide();
 		});
 
@@ -81,7 +76,7 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: -1
+		offset: -136
 	});
 
 	var waypoint2 = new Waypoint({
@@ -89,7 +84,7 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: 1
+		offset: 34
 	});
 
 	var waypoint2b = new Waypoint({
@@ -97,7 +92,7 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: -1
+		offset: -136
 	});
 
 	var waypoint3 = new Waypoint({
@@ -105,7 +100,7 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: 1
+		offset: 34
 	});
 
 	var waypoint3b = new Waypoint({
@@ -113,7 +108,7 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: -1
+		offset: -136
 	});
 
 	var waypoint4 = new Waypoint({
@@ -121,7 +116,7 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: 1
+		offset: 34
 	});
 
 	var waypoint4b = new Waypoint({
@@ -129,7 +124,13 @@
 		handler: function(direction) {
 			setActiveLi.call(this);
 		},
-		offset: -1
+		offset: -136
+	});
+
+	// Get text values from Sticky Nav, apply to Accordion labels
+	$("ul.stickyNav li a").each(function(i) {
+		var stickyLabel = $(this).text();
+		$("#stickyNav-"+i).text(stickyLabel);
 	});
 
 	var allMenus = $('.accordion-menu-container');
@@ -163,10 +164,19 @@
 	$('.stickyNav a').on('click', function(e){
 		e.preventDefault();
 
-		var el = $(this).attr('href').substring(1),
-			stickyNavHeight = $('.navContain .stickyNav').outerHeight();
+		var
+		 	scrollOffset = 0,
+			el = $(this).attr('href').substring(1),
+			stickyNavHeight = $('.navContain .stickyNav').outerHeight(),
+			stickyNavPosition = $( '.navContain .stickyNav' ).offset().top,
+			element = document.getElementById( el ),
+			elementPosition = element.getBoundingClientRect()
+		;
 
-		$(window).scrollTo(document.getElementById(el), 1000 );
+		if ( stickyNavPosition < elementPosition ) { scrollOffset = stickyNavHeight; }
+		else { scrollOffset = 0; }
+
+		$(window).scrollTo( element, 1000, { offset: scrollOffset } );
 	});
 
 })(jQuery);
