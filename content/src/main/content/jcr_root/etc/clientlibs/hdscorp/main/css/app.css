@@ -17,3 +17,11 @@
 .editbarstyle {
 	overflow: auto;
 }
+
+.acs-commons-resp-colctrl-row .col-sm-4{
+	width: 100%;	
+}
+
+.acs-commons-resp-colctrl-row .col-sm-6{
+	width: 100%;
+}
