@@ -15,115 +15,15 @@
                     <p><a href="${downloadspectargeturl}" target="${properties.downloadspeclinkopeninnew?'_blank':'_self'}">${properties.downloadspeclinklabel}<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a></p>
                   </div>
               </div>
+
+			<!--TECH SPEC TABLE START--> 
+            
               <div class="row">
-                <div class="col-sm-12">
-                    <div id="no-more-tables">
-                        <table class="table-bordered table-striped table-condensed cf specs-table">
-                        <tbody>
-                          <tr>
-                            <th class="tech-specs-pro-name" data-title="Maximum Number of Hard Drives, including Spares">Maximum Number of Hard Drives, including Spares</th>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th class="tech-specs-pro-name" data-title="Maximum Number of Hard Drives, including Spares">Maximum Number of Hard Drives, including Spares</th>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th class="tech-specs-pro-name" data-title="Maximum Number of Hard Drives, including Spares">Maximum Number of Hard Drives, including Spares</th>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-specs clearfix">
-                                  <div class="pro-type">G200</div>
-                                  <div class="pro-category"><span>264 SFF</span> <span>252 LFF</span></div>
-                                </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                </div>
-              </div>
+			  		<cq:include path="techspecpar" resourceType="hdscorp/components/content/productdetailtechspecs" />
+			  </div>
+			<!--TECH SPEC TABLE END-->
+
+
               <div class="tbd-dl">
                   <p><a class="btn-square btn-square-white" href="${properties.downloadspecctatargeturl}" target="${properties.downloadspecctaopeninnew?'_blank':'_self'}">${properties.downloadspecctalabel}</a></p>
               </div>
