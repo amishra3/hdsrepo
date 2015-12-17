@@ -15,6 +15,13 @@
             fieldDescription="CTA Target URL."
             fieldLabel="CTA Target URL."
             name="./ctatargeturl"
-            xtype="pathfield"/>            
+            xtype="pathfield"/>
+        <hidectaarrow
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Hide Arrow ?"
+            fieldLabel="Hide Arrow ?"
+            name="./hidectaarrow"
+            type="selection"
+            xtype="checkbox"/>                                    
     </items>
 </jcr:root>

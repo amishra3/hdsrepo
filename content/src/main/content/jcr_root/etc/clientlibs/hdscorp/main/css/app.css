@@ -18,10 +18,31 @@
 	overflow: auto;
 }
 
+.hero-product-solutions.overview{
+	display: block;
+}
+
+
 .acs-commons-resp-colctrl-row .col-sm-4{
 	width: 100%;	
 }
 
 .acs-commons-resp-colctrl-row .col-sm-6{
 	width: 100%;
+}
+
+.cs-section .cyancta {
+    background-color: #008eaa;
+    margin: 7px;
+    padding: 15px 20px;
+}
+
+@media only screen and (max-width: 768px){
+	.cs-section .cyancta {
+	    display: inline-block;
+	    width: 100%;
+	    position: relative;
+	    padding: 15px 10px;
+    	margin: 7px auto;
+	}
 }

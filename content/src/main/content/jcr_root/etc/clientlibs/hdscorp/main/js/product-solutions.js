@@ -141,10 +141,9 @@
 		return false;
 	});
 
-	$('.accordion-level').on('click', function(event) {
+	/*$('.accordion-level').on('click', function(event) {
 		var $currentMenu = $(this).find('.accordion-menu-container');
 		var $currentContent = $(this).find('.accordion-content');
-
 		if ($currentMenu.hasClass('open')) {
 			$currentMenu.removeClass('open');
 			$currentContent.removeClass('open');
@@ -155,7 +154,9 @@
 		$currentMenu.toggleClass('open');
 		$currentContent.toggleClass('open');
 		return false;
-	});
+	});*/
+
+		
 
 	/**
 	 * stickyNav scrolling functionality

@@ -17,25 +17,6 @@
 	<!-- row start -->
 	<div class="row row-reduce-half">
 		<cq:include path="resourctatpar" resourceType="hdscorp/components/content/column-control" />
-		
-		
-		
-<!-- 		<div class="col-sm-6 col-no-pad">
-			<div class="resources-all">
-				<a href="javascript:void(0);">See all related resources <span
-					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-			</div>
-		</div>
-		<div class="col-sm-6 col-no-pad">
-			<div class="resources-support">
-				<a href="javascript:void(0);">Customer &amp; login for support
-					resources <span class="glyphicon glyphicon-chevron-right"
-					aria-hidden="true"></span>
-				</a>
-			</div>
-		</div>
- -->		
-		
 	</div>
 	<!-- row end -->
 </div>

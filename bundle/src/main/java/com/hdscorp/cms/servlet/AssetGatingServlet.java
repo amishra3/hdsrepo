@@ -23,7 +23,7 @@ public class AssetGatingServlet extends SlingSafeMethodsServlet {
 			SlingHttpServletResponse response) throws ServletException,
 			IOException {
 		final RequestDispatcherOptions options = new RequestDispatcherOptions();
-		//1. Check if this is not cyclic to avoud infinite loop
+		//1. Check if this is not cyclic to avoid infinite loop
 		//2. Check if resource path is a match with the paths which are to be monitored
 		//3. Check if is a PDF
 		//4. Get resource meta information and check if PDF has isGated property set to true and the date is within gated date range set on the pdf
