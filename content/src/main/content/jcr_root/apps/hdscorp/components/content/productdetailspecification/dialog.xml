@@ -14,19 +14,41 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <sectiontitle
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Content Section Title (Optional)"
+                        fieldLabel="Content Section Title"
                         name="./sectiontitle"
                         xtype="textfield"/>
-                    <contenttitle
+                    <downloadspectargeturl
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Content Title"
-                        name="./contenttitle"
+                        fieldLabel="Spec Download Target URL"
+                        name="./downloadspectargeturl"
+                        xtype="pathfield"/>
+                    <downloadspeclinklabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Label For Spec Download Link"
+                        name="./downloadspeclinklabel"
                         xtype="textfield"/>
-                    <contensubttitle
+                    <downloadspeclinkopeninnew
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Content Sub Title"
-                        name="./contensubttitle"
-                        xtype="textfield"/>                        
+                        fieldLabel="Open in New Window ?"
+                        name="./downloadspeclinkopeninnew"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <downloadspecctatargeturl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Spec Download CTA Target URL"
+                        name="./downloadspecctatargeturl"
+                        xtype="pathfield"/>
+                    <downloadspecctalabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Label For Spec Download CTA"
+                        name="./downloadspecctalabel"
+                        xtype="textfield"/>
+                    <downloadspecctaopeninnew
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in New Window ?"
+                        name="./downloadspecctaopeninnew"
+                        type="checkbox"
+                        xtype="selection"/>
                 </items>
             </tab1>
         </items>

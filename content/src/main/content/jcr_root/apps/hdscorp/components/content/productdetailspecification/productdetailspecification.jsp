@@ -1,13 +1,18 @@
 <%@page session="false"%>
-
 <%@include file="/apps/foundation/global.jsp"%>
+<%@page import="com.hdscorp.cms.util.PathResolver"%>
+
+<c:set var="downloadspectargeturl" value="${properties.downloadspectargeturl}" />
+<c:if test="${fn:startsWith(downloadspectargeturl,'/content/')}">
+	<c:set var="downloadspectargeturl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("downloadspectargeturl").toString())%>" />
+</c:if>
 
 
 	<div class="spec-container container-fluid">
               <div class="spec-title hidden-xs">
-                  Specifications
+                  ${properties.sectiontitle}
                   <div class="spec-download-pdf">
-                    <p><a href="javascript:void(0);">download specs pdf <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a></p>
+                    <p><a href="${downloadspectargeturl}" target="${properties.downloadspeclinkopeninnew?'_blank':'_self'}">${properties.downloadspeclinklabel}<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a></p>
                   </div>
               </div>
               <div class="row">
@@ -120,7 +125,7 @@
                 </div>
               </div>
               <div class="tbd-dl">
-                  <p><a class="btn-square btn-square-white" href="javascript:void(0);">download specs pdf</a></p>
+                  <p><a class="btn-square btn-square-white" href="${properties.downloadspecctatargeturl}" target="${properties.downloadspecctaopeninnew?'_blank':'_self'}">${properties.downloadspecctalabel}</a></p>
               </div>
 
               <!-- test -->
@@ -172,7 +177,8 @@
                       </div>
                   </div>                
                 </div>
-                <div class="accordion-level" id="accord-box2">
+                
+               <!--   <div class="accordion-level" id="accord-box2">
                     <div class="accordion-menu-container">
                         <div class="accordion-menu">
                             <div id="stickyNav-0" class="acc-label">Storage and Data Management: Data Mobility</div>
@@ -262,7 +268,7 @@
                     </div>
                 </div>
 
-<!--                 <div class="accordion-level" id="accord-box4">
+              <div class="accordion-level" id="accord-box4">
                     <div class="accordion-menu-container">
                         <div class="accordion-menu">
                             <div id="stickyNav-0" class="acc-label">Data Protection: In-System Replication for Mainframe Products</div>
