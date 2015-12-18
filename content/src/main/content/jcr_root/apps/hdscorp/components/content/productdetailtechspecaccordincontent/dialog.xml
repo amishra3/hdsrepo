@@ -10,13 +10,22 @@
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
                 jcr:primaryType="cq:Panel"
-                title="Tech Spec Accordin Content">
+                title="Accordin Boxes">
                 <items jcr:primaryType="cq:WidgetCollection">
-                    <sectiontitle
+                    <multilinks
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Acordin Content Title"
-                        name="./accordinsectiontitle"
-                        xtype="textfield"/>
+                        customMultiFieldName="./multilinks"
+                        fieldLabel="Accordin Boxes"
+                        name="./multilinks"
+                        xtype="custommultifield">
+                        <fieldConfig jcr:primaryType="cq:WidgetCollection">
+                            <linkName
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Accordin Box Title"
+                                name="./linkName"
+                                xtype="textfield"/>
+                        </fieldConfig>
+                    </multilinks>
                 </items>
             </tab1>
         </items>
