@@ -27,10 +27,10 @@
 										<div class="pro-category">${fn:trim(cellContent[1])}</div>
 									</c:if>
 
-									<c:if test="${fn:length(cellContent) lt 1}">
-										<div class="pro-category">${fn:trim(cellContent[0])}</div>
+									<c:if test="${fn:length(cellContent) eq 1}">
+										<div class="pro-category">${columnItem}</div>
 									</c:if>
-
+									
 								</div>
 							</td>
 
