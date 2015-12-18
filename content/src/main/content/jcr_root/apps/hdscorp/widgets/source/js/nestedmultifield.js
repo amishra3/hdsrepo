@@ -97,6 +97,7 @@ try {
         this.columnCount = new CQ.Ext.form.TextField({
             fieldLabel : "Ignore this field",
             fieldDescription: "Ignore this field",
+            hidden:true,
             defaultValue :"0",
             allowBlank: true,
             width : 400,
@@ -115,11 +116,11 @@ try {
 
         this.columnContent = new CQ.form.MultiField({
             fieldLabel : "Add Columns",
-            fieldDescription : "Click '+' to add columns",
+            fieldDescription : "Click '+' to add columns<br/><p style='color:blue;font-weight: bold;'>Add Cell Content in the following format - 'Cell heading ~! Cell Content'. Use &lt;br/&gt; for line breaks.</p> <br/>Example - <p style='color:blue;font-weight: bold;'>G200 ~! 264 SFF &lt;br/&gt; 252 LFF</p>",
             width : 400,
             fieldConfig: {
                 "xtype" : "textfield",
-                allowBlank: false,
+                allowBlank: false,                
             },
             listeners: {
                 change: {
