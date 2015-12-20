@@ -38,6 +38,16 @@
 }
 
 
+.hiddencontent {
+    display: none;
+}
+
+.showcontent {
+    display: block !important;
+}
+
+
+
 @media only screen and (max-width: 768px){
 	.cs-section .cyancta {
 	    display: inline-block;

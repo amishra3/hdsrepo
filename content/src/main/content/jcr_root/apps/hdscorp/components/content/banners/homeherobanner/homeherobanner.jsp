@@ -37,7 +37,10 @@
     						<a href="#" data-href="${tabOverlayPath}.overlay.html" class="general-healthcare">
     							<span class="sprite icon-suitcase-red" style="background-image: url(${tabIconPath});background-position: 0 0"></span> ${tabTitle}
     						</a>
+    						<sling:include path="${tabOverlayPath}.modal.html"/>
     					</li>
+    					
+    					
     				</c:forEach>
     			</ul>
     	

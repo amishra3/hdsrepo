@@ -22,7 +22,15 @@
 
 		<c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath")%>" />
 
-    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-image: url('${properties.heximagePath}')">
+    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12 hero-homepage-container" style="background-image: url('${properties.heximagePath}')">
+    	    <!-- IF IS A MODAL TRUE -->
+    	    <c:if test="${properties.ismodalcontent}">
+    	    	<a href="javascript:void(0);" class="close-hero"><span class="sprite icon-close-hero"></span></a>
+    	    </c:if>
+    	    <c:if test="${properties.bannericonpath}">
+    	    <!-- IF ICON PATH IS PRODIVDED -->
+            	<span class="sprite icon-healthcare" style="background-image: url('${properties.bannericonpath}')"></span>
+            </c:if>
     		<div class="calculating-success-container content-container">
     			<h1>${properties.hextitlecontent}</h1>
     			<h4>${properties.hexsubtitlecontent}</h4>

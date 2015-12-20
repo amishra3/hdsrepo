@@ -19,16 +19,20 @@
                        ${xss:encodeForHTML(xssAPI, definition['contenttitle'])}
                        <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
                    </div>
-                   <div class="product-download">
-	                   	<a href="${downloadlink}" target="_blank">
-	                       	${xss:encodeForHTML(xssAPI, definition['downloadlinklabel'])}
-	                       	<span aria-hidden="true" class="glyphicon glyphicon-new-window"></span>
-	                    </a>
-                   </div>
-                   <div class="product-email">
-                       ${xss:encodeForHTML(xssAPI, definition['emailinformationlabel'])} 
-                       <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
-                   </div>
+                   <c:if test="${not empty definition['downloadlinklabel']}">
+	                   <div class="product-download">
+		                   	<a href="${downloadlink}" target="_blank">
+		                       	${xss:encodeForHTML(xssAPI, definition['downloadlinklabel'])}
+		                       	<span aria-hidden="true" class="glyphicon glyphicon-new-window"></span>
+		                    </a>
+	                   </div>
+                   </c:if>
+                   <c:if test="${not empty definition['emailinformationlabel']}">                   
+	                   <div class="product-email">
+	                       ${xss:encodeForHTML(xssAPI, definition['emailinformationlabel'])} 
+	                       <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
+	                   </div>
+                   </c:if>
                </div>
                <div class="col-sm-8">
                    <div class="product-desc">

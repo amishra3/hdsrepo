@@ -7,4 +7,5 @@
 	    <cq:include script="content.jsp"/>
 	    <cq:include script="footer.jsp" />
 	</div>
+	<!-- <cq:includeClientLib js="hdscorp.main" /> -->
 </body>

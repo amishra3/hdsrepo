@@ -12,6 +12,11 @@
                 jcr:primaryType="cq:Panel"
                 title="Tab 1">
                 <items jcr:primaryType="cq:WidgetCollection">
+                    <bannericonpath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Banner Icon Path (Optional)"
+                        name="./bannericonpath"
+                        xtype="ddpathfield"/>
                     <hextitlecontent
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Hero Title Content"
@@ -26,7 +31,7 @@
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Hero Content"
                         name="./hexcontent"
-                        xtype="richtext">
+                        xtype="textarea">
                         <rtePlugins
                             jcr:primaryType="nt:unstructured"
                             path="/apps/hdscorp/components/content/richtext/tab_editor/items/editor/rtePlugins.infinity.json"
@@ -75,30 +80,18 @@
                                 fieldLabel="Placard Icon Path"
                                 name="./placardIconPath"
                                 xtype="pathfield"/>
+		                    <placardlinklabel
+		                        jcr:primaryType="cq:Widget"
+		                        fieldLabel="Link Label"
+		                        name="./placardlinklabel"
+		                        xtype="textfield"/>
+		                    <placardlinkurl
+		                        jcr:primaryType="cq:Widget"
+		                        fieldLabel="Link Target URL"
+		                        name="./placardlinkurl"
+		                        xtype="pathfield"/>
                         </fieldConfig>
                     </multilinks>
-                    <hexbuttonlabel
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Button Label"
-                        name="./hexbuttonlabel"
-                        xtype="textfield"/>
-                    <hexbuttonurl
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Button Target URL"
-                        name="./hexbuttonurl"
-                        xtype="pathfield"/>
-                    <hexurltargettype
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Open in New Window ?"
-                        name="./hexurltargettype"
-                        type="checkbox"
-                        xtype="selection"/>
-                    <hexshowadditionsymbol
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Show Addition Icons ?"
-                        name="./hexshowadditionsymbol"
-                        type="checkbox"
-                        xtype="selection"/>
                 </items>
             </tab1>
         </items>
