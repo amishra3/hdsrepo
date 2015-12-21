@@ -17,8 +17,7 @@
 <div class="col-sm-6 col-no-pad ${editbarstyle}">
 	<div class="resources-all cyancta">
 		<a href="${linkUrl}">${properties.ctalabel}
-		<c:if test="${empty properties.hidectaarrow}">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-		</c:if>	
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		</a>
 	</div>
 </div>

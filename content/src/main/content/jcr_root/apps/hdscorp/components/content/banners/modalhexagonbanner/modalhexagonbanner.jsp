@@ -21,19 +21,16 @@
     <c:set var="containerclass" value="showcontent" />
 </c:if>
 
-<c:if test="${fn:contains(pageContext.request.requestURI, 'modal')}">
-    <c:set var="containerclass" value="" />
-</c:if>
 
 <c:choose>
 	<c:when test="${not empty properties.hextitlecontent}">
-        <c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath")%>" />
+        <c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath-placardlinklabel-placardlinkurl")%>" />
         <div class="hero-homepage healthcare ${containerclass}">
             <div class="hero-homepage-container">
                 <a href="javascript:void(0);" class="close-hero"><span class="sprite icon-close-hero"></span></a>
                 <c:if test="${not empty properties.bannericonpath}">
                     <!-- IF ICON PATH IS PRODIVDED -->
-                    <span class="sprite icon-healthcare" style="background-image: url('${properties.bannericonpath}')"></span>
+                    <span class="sprite icon-healthcare bannericon bigbannericon" style="background-image: url('${properties.bannericonpath}')"></span>
                 </c:if>
                 <h1>${properties.hextitlecontent}</h1>
                 <h4>${properties.hexsubtitlecontent}</h4>
