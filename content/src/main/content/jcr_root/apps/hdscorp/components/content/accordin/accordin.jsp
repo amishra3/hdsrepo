@@ -22,11 +22,10 @@
 			<div class="stickNav-container">
 				<ul class="list-inline stickyNav">
 					<c:forEach var="tabinks" items="${tabinks}" varStatus="loopcnt">
-								<c:set var="tabName" value="${tabinks.tabName}" />
-								<c:set var="tabAnchor" value="${tabinks.tabAnchor}" />
-								<c:set var="defaultActiveTab" value="${tabinks.defaultactivetab}" />
-								
-								<li class="${tabAnchor} ${loopcnt.index==0?'active':''}"><a href="#${tabAnchor}">${tabName}</a></li>
+						<c:set var="tabName" value="${tabinks.tabName}" />
+						<c:set var="tabAnchor" value="${tabinks.tabAnchor}" />
+						<c:set var="defaultActiveTab" value="${tabinks.defaultactivetab}" />
+						<li class="${tabAnchor} ${loopcnt.index==0?'active':''}"><a href="#${tabAnchor}">${tabName}</a></li>
 					</c:forEach>			
 			</div>
 		</div>

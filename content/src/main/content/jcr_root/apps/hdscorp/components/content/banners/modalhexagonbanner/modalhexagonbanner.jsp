@@ -14,13 +14,8 @@
 
 <c:set var="containerclass" value="" />
 <wcmmode:edit>
-	<c:set var="containerclass" value="showcontent" />
+	<!-- <c:set var="containerclass" value="showcontent" /> -->
 </wcmmode:edit>
-
-<c:if test="${fn:contains(pageContext.request.requestURI, 'lookup')}">
-    <c:set var="containerclass" value="showcontent" />
-</c:if>
-
 
 <c:choose>
 	<c:when test="${not empty properties.hextitlecontent}">

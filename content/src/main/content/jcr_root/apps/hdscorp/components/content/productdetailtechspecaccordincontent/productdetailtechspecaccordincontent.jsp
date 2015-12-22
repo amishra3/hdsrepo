@@ -4,9 +4,7 @@
 
 
 <c:set var="defaultEditState" value="" />
-<wcmmode:edit>
-	<c:set var="defaultEditState" value="open" />
-</wcmmode:edit>
+<wcmmode:edit><c:set var="defaultEditState" value="open" /></wcmmode:edit>
 
 <div class="vsp-soft-products-title">${properties.accordinsectiontitle}</div>
 
@@ -18,7 +16,7 @@
 
 		<div class="accordion-menu-container ${defaultEditState}">
 			<div class="accordion-menu">
-				<div id="stickyNav-0" class="acc-label">${accordinBoxTitle}</div>
+				<div id="stickyNav" class="acc-label">${accordinBoxTitle}</div>
 				<span class="icon-accordion-closed"></span> 
 				<span class="icon-accordion-opened"></span>
 			</div>
