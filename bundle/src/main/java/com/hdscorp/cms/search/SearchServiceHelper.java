@@ -81,9 +81,8 @@ public class SearchServiceHelper {
 
 	
 	
-	public List<Hit> getFullTextBasedResuts(String[] paths, String[] tags,String template, String type, String searchKeyword, boolean doPagination, ResourceResolver resourceResolver) {
+	public SearchResult getFullTextBasedResuts(String[] paths, String[] tags,String template, String type, String searchKeyword, boolean doPagination, String returnOffset, String returnLimit ,ResourceResolver resourceResolver) {
 
-		long startTime = Calendar.getInstance().getTimeInMillis();
 		Map<String, String> searchParams = new HashMap<String, String>();
 		int groupCnt=1;
 		
@@ -125,27 +124,26 @@ public class SearchServiceHelper {
 			searchParams.put("group."+groupCnt+"_group.1_fulltext", searchKeyword);
 			searchParams.put("group."+groupCnt+"_group.1_fulltext.relPath", "jcr:content");
 			searchParams.put("group."+groupCnt+"_group.2_fulltext", searchKeyword);
-			searchParams.put("group."+groupCnt+"_group.2_fulltext.relPath", "jcr:content/@cq:tags");			
+			searchParams.put("group."+groupCnt+"_group.2_fulltext.relPath", "jcr:content/@cq:tags");
+			searchParams.put("group."+groupCnt+"_group.3_fulltext", searchKeyword);
+			searchParams.put("group."+groupCnt+"_group.3_fulltext.relPath", "jcr:content/@jcr:title");
+			searchParams.put("group."+groupCnt+"_group.4_fulltext", searchKeyword);
+			searchParams.put("group."+groupCnt+"_group.4_fulltext.relPath", "jcr:content/@jcr:description");
 		}
 		
 		searchParams.put("p.guesstotal", "false");
 		
 		if(doPagination){
-			searchParams.put("p.offset", "0");
-			searchParams.put("p.limit", "10");			
+			searchParams.put("p.offset", returnOffset);
+			searchParams.put("p.limit", returnLimit);			
 		}else{
 			searchParams.put("p.limit", "-1");
 		}
 		
 		LOG.debug("before cretae query************"+ searchParams.toString());
 		Query query = queryBuilder.createQuery(PredicateGroup.create(searchParams),resourceResolver.adaptTo(Session.class));
-		SearchResult result = query.getResult();
-		List<Hit> hits = result.getHits();
-		LOG.debug("No of hits*******" + hits.size());
-		long endTime = Calendar.getInstance().getTimeInMillis();
-		long time = endTime - startTime;
-		LOG.debug("Total time *************" + time / 1000);
-		return hits;
+		SearchResult results = query.getResult();
+		return results;
 	}
 	
 	
