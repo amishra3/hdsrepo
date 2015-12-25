@@ -16,7 +16,7 @@ try{
 	boolean doPagination = false;
 	String returnOffset="0";
 	String returnLimit="10";
-	SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths,null,template,type,"test shirt",doPagination,returnOffset,returnLimit,resourceResolver);
+	SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths,null,template,type,"test shirt page",doPagination,returnOffset,returnLimit,resourceResolver);
 	List<Hit> hits = result.getHits();
 	pageContext.setAttribute("hits", hits);
 	out.println("<BR><BR><BR><BR>");
@@ -37,11 +37,13 @@ try{
 	        pageTitle = pagePath.substring(pagePath.lastIndexOf('/') + 1, pagePath.length());
 	    }
 	    
+	    
 	    out.println("<a href="+pagePath+" style='padding-left:5em;margin-bottom:5em;'>"+pageTitle+"</a>"+"<BR>");
+
 	    if(pageDescription!=null){
 	    	out.println(pageDescription+"<BR>");	
 	    }
-	    //out.println(hit.getExcerpt()+"<BR>");
+	    
 	    
 	}
 	

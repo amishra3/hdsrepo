@@ -140,12 +140,12 @@ public class SearchServiceHelper {
 			searchParams.put("p.limit", "-1");
 		}
 		
+		searchParams.put("orderby", "@jcr:content/jcr:lastModified");
+		searchParams.put("orderby.sort", "desc");
+		
 		LOG.debug("before cretae query************"+ searchParams.toString());
 		Query query = queryBuilder.createQuery(PredicateGroup.create(searchParams),resourceResolver.adaptTo(Session.class));
 		SearchResult results = query.getResult();
 		return results;
 	}
-	
-	
-	
 }
