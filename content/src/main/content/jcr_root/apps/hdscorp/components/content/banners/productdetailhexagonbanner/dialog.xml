@@ -30,14 +30,23 @@
 			                <customdamimage
 			                    jcr:primaryType="nt:unstructured"
 			                    text="Custom (DAM Image)"
-			                    value="customdamimage"/>			                    
+			                    value="customdamimage"/>
+			                <custombkgcolor
+			                    jcr:primaryType="nt:unstructured"
+			                    text="Custom (Background Color)"
+			                    value="custombkgcolor"/>			                    			                    			                    
 			            </options>
 			        </type>
 					<bannerbackgroundimage
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Provide Background Image (If Custom selected above.)"
+                        fieldLabel="Provide Background Image (If Custom Image selected above.)"
                         name="./bannerbackgroundimage"
-                        xtype="ddpathfield"/>			                                                    
+                        xtype="ddpathfield"/>
+					<colorbackgroundpicker
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Provide Background Image (If Custom Color selected above.)"
+                        name="./colorbackgroundpicker"
+                        xtype="colorfield"/>			                                                                            			                                                    
                     <secondaryherotitlecontent
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Hero Title"

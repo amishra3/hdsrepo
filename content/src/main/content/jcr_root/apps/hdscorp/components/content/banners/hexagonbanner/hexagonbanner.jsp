@@ -16,13 +16,18 @@
 	<c:set var="linkUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("linkUrl").toString())%>"/>
 </c:if>
 
+<c:set var="editbarstyle" value="" />
+<wcmmode:edit>
+	<c:set var="editbarstyle" value="editbarstyle" />
+</wcmmode:edit>
+
 
 <c:choose>
 	<c:when test="${not empty properties.hextitlecontent}">
 
 		<c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath")%>" />
 
-    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12 hero-homepage-container ${not empty properties.hexbuttonlabel?' ':'heaxongonbannernobutton'}" style="background-image: url('${properties.heximagePath}')">
+    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12 hero-homepage-container ${editbarstyle} ${not empty properties.hexbuttonlabel?' ':'heaxongonbannernobutton'}" style="background-image: url('${properties.heximagePath}')">
     	    <!-- IF IS A MODAL TRUE -->
     	    <c:if test="${properties.ismodalcontent}">
     	    	<a href="javascript:void(0);" class="close-hero"><span class="sprite icon-close-hero"></span></a>

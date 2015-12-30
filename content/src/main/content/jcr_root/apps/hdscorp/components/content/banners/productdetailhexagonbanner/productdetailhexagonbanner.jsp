@@ -16,6 +16,11 @@
 	<c:set var="bannerbackgroundstyle" value=" style='background-image: url(${properties.bannerbackgroundimage})''" />
 </c:if>
 
+<c:if test = "${bannertype == 'custombkgcolor'}">
+	<c:set var="bannerbackgroundstyle" value=" style='background-color:&#35;${properties.colorbackgroundpicker}'" />
+</c:if>
+
+
 <c:if test = "${properties.hexagoniconpath != null}">
 	<c:set var="hexagoniconstyle" value=" style='background-image: url(${properties.hexagoniconpath});background-position:0 0;''" />
 </c:if>
