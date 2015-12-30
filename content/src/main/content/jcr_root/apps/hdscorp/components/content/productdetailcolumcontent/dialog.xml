@@ -22,6 +22,12 @@
                         fieldLabel="Content"
                         name="./columncontent"
                         xtype="textarea"/>
+                    <hiderightborder
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hide Right Vertical Border ?"
+                        name="./hiderightborder"
+                        type="checkbox"
+                        xtype="selection"/>                        
                 </items>
             </tab1>
         </items>

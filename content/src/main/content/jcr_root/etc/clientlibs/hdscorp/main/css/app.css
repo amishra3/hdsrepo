@@ -56,6 +56,11 @@
 	width: 70px;
 }
 
+.icon-content-type{
+	background-repeat: no-repeat;
+	height: 30px;
+}
+
 .fb-section .fb-container{
     min-height: auto;
 }
@@ -63,6 +68,19 @@
 .specific-benefit.row{
 	margin-left: 0;
     margin-right: 0;
+}
+
+.rightborder{
+	border-right: 1px solid #ebebeb !important;
+}
+
+.business-specific .icon-light, .business-specific .icon-gear,
+	.business-specific .icon-advance, .business-specific .icon-advance-lt,
+	.specific-benefit .icon-light, .specific-benefit .icon-gear,
+	.specific-benefit .icon-advance, .specific-benefit .icon-advance-lt,
+	.specific-tech .icon-light, .specific-tech .icon-gear, .specific-tech .icon-advance,
+	.specific-tech .icon-advance-lt {
+	background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 768px){
