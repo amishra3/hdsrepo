@@ -48,22 +48,25 @@
     line-height: 175%;
 }
 
-.cloud-storage .cloud-storage-container .cloud-content .learn-more {
-    font-family: 'museo-sans', Helvetica, Arial, sans-serif;
-    font-weight: 900;
-    font-size: 0.8125em;
-    line-height: 1;
-    letter-spacing: 3px;
-    background-color: #ffffff;
-    transition: background-color 0.3s linear, color 0.3s linear;
+.cloud-storage .cloud-storage-container .cloud-content .learn-cloud-storage {
+     background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-.cloud-storage .cloud-storage-container .cloud-content .learn-more:hover {
-    background-color: #ce0000;
+.cloud-storage .cloud-storage-container .cloud-content .learn-cloud-storage:hover {
+    background-color: #cc0000;
+    border-color: #ffffff;
     color: #ffffff;
 }
 
-.cloud-storage .cloud-storage-container .cloud-content .learn-more:hover a {
+.cloud-storage .cloud-storage-container .cloud-content .learn-cloud-storage a:focus, 
+.cloud-storage .cloud-storage-container .cloud-content .learn-cloud-storage a:hover {
+    text-decoration: none;
+}
+.cloud-storage .cloud-storage-container .cloud-content .learn-cloud-storage:hover a {
     color: #ffffff;
 }
 
@@ -245,11 +248,11 @@
 }
 
 .calculating-success .calculating-success-container .calculating-list > li .icon-plus {
-    top: 10px;
+    top: 25px;
 }
 
 .calculating-success .calculating-success-container .calculating-list > li .icon-minus {
-    top: -5px;
+    top: 15px;
 }
 
 .calculating-success .calculating-success-container .blurb-container > p {
@@ -277,6 +280,7 @@
 .calculating-success .calculating-success-container .explore a {
     font-weight: 900;
     letter-spacing: 3px;
+	text-decoration:none;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -334,7 +338,7 @@
 }
 
 .millennials {
-    padding: 0 15px;
+    padding: 0 15px 115px;
     background: url("../images/hero-millennials.jpg") top center no-repeat;
     background-size: cover;
 }
@@ -361,7 +365,7 @@
 }
 
 .millennials .millennials-container .millennials-content h1 {
-    margin: 5em 0 20px;
+    margin: 3.5em 0 20px;
     font-family: 'museo-sans', Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 3.25em;
@@ -373,6 +377,7 @@
     font-weight: 700;
     font-size: 1.5em;
     line-height: 1;
+	margin-bottom:20px;
     text-transform: uppercase;
 }
 
@@ -390,32 +395,33 @@
     float: right;
 }
 
-.millennials .millennials-container .millennials-content .learn {
-    margin-bottom: 60px;
-    display: inline-block;
-    font-family: 'museo-sans', Helvetica, Arial, sans-serif;
-    font-weight: 900;
-    font-size: 0.8125em;
-    line-height: 1;
-    letter-spacing: 3px;
-    background-color: transparent;
-    transition: background-color 0.3s linear, color 0.3s linear;
-}
-
-.millennials .millennials-container .millennials-content .learn:hover {
-    background-color: #ffffff;
+.millennials .millennials-container .millennials-content .learn-millennials {
+     background-color: transparent;
     color: #000000;
-    border-color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-.millennials .millennials-container .millennials-content .learn:hover a {
+.millennials .millennials-container .millennials-content .learn-millennials:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+}
+
+.millennials .millennials-container .millennials-content .learn-millennials a:focus, 
+.millennials .millennials-container .millennials-content .learn-millennials a:hover {
+    text-decoration: none;
+}
+.millennials .millennials-container .millennials-content .learn-millennials:hover a {
     color: #000000;
 }
 
 .millennials .millennials-container .millennials-content .return {
-    margin-bottom: 2em;
+    margin-top: 2em;
     line-height: 1em;
     text-align: center;
+    font-weight: bold;
 }
 
 .millennials .millennials-container .millennials-content .return a {
@@ -427,7 +433,7 @@
 
 @media only screen and (min-width: 1280px) {
     .millennials {
-        min-height: 625px;
+        min-height: 0;
     }
 }
 
@@ -465,6 +471,7 @@
     .millennials {
         background: url("../images/hero-millennials_mobile.jpg") top center no-repeat;
         background-size: cover;
+        padding: 0 15px 10px;
     }
 }
 

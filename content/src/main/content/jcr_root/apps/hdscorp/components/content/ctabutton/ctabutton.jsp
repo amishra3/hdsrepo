@@ -15,7 +15,7 @@
 </wcmmode:edit>
 
 <div class="col-sm-6 col-no-pad ${editbarstyle}">
-	<div class="resources-all cyancta">
+	<div class="resources-all cs-selection-box">
 		<a href="${linkUrl}">${properties.ctalabel}
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		</a>

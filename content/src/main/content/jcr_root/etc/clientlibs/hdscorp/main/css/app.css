@@ -83,6 +83,28 @@
 	background-repeat: no-repeat;
 }
 
+.heaxongonbannernobutton{
+	min-height: 655px;	
+}
+
+.productcategory .calculating-success-container>p{
+	font-size: 1em;
+}
+
+.productcategory .calculating-success-container>h4{
+	font-size:1.7em;
+	letter-spacing:.025em;
+}
+
+.calculating-success{
+	background-color: transparent;
+	background-image: none;
+}
+
+.icon-light{
+	width:70px;
+}
+
 @media only screen and (max-width: 768px){
 	.cs-section .cyancta {
 	    display: block;
@@ -90,5 +112,13 @@
 	    position: relative;
 	    padding: 15px 10px;
     	margin: 7px auto;
+	}
+	
+	.acs-commons-resp-colctrl-col{
+		margin-bottom:-5px;
+	}
+	
+	.cs-section .cs-container .cs-selections .cs-selection-box a span.glyphicon.glyphicon-chevron-right{
+		right: 5%;
 	}
 }

@@ -7,11 +7,10 @@ if(pageTemplatePath!=null){
 }
 %>
 
-<body class="<%=pageTemplatePath %> home-page">
-	 <div class="one-column homepage">
-	     <cq:include script="header.jsp"/>
-	    <cq:include script="content.jsp"/>
-	    <cq:include script="footer.jsp" />
+<body class="<%=pageTemplatePath %>">
+	<div class="one-column">
+		<cq:include script="header.jsp" />
+		<cq:include script="content.jsp" />
+		<cq:include script="footer.jsp" />
 	</div>
-	<!-- <cq:includeClientLib js="hdscorp.main" /> -->
 </body>

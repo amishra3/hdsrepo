@@ -1,11 +1,13 @@
 .hero-homepage {
   position: relative;
-  padding: 70px 15px 35px 15px;
+  padding: 70px 15px 115px 15px;
 }
 
 .hero-homepage .hero-homepage-container {
   position: relative;
   text-align: center;
+  max-width:1280px;
+  margin:0 auto;
 }
 
 .hero-homepage .hero-homepage-container > h1,
@@ -25,7 +27,7 @@
   display: inline-block;
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 20px;
 }
 
 .hero-homepage.general {
@@ -137,10 +139,26 @@
 }
 
 .hero-homepage.general .hero-homepage-container .scroll-down {
-  display: inline-block;
-  width: 100%;
-  margin: 62px auto 20px;
+    bottom: -145px;
+    display: inline-block;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
 }
+
+.hero-homepage.general .hero-homepage-container .scroll-down:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 20px solid #000;
+  position: absolute;
+  left: calc(50% - 30px);
+}
+
+
 
 .hero-homepage.healthcare {
   display: none;
@@ -332,6 +350,7 @@
   .hero-homepage.general .hero-homepage-container .general-list li {
     padding-right: 15px !important;
   }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -385,6 +404,15 @@
   }
   .hero-homepage.healthcare .hero-homepage-container .close-hero {
     right: 15px;
+  }
+  .hero-homepage.general .hero-homepage-container .scroll-down::after{
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 13px solid #000;
+    left: calc(51% - 30px);
+  }
+  .hero-homepage.general .hero-homepage-container .scroll-down{
+    bottom: -50px;
   }
 }
 

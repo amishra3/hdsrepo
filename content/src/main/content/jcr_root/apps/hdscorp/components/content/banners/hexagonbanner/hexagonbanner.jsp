@@ -22,7 +22,7 @@
 
 		<c:set var="placardList" value="<%=PageUtils.convertMultiWidgetToList(properties,"placardTitle-placardcontent-placardIconPath")%>" />
 
-    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12 hero-homepage-container" style="background-image: url('${properties.heximagePath}')">
+    	<div class="calculating-success col-xs-12 col-sm-12 col-md-12 col-lg-12 hero-homepage-container ${not empty properties.hexbuttonlabel?' ':'heaxongonbannernobutton'}" style="background-image: url('${properties.heximagePath}')">
     	    <!-- IF IS A MODAL TRUE -->
     	    <c:if test="${properties.ismodalcontent}">
     	    	<a href="javascript:void(0);" class="close-hero"><span class="sprite icon-close-hero"></span></a>
@@ -34,7 +34,7 @@
     		<div class="calculating-success-container content-container">
     			<h1>${properties.hextitlecontent}</h1>
     			<h4>${properties.hexsubtitlecontent}</h4>
-					${properties.hexcontent}    	
+					<p>${properties.hexcontent}</p>	
     			<div class="explore hidden-sm hidden-md hidden-lg">
     				<a href="${linkUrl}" class="btn-square -white" target="${properties.hexurltargettype?'_blank':'_self'}">${properties.hexbuttonlabel}</a>
     			</div>
@@ -45,7 +45,7 @@
 						<c:set var="placardIconPath" value="${placardList.placardIconPath}" />
 						<c:set var="placardcontent" value="${placardList.placardcontent}" />
 	    				<li class="hexagon-good hexagon270">
-	    					<span class="sprite icon-light" style="background-image: url('${placardIconPath}');"></span>
+	    					<span class="sprite icon-light" style="background-image: url('${placardIconPath}');background-repeat:no-repeat;background-position:0 0;"></span>
 	    					<h4>${placardTitle}</h4>
 	    					${placardcontent}
 	    				</li>
@@ -58,10 +58,11 @@
     			</c:forEach>
 
     			</ul>
-    	
-    			<div class="explore hidden-xs">
-    				<a href="${linkUrl}" class="btn-square -white" target="${properties.hexurltargettype?'_blank':'_self'}">${properties.hexbuttonlabel}</a>
-    			</div>
+    			<c:if test="${not empty properties.hexbuttonlabel}">
+	    			<div class="explore hidden-xs">
+	    				<a href="${linkUrl}" class="btn-square -white" target="${properties.hexurltargettype?'_blank':'_self'}">${properties.hexbuttonlabel}</a>
+	    			</div>
+				</c:if>    			
     		</div>
     	</div>
     		

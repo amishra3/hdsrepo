@@ -26,7 +26,7 @@
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Hero Content"
                         name="./hexcontent"
-                        xtype="richtext">
+                        xtype="textarea">
                         <rtePlugins
                             jcr:primaryType="nt:unstructured"
                             path="/apps/hdscorp/components/content/richtext/tab_editor/items/editor/rtePlugins.infinity.json"

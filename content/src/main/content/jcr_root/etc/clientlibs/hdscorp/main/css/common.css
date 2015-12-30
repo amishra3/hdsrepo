@@ -94,6 +94,7 @@
     font-size: .8em;
     float: left;
     display: inline;
+    position: relative;
 }
 
 .header .header-container .navigation > ul > li a {
@@ -114,7 +115,7 @@
 }
 
 .header .header-container .navigation > ul > li.search > input[type=text] {
-    border-radius: 3px;
+    border-radius: 5px;
     border: none;
     padding: 6px 31px 5px 5px;
     font-family: Arial, sans-serif;
@@ -210,7 +211,7 @@
 .header .sub-navigation-container .sub-navigation > ul > li a {
     display: table-cell;
     margin: 0;
-    padding: 19px 13px 20px;
+    padding: 19px 10px 20px;
     vertical-align: middle;
     color: #ffffff;
     text-transform: uppercase;
@@ -1097,8 +1098,8 @@ button.cta-scroll-top .text-return {
 a, a:focus{outline: none;}
 textarea{resize:none;}
 
-/* Globe Mega Menu CSS */
 
+/* Globe Mega Menu CSS */
 div#Selector {
     left: auto;
     right: 0;
@@ -1108,19 +1109,19 @@ div#Selector {
     background: #4a4a4a none repeat scroll 0 0;
     float: none;
     font-size: 13px;
-    left: 105px;
+    right: 0;
     margin: 0;
     padding: 5px 5px 0;
     position: absolute;
-    top: 0;
-    width: 630px;
+    top: 45px;
+    width: 640px;
     z-index: 999;
 }
 div#Selector ul {
     float: left;
     margin: 0 0 5px;
     padding: 0;
-    width: 630px;
+    width: 100%;
 }
 
 div#Selector ul li.FirstItem {
@@ -1130,7 +1131,7 @@ div#Selector ul li.FirstItem {
     float: left;
     font-weight: bold;
     padding: 0 0 3px;
-    width: 630px;
+    width: 100%;
 }
 div#Selector ul li {
     float: left;
@@ -1139,24 +1140,24 @@ div#Selector ul li {
     padding: 2px 0;
     text-align: left;
     white-space: nowrap;
-    width: 192px;
 }
 
 div#Selector .innerSelector {
     clear: both;
     float: left;
-    width: 630px;
+    width: 100%;
 }
 
 div#Selector .innerSelector ul {
     float: left;
-    width: 210px;
 }
 
 div#Selector ul li a {
     line-height: 17px;
     margin: 0;
     padding: 0 0 0 5px;
+    height: auto;
+    text-align: left;
 }
 div#Selector ul li a {
     color: #fff;
