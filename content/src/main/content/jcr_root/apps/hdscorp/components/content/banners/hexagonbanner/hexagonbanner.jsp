@@ -35,10 +35,11 @@
     			<h1>${properties.hextitlecontent}</h1>
     			<h4>${properties.hexsubtitlecontent}</h4>
 					<p>${properties.hexcontent}</p>	
-    			<div class="explore hidden-sm hidden-md hidden-lg">
-    				<a href="${linkUrl}" class="btn-square -white" target="${properties.hexurltargettype?'_blank':'_self'}">${properties.hexbuttonlabel}</a>
-    			</div>
-    	
+				<c:if test="${not empty properties.hexbuttonlabel}">					
+	    			<div class="explore hidden-sm hidden-md hidden-lg">
+	    				<a href="${linkUrl}" class="btn-square -white" target="${properties.hexurltargettype?'_blank':'_self'}">${properties.hexbuttonlabel}</a>
+	    			</div>
+				</c:if>    	
     			<ul class="calculating-list">
     			<c:forEach var="placardList" items="${placardList}" varStatus="loop">
 						<c:set var="placardTitle" value="${placardList.placardTitle}" />
