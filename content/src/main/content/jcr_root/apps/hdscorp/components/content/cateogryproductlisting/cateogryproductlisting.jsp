@@ -4,35 +4,12 @@
 
 
 <div class="product-category-list">
-	<div class="product-category-list-container">
-		<h2 class="hidden-xs hidden-sm">Storage products &amp; solutions</h2>
+	<div class="product-category-list-container">		
+		<cq:include path="categoryproductlistingtitle" resourceType="hdscorp/components/content/cateogryproductlisting/sectiontitle" />
 		<div class="row">
-			<div class="col-md-3 category-listing">
-				<ul id="asideLinks">
-					<li class="linkLeft active"><a href="javascript:void(0);"
-						data-loadhtml="category-pages/storage-management.html"
-						class="active"> Storage Management <span
-							class="icon-accordion-closed hidden-md hidden-lg"
-							style="display: none;"></span> <span
-							class="icon-accordion-opened hidden-md hidden-lg"
-							style="display: inline-block;"></span>
-					</a>
-						<div class="MobileHolderWrapper"></div></li>
-					<li class="linkLeft"><a href="javascript:void(0);"
-						data-loadhtml="category-pages/enterprise-storage.html">Enterprise
-							Storage <span class="icon-accordion-closed hidden-md hidden-lg"></span>
-							<span class="icon-accordion-opened hidden-md hidden-lg"></span>
-					</a>
-						<div class="MobileHolderWrapper"></div></li>
-					<li class="linkLeft"><a href="javascript:void(0);"
-						data-loadhtml="category-pages/object-storage.html">Object
-							Storage<span class="icon-accordion-closed hidden-md hidden-lg"></span>
-							<span class="icon-accordion-opened hidden-md hidden-lg"></span>
-					</a>
-						<div class="MobileHolderWrapper"></div></li>
-				</ul>
-			</div>
+			<cq:include path="subcategoryfilterpar" resourceType="hdscorp/components/content/cateogryproductlisting/subcategoryfilter" />
 			<!-- Category Content to Loaded here -->
+			<div id="contentCatagory"></div>
 
 		</div>
 	</div>
