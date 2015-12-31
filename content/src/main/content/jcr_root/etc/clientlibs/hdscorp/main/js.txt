@@ -6,3 +6,4 @@ home.js
 product-solutions.js
 tech-specs.js
 accordion.js
+product-catagory.js

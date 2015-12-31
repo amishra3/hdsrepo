@@ -2,6 +2,7 @@
 var hds = window.hds || {};
 
 (function(window, document, $, hds) {
+	alert(" --- ");
     hds.productCatagory = {
         init: function() {
             hds.productCatagory.loadCatagoryHTML();
