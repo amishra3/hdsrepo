@@ -8,9 +8,7 @@
 		<cq:include path="categoryproductlistingtitle" resourceType="hdscorp/components/content/cateogryproductlisting/sectiontitle" />
 		<div class="row">
 			<cq:include path="subcategoryfilterpar" resourceType="hdscorp/components/content/cateogryproductlisting/subcategoryfilter" />
-			<!-- Category Content to Loaded here -->
-			<div id="contentCatagory"></div>
 
 		</div>
 	</div>
-</div>
+</div> 

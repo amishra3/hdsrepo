@@ -15,3 +15,8 @@
 <!-- <script type="text/javascript" src="/etc/clientlibs/hdscorp/main.js"></script> -->
 
 
+<script>
+$(function() {
+	hds.productCatagory.init();
+})
+</script> 

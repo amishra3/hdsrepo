@@ -31,4 +31,12 @@
 		</c:forEach>	
 			
 	</ul>
+	
+</div>
+
+<!-- Category Content to Loaded here -->
+<div class="col-md-9 category-products">
+	<div id="contentCatagory">
+		<sling:include path="/content/hdscorp/en_us/lookup/productsubcateogry/storagemanagement.html" />
+	</div>
 </div>
