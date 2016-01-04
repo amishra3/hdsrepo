@@ -141,6 +141,13 @@
 }
 
 
+.category-products-listing .product a {
+    font-size: 0.8485rem;
+    color: #ce0000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}
 
 @media only screen and (max-width: 768px) {
 	.cs-section .cyancta {
