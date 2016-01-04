@@ -34,9 +34,14 @@ public class SearchServiceHelper {
 	@Reference
 	private QueryBuilder queryBuilder;
 
-	private static final Logger LOG = LoggerFactory.getLogger(SearchServiceHelper.class);
+	private static final Logger LOG = LoggerFactory
+			.getLogger(SearchServiceHelper.class);
+	private static final String TYPE = "cq:Page";
+	private static final String ORDER_BY_PROPERTY = "@jcr:content/jcr:lastModified";
+	private static final String ORDER_BY_SORT = "desc";
 
-	public List<Hit> getTagBasedResuts(String[] paths, String[] tags,String template, String type) {
+	public List<Hit> getTagBasedResuts(String[] paths, String[] tags,
+			String template, String type) {
 
 		long startTime = Calendar.getInstance().getTimeInMillis();
 		Map<String, String> searchParams = new HashMap<String, String>();
@@ -52,14 +57,16 @@ public class SearchServiceHelper {
 		}
 
 		searchParams.put("group.2_group.p.and", "true");
-		searchParams.put("group.2_group.1_property","@jcr:content/metadata/cq:tags");
+		searchParams.put("group.2_group.1_property",
+				"@jcr:content/metadata/cq:tags");
 		int k = 0;
 		for (String tag : tags) {
 			searchParams.put("group.2_group.1_property." + ++k + "_value", tag);
 		}
 
 		if (template != null && !template.isEmpty()) {
-			searchParams.put("group.2_group.2_property","@jcr:content/cq:template");
+			searchParams.put("group.2_group.2_property",
+					"@jcr:content/cq:template");
 			searchParams.put("group.2_group.2_property.1_value", template);
 		}
 
@@ -67,9 +74,11 @@ public class SearchServiceHelper {
 		searchParams.put("p.guesstotal", "true");
 		searchParams.put("p.offset", "0");
 		searchParams.put("p.limit", "10");
-		//searchParams.put("p.limit", "-1");
-		LOG.debug("before cretae query************"+ searchParams.toString());
-		Query query = queryBuilder.createQuery(PredicateGroup.create(searchParams),JcrUtilService.getSession());
+		// searchParams.put("p.limit", "-1");
+		LOG.debug("before cretae query************" + searchParams.toString());
+		Query query = queryBuilder.createQuery(
+				PredicateGroup.create(searchParams),
+				JcrUtilService.getSession());
 		SearchResult result = query.getResult();
 		List<Hit> hits = result.getHits();
 		LOG.debug("No of hits*******" + hits.size());
@@ -79,73 +88,112 @@ public class SearchServiceHelper {
 		return hits;
 	}
 
-	
-	
-	public SearchResult getFullTextBasedResuts(String[] paths, String[] tags,String template, String type, String searchKeyword, boolean doPagination, String returnOffset, String returnLimit ,ResourceResolver resourceResolver) {
+	public SearchResult getFullTextBasedResuts(String[] paths, String[] tags,
+			String template, String[] types, String searchKeyword,
+			boolean doPagination, String returnOffset, String returnLimit,
+			ResourceResolver resourceResolver, String orderByProperty,
+			String orderBySort) {
 
 		Map<String, String> searchParams = new HashMap<String, String>();
-		int groupCnt=1;
-		
-		
-		if (type != null && !type.isEmpty()) {
-			searchParams.put("type", type);
-		}
-		
-		if (paths != null && paths.length>0) {
-			searchParams.put("group."+groupCnt+"_group.p.or", "true");
-			int i = 0;
-			for (String path : paths) {
-				searchParams.put("group."+groupCnt+"_group." + ++i + "_path", path);
+		int groupCnt = 1;
+
+		if (types != null && types.length > 0) {
+
+			searchParams.put("group." + groupCnt + "_group.p.or", "true");
+			int j = 0;
+			for (String type : types) {
+				searchParams.put("group." + groupCnt + "_group." + ++j
+						+ "_type", type);
 			}
 			groupCnt++;
+
+		} else {
+			searchParams.put("type", TYPE);
 		}
-		
-		if(tags!=null && tags.length>0){
-			searchParams.put("group."+groupCnt+"_group.p.and", "true");
-			searchParams.put("group."+groupCnt+"_group.1_property","@jcr:content/metadata/cq:tags");
-			int k = 0;
-			for (String tag : tags) {
-				searchParams.put("group."+groupCnt+"_group.1_property." + ++k + "_value", tag);
+
+		if (paths != null && paths.length > 0) {
+			searchParams.put("group." + groupCnt + "_group.p.or", "true");
+			int i = 0;
+			for (String path : paths) {
+				searchParams.put("group." + groupCnt + "_group." + ++i
+						+ "_path", path);
 			}
 			groupCnt++;
 		}
 
-		
-		if (template != null && !template.isEmpty()) {
-			searchParams.put("group."+groupCnt+"_group.2_property","@jcr:content/cq:template");
-			searchParams.put("group."+groupCnt+"_group.2_property.1_value", template);
+		if (tags != null && tags.length > 0) {
+
+			searchParams.put("group." + groupCnt + "_group.p.facets", "true");
+			searchParams.put("group." + groupCnt + "_group.p.or", "true");
+			searchParams.put("group." + groupCnt + "_group.1_property",
+					"jcr:content/cq:tags");
+			int k = 0;
+			for (String tag : tags) {
+				searchParams.put("group." + groupCnt + "_group.1_property."
+						+ ++k + "_value", tag);
+			}
 			groupCnt++;
 		}
-			
-		
-		if(searchKeyword!=null){
-			// combine this group with OR
-			searchParams.put("group."+groupCnt+"_group.p.or", "true"); 
-			searchParams.put("group."+groupCnt+"_group.1_fulltext", searchKeyword);
-			searchParams.put("group."+groupCnt+"_group.1_fulltext.relPath", "jcr:content");
-			searchParams.put("group."+groupCnt+"_group.2_fulltext", searchKeyword);
-			searchParams.put("group."+groupCnt+"_group.2_fulltext.relPath", "jcr:content/@cq:tags");
-			searchParams.put("group."+groupCnt+"_group.3_fulltext", searchKeyword);
-			searchParams.put("group."+groupCnt+"_group.3_fulltext.relPath", "jcr:content/@jcr:title");
-			searchParams.put("group."+groupCnt+"_group.4_fulltext", searchKeyword);
-			searchParams.put("group."+groupCnt+"_group.4_fulltext.relPath", "jcr:content/@jcr:description");
+
+		if (template != null && !template.isEmpty()) {
+			searchParams.put("group." + groupCnt + "_group.2_property",
+					"@jcr:content/cq:template");
+			searchParams.put("group." + groupCnt + "_group.2_property.1_value",
+					template);
+			groupCnt++;
 		}
-		
+
+		if (searchKeyword != null) {
+			// combine this group with OR
+			searchParams.put("group." + groupCnt + "_group.p.or", "true");
+			searchParams.put("group." + groupCnt + "_group.1_fulltext",
+					searchKeyword);
+			searchParams.put("group." + groupCnt + "_group.1_fulltext.relPath",
+					"jcr:content");
+			searchParams.put("group." + groupCnt + "_group.2_fulltext",
+					searchKeyword);
+			searchParams.put("group." + groupCnt + "_group.2_fulltext.relPath",
+					"jcr:content/@cq:tags");
+			searchParams.put("group." + groupCnt + "_group.3_fulltext",
+					searchKeyword);
+			searchParams.put("group." + groupCnt + "_group.3_fulltext.relPath",
+					"jcr:content/@jcr:title");
+			searchParams.put("group." + groupCnt + "_group.4_fulltext",
+					searchKeyword);
+			searchParams.put("group." + groupCnt + "_group.4_fulltext.relPath",
+					"jcr:content/@jcr:description");
+		}
+
 		searchParams.put("p.guesstotal", "false");
-		
-		if(doPagination){
+
+		if (doPagination) {
 			searchParams.put("p.offset", returnOffset);
-			searchParams.put("p.limit", returnLimit);			
-		}else{
+			searchParams.put("p.limit", returnLimit);
+		} else {
 			searchParams.put("p.limit", "-1");
 		}
-		
-		searchParams.put("orderby", "@jcr:content/jcr:lastModified");
-		searchParams.put("orderby.sort", "desc");
-		
-		LOG.debug("before cretae query************"+ searchParams.toString());
-		Query query = queryBuilder.createQuery(PredicateGroup.create(searchParams),resourceResolver.adaptTo(Session.class));
+		 searchParams.put("group.p.and", "true");
+		// searchParams.put("p.facets", "true");
+
+		if (orderByProperty != null && !orderByProperty.isEmpty()) {
+			searchParams.put("orderby", orderByProperty);
+		} else {
+			searchParams.put("orderby", ORDER_BY_PROPERTY);
+		}
+		if (orderBySort != null && !orderBySort.isEmpty()) {
+			searchParams.put("orderby.sort", ORDER_BY_SORT);
+		} else {
+			searchParams.put("orderby.sort", "desc");
+		}
+
+		LOG.debug("before cretae query************" + searchParams.toString());
+		Query query = queryBuilder.createQuery(
+				PredicateGroup.create(searchParams),
+				resourceResolver.adaptTo(Session.class));
 		SearchResult results = query.getResult();
+		LOG.debug("Execution Time************" + results.getExecutionTime());
+		
+
 		return results;
 	}
 }

@@ -1,7 +1,6 @@
 package com.hdscorp.cms.slingmodels;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -44,17 +43,12 @@ public class SubCatContentModel {
 		SearchServiceHelper searchServiceHelper = (SearchServiceHelper)ViewHelperUtil.getService(com.hdscorp.cms.search.SearchServiceHelper.class);
         
 		String paths[] = {"/content/hdscorp/en_us/productsandsolutions"};
-		paths = null ;
 		String tags[] = subcattags ;
-		tags = null;
 		String template= "/apps/hdscorp/templates/productdetail";
-		String type = "cq:Page";
+		String type[] = {"cq:Page"};
 		boolean doPagination = false;
-		String returnOffset="0";
-		String returnLimit="10";
 		
-		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths,tags,template,type,null,doPagination,returnOffset,returnLimit,resourceResolver);
-		
+		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths,tags,template,type,null,doPagination,null,null,resourceResolver,null,null);
 		List<Hit> hits = result.getHits();
 		products = new ArrayList<ProductNode>();
 		
