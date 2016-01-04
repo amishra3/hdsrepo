@@ -18,7 +18,7 @@
 		boolean doPagination = false;
 		String returnOffset = "0";
 		String returnLimit = "10";
-		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths, tags, template, type,null, doPagination, returnOffset,returnLimit, resourceResolver,null,null);
+		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths, tags, template, type,"This summer head", doPagination, returnOffset,returnLimit, resourceResolver,null,null);
 		
 		List<Hit> hits = result.getHits();
 		pageContext.setAttribute("hits", hits);
@@ -40,7 +40,7 @@
 		
 		Map<String, Facet> facets = result.getFacets();
  		for (String key : facets.keySet()) {
-			System.out.println("facet key**********" + key);
+			//System.out.println("facet key**********" + key);
 			Facet facet = facets.get(key);
 			if (facet.getContainsHit()) {
 
@@ -83,7 +83,6 @@
 		}
 
 	} catch (Exception ex) {
-		System.out.println("+++++++++++++++IN ERROR BLOCK"
-				+ ex.getMessage());
+		/*System.out.println("+++++++++++++++IN ERROR BLOCK"+ ex.getMessage());*/	
 	}
 %>

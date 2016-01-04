@@ -12,7 +12,7 @@
 	
 	</c:if>
 
-	<div style="overflow: auto;">
+	<!-- <div style="overflow: auto;">  -->
 		<cq:include path="par" resourceType="foundation/components/parsys" />
-	</div>
+	<!-- </div>  -->
 </div>
