@@ -141,7 +141,7 @@
 		return false;
 	});
 
-	$('.accordion-level > .accordion-menu-container').on('click', function(event) {
+	$(document).on('click','.accordion-level > .accordion-menu-container', function(event) {
         var $currentContent = $(this).closest('div').next('div.accordion-content',this);
         if ($(this).hasClass("open") && $(this).next().queue().length === 0) {
             $currentContent.removeClass('open');
