@@ -149,6 +149,14 @@
     letter-spacing: 0.10em;
 }
 
+/* .mes-section{
+	background:url("/etc/clientlibs/hdscorp/main/images/prod-sol-bg-mes.jpg") no-repeat 50% 50%;
+}
+
+.specific-tech {
+	background: url("/etc/clientlibs/hdscorp/main/images/hero-specific-tech.jpg") center center no-repeat;
+}
+ */
 @media only screen and (max-width: 768px) {
 	.cs-section .cyancta {
 		display: block;
