@@ -15,10 +15,10 @@
 </c:if>
 
 
-<c:if test="${not empty properties.isaccordincontainer }">
+<c:if test="${not empty properties.isaccordincontainer}">
     <c:choose>
         <c:when test="${not empty id}">
-            <div id="${properties.id}" class="${properties.class}">
+            <div id="${properties.id}" class="${properties.class} accordion-level">
                 <div class="accordion-menu-container">
                     <div class="accordion-menu hidden-sm hidden-md hidden-lg">
                         <span class="acc-label" id="stickyNav-${properties.accordincontentsectionnumber}">${properties.mobileaccordinsectiontitle}</span> <span
