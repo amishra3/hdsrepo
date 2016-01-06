@@ -7,3 +7,7 @@ product-solutions.js
 tech-specs.js
 accordion.js
 product-catagory.js
+product-box.js
+hds-product-solutions.js
+product-solutions-lp.js
+social-innovation.js
