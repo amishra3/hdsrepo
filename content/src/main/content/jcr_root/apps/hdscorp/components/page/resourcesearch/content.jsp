@@ -9,7 +9,7 @@
 <%
 	try {
 		SearchServiceHelper searchServiceHelper = sling.getService(com.hdscorp.cms.search.SearchServiceHelper.class);
-		String paths[] = { "/content/geometrixx-outdoors/en" };
+/* 		String paths[] = { "/content/geometrixx-outdoors/en" };
 		String tags[] = { "geometrixx-outdoors:gender/women","geometrixx-outdoors:season/winter" };
 		//tags=null;
 		String template = "/apps/geometrixx-outdoors/templates/page_product";
@@ -18,7 +18,19 @@
 		boolean doPagination = false;
 		String returnOffset = "0";
 		String returnLimit = "10";
-		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths, tags, template, type,"This summer head", doPagination, returnOffset,returnLimit, resourceResolver,null,null);
+ */		
+	    String paths[] = {"/content/dam/public/testpdf/batch1"};
+	    String tags[] = {"common:country/us","common:region/global"};
+	    String template= "/apps/geometrixx-outdoors/templates/page_product";
+	    template=null;
+	    String type[] = {"dam:Asset"};
+	    boolean doPagination = false;
+	    String returnOffset="0";
+	    String returnLimit="10";
+		
+		
+		
+		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths, tags, template, type,null, doPagination, returnOffset,returnLimit, resourceResolver,null,null);
 		
 		List<Hit> hits = result.getHits();
 		pageContext.setAttribute("hits", hits);
