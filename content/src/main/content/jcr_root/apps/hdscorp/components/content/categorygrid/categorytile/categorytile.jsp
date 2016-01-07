@@ -1,14 +1,21 @@
+<%@page import="com.hdscorp.cms.util.PathResolver"%>
 <%@page session="false"%>
 <%@include file="/apps/foundation/global.jsp"%>
 
 
 <c:set var="categoryObj" value="${requestScope['categoryObj']}" />
+<c:set var="linkUrl" value="${categoryObj.categoryPath}" />
+
+<c:if test="${fn:startsWith(linkUrl,'/content/')}">
+	<c:set var="linkUrl" value="<%=PathResolver.getShortURLPath(pageContext.getAttribute("linkUrl").toString())%>"/>
+</c:if>
+												
 												
 <div class="col-sm-4 overRidePadding">
     <div class="section-product-col panel-box" style="height: 252px;">
-        <div class="imageHolder"><img src="images/icon_cloud_pr.gif" alt="Cloud"></div>
+        <div class="imageHolder"><img src="${properties.categoryiconpath}" alt="${categoryObj.categoryTitle}"></div>
         <h3 class="headline">${categoryObj.categoryTitle}</h3>
-        <p>Turmoil has engulfed the Galactic Republic. The taxation of trade routes to outlying star. </p>
-        <a href="javascript:void(0);" class="animateLink">SEE ALL <span aria-hidden="true" class="glyphicon glyphicon-menu-right animateIcon"></span></a>
+        <p>${properties.categorysubtitle}</p>
+        <a href="${linkUrl}" class="animateLink">SEE ALL <span aria-hidden="true" class="glyphicon glyphicon-menu-right animateIcon"></span></a>
     </div>
 </div>

@@ -16,6 +16,6 @@
             fieldDescription="Please provide the path to category icon."
             fieldLabel="Category Icon Path"
             name="./categoryiconpath"
-            xtype="pathfield"/>            
+            xtype="ddpathfield"/>            
     </items>
 </jcr:root>
