@@ -190,6 +190,31 @@
     margin: 0 0 11px;
     text-transform: none;
 }
+
+.productdetail .icon-advance-lt{
+    width: 75px;
+    height: 75px;
+}
+
+.hero-homepage.general .hero-homepage-container .general-list li a .sprite{
+	width: 27px;
+    height: 28px;
+}
+
+.icon-home-modal {
+    width: 56px;
+    height: 65px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.hero-homepage.healthcare .hero-homepage-container .icon-connect{
+	width: 56px;
+    height: 65px;	
+}
  
 @media only screen and (max-width: 768px) {
 	.cs-section .cyancta {

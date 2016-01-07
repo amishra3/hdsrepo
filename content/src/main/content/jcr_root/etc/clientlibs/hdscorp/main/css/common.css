@@ -767,14 +767,14 @@ button.cta-scroll-top .text-return {
 }
 
 @media only screen and (max-width: 768px) {
-    button.cta-scroll-top {
-        position: absolute;
-        display: inline-block;
-        font-size: .5rem;
-        line-height: .7rem;
-        width: 68px;
-        height: 68px;
-    }
+     button.cta-scroll-top {    
+	    font-size: .5rem;
+	   line-height: .7rem;
+	   display: inline-block;
+	   width: 68px;
+	   height: 68px;
+     }
+
     button.cta-scroll-top .text-return {
         margin-top: 5px;
     }

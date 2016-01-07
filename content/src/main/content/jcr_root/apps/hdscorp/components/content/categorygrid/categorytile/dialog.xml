@@ -10,7 +10,7 @@
             fieldDescription="This is the Category Description/Sub-Title."
             fieldLabel="Category Description/Sub-Title"
             name="./categorysubtitle"
-            xtype="textfield"/>
+            xtype="textarea"/>
         <categoryiconpath
             jcr:primaryType="cq:Widget"
             fieldDescription="Please provide the path to category icon."

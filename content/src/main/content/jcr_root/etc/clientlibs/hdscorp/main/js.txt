@@ -2,7 +2,7 @@
 vendor.js
 plugins.js
 main.js
-home.js
+banner.js
 product-solutions.js
 tech-specs.js
 accordion.js
