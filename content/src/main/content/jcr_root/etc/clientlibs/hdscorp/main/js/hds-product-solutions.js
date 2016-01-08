@@ -119,8 +119,4 @@ var hds = window.hds || {};
     }
 
 }(window, document, jQuery, hds));
-
-
-$(function() {
-    hds.loadDataFilters.init();
-})
+(function($) {    hds.loadDataFilters.init();})(jQuery);
