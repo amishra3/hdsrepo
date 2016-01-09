@@ -1,32 +1,41 @@
-<%--
-  categoryfacsets component.
---%>
-
-
 <%@include file="/apps/foundation/global.jsp"%>
 <%@page session="false"%>
 <%@ taglib prefix="xss" uri="http://www.adobe.com/consulting/acs-aem-commons/xss" %>
+<%@page import="com.hdscorp.cms.slingmodels.CategoryFacetsModel"%>
 
 <sling:adaptTo adaptable="${resource}" adaptTo="com.hdscorp.cms.slingmodels.CategoryFacetsModel" var="model" />
 
-Add values for Category Facets Model  
-<br>
-All CategoriesLabel :${model.allCategoriesLabel}
-	<c:forEach items="${model.categories}" var="data" varStatus="status"> 
+<div class="col-md-3 product-listing">
+	<ul id="asideLinks-product">
+		<li class="active"><a href="javascript:void(0);" data-href="all-product-solutions.html"> all products &amp;solutions </a></li>
 
-                         <br><br>Category ID : ${xss:filterHTML(xssAPI,data['category-id'])}
-                            <br> Category Title : ${xss:filterHTML(xssAPI,data['display-title'])}
+		<c:forEach items="${model.categories}" var="data" varStatus="status">
 
-                             <br>Category Tags :  ${xss:filterHTML(xssAPI,data['category-tag'])}<br>
+			<li>
+				<a href="javascript:void(0);" data-href="storage.html"
+					id="${xss:filterHTML(xssAPI,data['category-id'])}">
+						${xss:filterHTML(xssAPI,data['display-title'])} <span
+						class="icon-accordion-closed"></span> <span
+						class="icon-accordion-opened"></span>
+				</a>
+				<ul>
+					<c:forEach items="${data['sub-category']}" var="subCategoryData" varStatus="counter">
+					<li>
+						<div class="checkbox">
+							<input class="filters" type="checkbox" name="cbxFunction"
+								id="${xss:filterHTML(xssAPI,subCategoryData['sub-category-ID'])}"
+								value="${xss:filterHTML(xssAPI,subCategoryData['sub-category-tag'])}">
+							
+							<label for="cloudStorage" class="hds-icon"><span>${xss:filterHTML(xssAPI,subCategoryData['sub-category-title'])}</span></label>
+						</div>
+					</li>
 
-                             <br><c:forEach items="${data['sub-category']}" var="subCategoryData" varStatus="counter"> 
+					</c:forEach>
+				</ul>
+			</li>
+		</c:forEach>
 
-                                     <br>  Sub Category ID :  ${xss:filterHTML(xssAPI,subCategoryData['sub-category-ID'])}
-                                     <br>  Sub Category Title :  ${xss:filterHTML(xssAPI,subCategoryData['sub-category-title'])}
+	</ul>
+</div>
 
-                                     <br>    Sub Category Tags :  ${xss:filterHTML(xssAPI,subCategoryData['sub-category-tag'])}
-
-                               </c:forEach>   
-
-     </c:forEach>
 

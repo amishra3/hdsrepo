@@ -6,6 +6,10 @@
 <%@page import="com.day.cq.search.result.Hit"%>
 <%@page
 	import="java.util.List,com.day.cq.search.facets.Facet,com.day.cq.search.facets.Bucket,java.util.Map"%>
+
+
+
+
 <%
 	try {
 		SearchServiceHelper searchServiceHelper = sling
@@ -43,20 +47,17 @@
 			System.out.println("facet key**********" + key);
 			Facet facet = facets.get(key);
 			if (facet.getContainsHit()) {
-
-				out.println("buckets size***"
-						+ facet.getBuckets().size());
+				out.println("buckets size***"+ facet.getBuckets().size()+"<br>");
+				out.println("<BR><BR><BR><BR>");
 				for (Bucket bucket : facet.getBuckets()) {
 					long count = bucket.getCount();
-					out.println("count ***********" + count);
+					//out.println("count ***********" + count);
+					//out.println("bucket value**" + bucket.getValue());
+					out.println("bucket value**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + new java.util.Locale((String) bucket.getValue()).getDisplayLanguage(request.getLocale())+"<br>");
+					 
 
-					out.println("bucket value**" + bucket.getValue());
-
-					/*
-					 * Map<String, String> params = bucket.getPredicate()
-					 * .getParameters(); for (String k : params.keySet()) {
-					 * System.out.println("predicate params.." + k); }
-					 */
+					
+					
 				}
 			}
 		}
