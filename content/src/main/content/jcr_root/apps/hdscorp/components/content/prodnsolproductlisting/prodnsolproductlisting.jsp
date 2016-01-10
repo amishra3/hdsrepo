@@ -19,6 +19,11 @@
                     </div>
                     <div class="Container-Results container-fluid overRideRight">
                     	<c:set var="viewproductlabel" value="${properties.viewproductlabel}" scope="request"/>
+                    	<c:set var="contentrenderingpagepath" value="${properties.contentrenderingpagepath}" scope="request"/>
+                    	
+                    	<c:if test="${empty properties.contentrenderingpagepath}">
+                    		<c:set var="contentrenderingpagepath" value="/content/hdscorp/en_us/lookup/prodnsolcontent/prodnsolrenderer" scope="request"/>
+                    	</c:if>
                     
                     	<cq:include path="subcategoryfilterpar" resourceType="hdscorp/components/content/categoryfacets" />
                         
@@ -30,7 +35,11 @@
                                 </div>
                                 <div class="navLinks">
                                     <div class="countProducts">
-                                        <p>Showing <strong id="actualCount"></strong> of <strong id="TotalCount"></strong> products</p>
+                                    	<c:set var="resultcountmessagetext" value="<p>Showing <strong id='actualCount'></strong> of <strong id='TotalCount'></strong> products</p>"/>
+                                    	<c:if test="${not empty properties.resultcountmessagetext}">
+                                    		<c:set var="resultcountmessagetext" value="${properties.resultcountmessagetext}"/>
+                                    	</c:if>
+                                    	<c:out value='${resultcountmessagetext}' escapeXml="false"/>
                                     </div>
                                     <div class="toggleLinks hidden-xs hidden-sm">
                                         <a href="javascript:void(0)" data-tab="tab-1" class="tab current">${properties.displaysortlabel}</a>
@@ -53,8 +62,10 @@
                                     <div class="category-products-listing" id="loadCatagoryContent">
                                     
                                     <!-- Content Populated Here -->
-                                    
-                                    
+                                    <c:set var="includetargetURL" value="${requestScope['includetargetURL']}" />
+                                    <c:if test="${not empty includetargetURL}">
+                                   		<sling:include path="${includetargetURL}" />
+                                    </c:if>
                                     </div>
                                     <div class="btn-square-red load-more-link" id="loadMoreBtn" style="display:none;">
                                         <a href="javascript:void(0);" title="${properties.loadmorelabel}">${properties.loadmorelabel}</a>

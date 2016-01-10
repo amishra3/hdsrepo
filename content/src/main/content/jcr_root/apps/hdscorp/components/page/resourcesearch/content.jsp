@@ -23,7 +23,7 @@
         boolean doPagination = false;
         String returnOffset="0";
         String returnLimit="10";
-           SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths, tags, null, type,"Hitachi", doPagination, returnOffset,returnLimit, resourceResolver,null,null);
+        SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths, tags, null, type,"Hitachi", doPagination, returnOffset,returnLimit, resourceResolver,null,null);
 
 		List<Hit> hits = result.getHits();
 		pageContext.setAttribute("hits", hits);

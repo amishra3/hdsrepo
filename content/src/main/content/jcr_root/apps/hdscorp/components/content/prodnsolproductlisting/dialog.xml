@@ -52,7 +52,13 @@
                         jcr:primaryType="cq:Widget"
                         fieldLabel="View Product Label."
                         name="./viewproductlabel"
-                        xtype="textfield"/>                                                                                                                                                          
+                        xtype="textfield"/>
+                    <resultcountmessagetext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Provide result count message."
+                        fieldDescription="Use the following format - &lt;p&gt;Showing &lt;strong id='actualCount'&gt;&lt;/strong&gt; of &lt;strong id='TotalCount'&gt;&lt;/strong&gt; products&lt;/p&gt;"
+                        name="./resultcountmessagetext"
+                        xtype="textfield"/>                                                                                                                                                                                  
                 </items>
             </tab1>
         </items>
