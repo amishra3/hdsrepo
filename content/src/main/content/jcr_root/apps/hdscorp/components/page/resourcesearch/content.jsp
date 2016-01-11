@@ -36,7 +36,8 @@
 			<h3 style="font-size: 1em;">Query Statement  &nbsp;&nbsp;&nbsp;   <%=result.getQueryStatement() %>   </h3>
 		</div>
 		<br>
-		<span style="float:right;width: 69%; ">
+		<div style="background-color: white;">
+		<span style="float:right;width: 69%; background-color: white;">
 		<%
 		
 		for (Hit hit : hits) {
@@ -85,7 +86,7 @@
 		
 		%>
 		</span>
-		<span style="float:left;width: 30%; ">
+		<span style="float:left;width: 30%; background-color: white;">
 				<table width="29%" border="1" style="margin-left: 200px;">
 		<tr><td><h3>Tag</h3></td><td><h3>#Results</h3>
 		<% Map<String, Facet> facets = result.getFacets();
@@ -100,7 +101,7 @@
 				for (Bucket bucket : facet.getBuckets()) {
 					
 					Tag tag = tm.resolve((String) bucket.getValue());
-					if(tag!= null){ %> 
+			 		if(tag!= null){ %> 
 						<tr>
 						<td><p><%= tag.getTitle()%></p></td><td><p><%=bucket.getCount() %></p></td></tr><%
 						//out.println("<h4>"+tag.getTitle()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+count+ "</h4><BR>");
@@ -116,6 +117,7 @@
 		%>
 		</table>
 		</span>
+		</div>
 <%		
 
 	} catch (Exception ex) {
