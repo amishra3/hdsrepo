@@ -22,40 +22,40 @@ try{
 		viewtype = selectorArray[0];
 		viewtype = viewtype.replaceAll("\\|", "/").replaceAll("[\\[\\](){}]","");
 		tags = viewtype.split(",");
+	}else{
+		tags = null;
+	}
+
+	SearchServiceHelper searchServiceHelper =  sling.getService(com.hdscorp.cms.search.SearchServiceHelper.class);
+	
+	String paths[] = {"/content/hdscorp/en_us/productsandsolutions"};
+	String template= "/apps/hdscorp/templates/productdetail";
+	boolean doPagination = false;
+	String type[] = {"cq:Page"};
+	
+	
+	SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths,tags,template,type,null,doPagination,null,null,resourceResolver,null,null);
+	List<Hit> hits = result.getHits();
+	
+	ArrayList<ProductNode> products = new ArrayList<ProductNode>();
+	
+	for (Hit hit : hits) {
+		ProductNode productNode = new ProductNode();
+		Page reourcePage = hit.getResource().adaptTo(Page.class);
+	    String pageTitle = reourcePage.getTitle();
+	    String pagePath = reourcePage.getPath();
+	    String pageProductDescription = (String)reourcePage.getProperties().get("subtext");
+	    if(pagePath.startsWith("/content")){
+	    	pagePath=PathResolver.getShortURLPath(pagePath);
+	    }
+	    productNode.setProductTitle(pageTitle);
+	    productNode.setProductDescription(pageProductDescription);
+	    productNode.setProductPath(pagePath);
+	    products.add(productNode);
 	}
 	
-	if(tags!=null && tags.length>0){
+	pageContext.setAttribute("productsList", products);
 	
-		SearchServiceHelper searchServiceHelper =  sling.getService(com.hdscorp.cms.search.SearchServiceHelper.class);
-		
-		String paths[] = {"/content/hdscorp/en_us/productsandsolutions"};
-		String template= "/apps/hdscorp/templates/productdetail";
-		String type[] = {"cq:Page"};
-		boolean doPagination = false;
-		
-		
-		SearchResult result = searchServiceHelper.getFullTextBasedResuts(paths,tags,template,type,null,doPagination,null,null,resourceResolver,null,null);
-		List<Hit> hits = result.getHits();
-		
-		ArrayList<ProductNode> products = new ArrayList<ProductNode>();
-		
-		for (Hit hit : hits) {
-			ProductNode productNode = new ProductNode();
-			Page reourcePage = hit.getResource().adaptTo(Page.class);
-		    String pageTitle = reourcePage.getTitle();
-		    String pagePath = reourcePage.getPath();
-		    String pageProductDescription = (String)reourcePage.getProperties().get("subtext");
-		    if(pagePath.startsWith("/content")){
-		    	pagePath=PathResolver.getShortURLPath(pagePath);
-		    }
-		    productNode.setProductTitle(pageTitle);
-		    productNode.setProductDescription(pageProductDescription);
-		    productNode.setProductPath(pagePath);
-		    products.add(productNode);
-		}
-		
-		pageContext.setAttribute("productsList", products);
-	}
 }catch(Exception ex){
 	//System.out.println(ex.getMessage());
 }
