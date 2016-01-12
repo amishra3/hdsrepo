@@ -36,7 +36,7 @@
 			<h3 style="font-size: 1em;">Query Statement  &nbsp;&nbsp;&nbsp;   <%=result.getQueryStatement() %>   </h3>
 		</div>
 		<br>
-		<div style="background-color: white;">
+		<div>
 		<span style="float:right;width: 69%; background-color: white;">
 		<%
 		
