@@ -63,71 +63,77 @@
 		$('.list-inline').find('li.' + currentId).addClass('active');
 	}
 
-	var waypoint = new Waypoint({
-		element: document.getElementById('overview'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: 1
-	});
+    if ($('#overview').length > 0) {
+		var waypoint = new Waypoint({
+			element: document.getElementById('overview'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: 1
+		});
 
-	var waypointb = new Waypoint({
-		element: document.getElementById('overview'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: -136
-	});
+		var waypointb = new Waypoint({
+			element: document.getElementById('overview'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: -136
+		});
+    }
 
-	var waypoint2 = new Waypoint({
-		element: document.getElementById('features-benefits'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: 34
-	});
+    if ($('#features-benefits').length > 0) {
+		var waypoint2 = new Waypoint({
+			element: document.getElementById('features-benefits'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: 34
+		});
 
-	var waypoint2b = new Waypoint({
-		element: document.getElementById('features-benefits'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: -136
-	});
+		var waypoint2b = new Waypoint({
+			element: document.getElementById('features-benefits'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: -136
+		});
+     }
 
-	var waypoint3 = new Waypoint({
-		element: document.getElementById('resources'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: 34
-	});
+    if ($('#resources').length > 0) {
+		var waypoint3 = new Waypoint({
+			element: document.getElementById('resources'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: 34
+		});
 
-	var waypoint3b = new Waypoint({
-		element: document.getElementById('resources'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: -136
-	});
+		var waypoint3b = new Waypoint({
+			element: document.getElementById('resources'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: -136
+		});
+	}
+	if ($('#tech-specifications').length > 0) {
+		var waypoint4 = new Waypoint({
+			element: document.getElementById('tech-specifications'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: 34
+		});
 
-	var waypoint4 = new Waypoint({
-		element: document.getElementById('tech-specifications'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: 34
-	});
+		var waypoint4b = new Waypoint({
+			element: document.getElementById('tech-specifications'),
+			handler: function(direction) {
+				setActiveLi.call(this);
+			},
+			offset: -136
+		});
 
-	var waypoint4b = new Waypoint({
-		element: document.getElementById('tech-specifications'),
-		handler: function(direction) {
-			setActiveLi.call(this);
-		},
-		offset: -136
-	});
-
-
+	}
 
 
 	// Get text values from Sticky Nav, apply to Accordion labels
@@ -139,12 +145,9 @@
 	var allMenus = $('.accordion-menu-container');
 	var allContents = $('.accordion-content');
 
-	$('.accordion-content').on('click', function(event){
-		event.stopPropagation();
-		return false;
-	});
 
-	$(document).on('click','.accordion-level > .accordion-menu-container').on('click', function(event) {
+
+	$(document).on('click','.accordion-level > .accordion-menu-container' , function(event) {
         var $currentContent = $(this).closest('div').next('div.accordion-content',this);
         if ($(this).hasClass("open") && $(this).next().queue().length === 0) {
             $currentContent.removeClass('open');

@@ -7,4 +7,4 @@
     facebook.postlimit="3"
     facebook.scheduler.expression="0 10 16 * * ?"
     facebook.searchpost="HitachiDataSystems"
-    facebook.storage.path="/content/hdscorp/en_us/test/jcr:content/"/>
+    facebook.storage.path="/content/hdscorp/en_us/lookup/facebookpostdata/jcr:content/"/>
