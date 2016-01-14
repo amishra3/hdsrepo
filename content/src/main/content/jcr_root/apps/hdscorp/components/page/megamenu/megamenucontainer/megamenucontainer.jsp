@@ -15,15 +15,17 @@
 <%
 	PersistableValueMap map = resource.adaptTo(PersistableValueMap.class);
 	String topNavElementPath = (String)map.get("topnavelementpath") ;
-	map.put("topnavelementactualpath", PathResolver.getShortURLPath(topNavElementPath));
-	
-	Resource res = resourceResolver.getResource(topNavElementPath) ;
-	Page topNavPage = res.adaptTo(Page.class);
-	String topnavelementTitle = topNavPage .getTitle();
-	
-	map.put("topnavelementTitle", topnavelementTitle);
-	map.save();
 
+	Resource res = resourceResolver.getResource(topNavElementPath) ;
+    if(res!=null){
+        map.put("topnavelementactualpath", PathResolver.getShortURLPath(topNavElementPath));
+    
+        Page topNavPage = res.adaptTo(Page.class);
+        String topnavelementTitle = topNavPage .getTitle();	
+        map.put("topnavelementTitle", topnavelementTitle);
+    
+        map.save();
+    }
 %>
 
 <wcmmode:edit>
