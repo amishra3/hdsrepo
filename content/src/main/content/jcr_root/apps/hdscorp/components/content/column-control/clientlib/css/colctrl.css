@@ -1141,4 +1141,8 @@ This basically loops and creates that many number of classes
     div.acs-commons-resp-colctrl-row > div {
         width:100%; 
     }
+    
+    .acs-commons-resp-colctrl-row br {
+        display: none;
+    }
 }
