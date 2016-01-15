@@ -2,8 +2,7 @@
 <%@include file="/apps/foundation/global.jsp"%>
 <%@page session="false" %>
 <%@page import="com.hdscorp.cms.util.PageUtils"%>
-<%@page import="com.hdscorp.cms.restservice.FeedConstant"%>
-
+<%@page import="com.hdscorp.cms.constants.ServiceConstants"%> 
 
 
 
