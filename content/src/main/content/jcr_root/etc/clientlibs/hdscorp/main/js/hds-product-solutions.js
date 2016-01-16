@@ -14,15 +14,17 @@ var hds = window.hds || {};
         loadCatagoryContent: function(url) {
             var getURL = "";
             if (typeof url === 'undefined') {
-                getURL = $('.product-listing > ul > li').eq(0).find("a").attr("data-href");
-                $('.product-listing > ul > li').eq(0).addClass('active');
-                $("#loadCatagoryContent").attr('data-content', 'all');
+//                getURL = $('.product-listing > ul > li').eq(0).find("a").attr("data-href");
+//                $('.product-listing > ul > li').eq(0).addClass('active');
+//                $("#loadCatagoryContent").attr('data-content', 'all');
             } else {
                 getURL = url;
                 $("#loadCatagoryContent").removeAttr('data-content');
             }
 
-            $("#loadCatagoryContent").html(" ").load(getURL, function() {
+            
+            
+            $("#loadCatagoryContent").html(" ").load(getURL + " .prodnsolcategorycontent ", function() {
                 hds.loadDataFilters.loadSubContent();
                 hds.loadDataFilters.bindHTMLLoad();
                 $('.category-heading > h2').html(" ").html($('.product-listing > ul > li.active').find('a').text());
