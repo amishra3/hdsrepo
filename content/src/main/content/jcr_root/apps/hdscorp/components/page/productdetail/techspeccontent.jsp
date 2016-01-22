@@ -25,7 +25,7 @@ if (node.hasProperty("techSpecContentPath")){
 }
 	
 %>
-</div>
+</div>  
 	
 
 
